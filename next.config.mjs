@@ -13,7 +13,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'g-6r95onc1ynb.vusercontent.net',
         port: '',
-        pathname: '/placeholder.svg/*',
+        pathname: '/placeholder.svg/**',
       },
     ],
   },
