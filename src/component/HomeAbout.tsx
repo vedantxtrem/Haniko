@@ -4,8 +4,8 @@ export default function AboutUs() {
   const features = [
     {
       icon: FaMedal,
-      title: "Quality assurance",
-      description: "The quality of honey is our pride. But if you do not like the product, we will refund your money."
+      title: "Our Story",
+      description: "Haniko is more than just a honey brand; it's the culmination of decades of passion, dedication, and expertise in the world of honey. As a subsidiary of M B Exim Pvt. Ltd., a premium exporter of bulk honey with nearly three decades of experience, Haniko carries forward a rich legacy of quality and trust. Our parent company, M B Exim, has built its reputation by supporting small businesses and sharing the exceptional quality of Indian honey with the world."
     },
     {
       icon: FaHandPaper,
