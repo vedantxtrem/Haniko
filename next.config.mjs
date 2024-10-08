@@ -7,7 +7,7 @@ const nextConfig = {
               protocol: 'https',
               hostname: 'hanio.peerduck.com',
               port: '',
-              pathname: '*',
+              pathname: '/wp-content/uploads/**',
             },
           ],
         },

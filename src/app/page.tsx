@@ -8,9 +8,9 @@ function page() {
   return (
     <div>
       <HeroSection/>
-      {/* <Product/>
+      <Product/>
       <AboutUs/>
-      <BlogSection/> */}
+      <BlogSection/>
     </div>
   )
 }
