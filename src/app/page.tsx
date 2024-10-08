@@ -1,11 +1,12 @@
+import Product from '@/component/Productsection'
+import React from 'react'
 
-import Product from "@/component/Productsection";
-import Image from "next/image";
-
-export default function Home() {
+function page() {
   return (
     <div>
       <Product/>
     </div>
-  );
+  )
 }
+
+export default page

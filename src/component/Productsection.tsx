@@ -1,14 +1,14 @@
-// import { ShoppingCart } from "lucide-react"
+
 import Image from "next/image"
 
 export default function Product() {
   const categories = [
-    { name: "Beehive", icon: "/placeholder.svg" },
-    { name: "Beekeepar", icon: "/placeholder.svg" },
-    { name: "Honey", icon: "/placeholder.svg" },
-    { name: "Beekeepar", icon: "/placeholder.svg" },
-    { name: "Beekeeping", icon: "/placeholder.svg" },
-    { name: "Honeybee", icon: "/placeholder.svg" },
+    { name: "Beehive", icon: "/image/honey.jpg" },
+    { name: "Beekeepar", icon: "/image/honey.jpg" },
+    { name: "Honey", icon: "/image/honey.jpg" },
+    { name: "Beekeepar", icon: "/image/honey.jpg" },
+    { name: "Beekeeping", icon: "/image/honey.jpg" },
+    { name: "Honeybee", icon: "/image/honey.jpg" },
   ]
 
   const products = [
