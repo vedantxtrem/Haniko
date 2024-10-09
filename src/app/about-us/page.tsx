@@ -34,7 +34,7 @@ export default function AboutUs() {
     const [isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
-        const handleScroll = (event) => {
+        const handleScroll = (event:any ) => {
             if (!hover) return;
 
             if (event instanceof WheelEvent) {
@@ -63,7 +63,7 @@ export default function AboutUs() {
         };
     }, [currentSlide, hover]);
 
-    const changeSlide = (newSlide) => {
+    const changeSlide = (newSlide:any) => {
         if (isAnimating) return;
         setIsAnimating(true);
         setTimeout(() => {

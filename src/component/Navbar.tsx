@@ -53,7 +53,7 @@ const Navbar = () => {
 
             {/* Sidebar for Mobile */}
             <div
-                className={`fixed top-0 left-0 w-64 h-full bg-white shadow-md transform transition-transform duration-300 ease-in-out z-[1000] ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`top-0 left-0 w-64 h-full bg-white shadow-md transform transition-transform duration-300 ease-in-out z-[1000] absolute ${isOpen ? 'translate-x-0' : '-translate-x-full'
                     }`}
             >
 
