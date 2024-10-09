@@ -1,4 +1,4 @@
-import { FaShippingFast, FaHive, FaBoxOpen, FaCrown } from 'react-icons/fa'
+
 
 export default function WhyChooseUs() {
   const features = [

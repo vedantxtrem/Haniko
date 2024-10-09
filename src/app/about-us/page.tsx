@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import { FaBeer } from 'react-icons/fa'
 import { Poppins, Roboto } from "next/font/google";
 
-export const poppins = Poppins({
+const poppins = Poppins({
     subsets: ['latin'],
     weight: ["200", "300", "400", "500", "600", "700", "800", "900"]
 })
