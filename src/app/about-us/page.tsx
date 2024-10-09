@@ -13,18 +13,18 @@ const slides = [
     {
         title: "Our Story",
         description: "Haniko is more than just a honey brand; it's the culmination of decades of passion, dedication, and expertise in the world of honey. As a subsidiary of M B Exim Pvt. Ltd., a premium exporter of bulk honey with nearly three decades of experience, Haniko carries forward a rich legacy of quality and trust. Our parent company, M B Exim, has built its reputation by supporting small businesses and sharing the exceptional quality of Indian honey with the world.",
-        image: "https://www.indiewire.com/wp-content/uploads/2014/11/emma-stone.jpg?w=600&h=337&crop=1"
-        // image: "/image/logo.png"
+        image: "/image/logo.png"
+        
     },
     {
         title: "Supporting Sustainable Beekeeping",
         description: "Haniko isn’t just about honey; it’s about the ecosystem that creates it. We work closely with beekeepers to promote sustainable practices, ensuring that the bees thrive while we harvest honey responsibly. Our focus on ethical beekeeping helps maintain the health of bee populations and supports the livelihoods of local communities.",
-        image: "https://media.glamourmagazine.co.uk/photos/62fcc7a20d8e64f859ecfd53/3:2/w_1920,h_1280,c_limit/MADISON%20BEER%20BEAUTY%20MEMO%20090822%20%20%20852A8843-edit1-(main-#2)_SQ.jpeg"
+        image: "https://hanio.peerduck.com/wp-content/uploads/2020/11/vero-photoart-lNjD7h3yXIg-unsplash-1536x994.jpg"
     },
     {
         title: "Quality Assurance",
         description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table. We are transparent about our processes, with certifications and rigorous testing at every stage to maintain the integrity of our honey.",
-        image: "https://miro.medium.com/v2/resize:fit:1200/1*_73eDIohonFWuFhQsBL-bw.png"
+        image: "https://hanio.peerduck.com/wp-content/uploads/2020/11/bermix-studio-Uw15zjNj8ao-unsplash-1536x1024.jpg"
     }
 ];
 

@@ -1,80 +1,62 @@
-import Image from 'next/image'
-import { FaUser, FaCalendar, FaComments } from 'react-icons/fa'
+import React from "react";
 
-export default function BlogSection() {
-  const blogPosts = [
-    {
-      title: "How many calories are in honey?",
-      category: "Service",
-      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec...",
-      image: "/placeholder.svg?height=200&width=300",
-      author: "Alex",
-      date: "January 10, 2021",
-      comments: 3
-    },
-    {
-      title: "One pound of honey",
-      category: "Honey",
-      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec...",
-      image: "/placeholder.svg?height=200&width=300",
-      author: "Alex",
-      date: "January 9, 2021",
-      comments: 2
-    },
-    {
-      title: "What is honey?",
-      category: "Beekeeping",
-      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec...",
-      image: "/placeholder.svg?height=200&width=300",
-      author: "Alex",
-      date: "January 8, 2021",
-      comments: 4
-    }
-  ]
+const services = [
+  {
+    step: "01",
+    name: "Honey",
+    imageUrl: "https://localhivehoney.com/cdn/shop/articles/11_FallScone_1080x1920_1_large.png?v=1727467939",
+    description: "State-of-the-art diagnostics to accurately identify vehicle issues.",
+  },
+  {
+    step: "02",
+    name: "How to make Honey",
+    imageUrl: "https://localhivehoney.com/cdn/shop/articles/cover_image_pistakioxlocalhive_large.jpg?v=1727206394",
+    description: "Engine overhauls to brake replacements, we ensure high-quality work for your vehicle’s longevity.",
+  },
+  {
+    step: "03",
+    name: "Are you Honey ?",
+    imageUrl: "https://localhivehoney.com/cdn/shop/articles/11_FallScone_1080x1920_1_large.png?v=1727467939",
+    description: "Oil changes, tire rotations, and more to enhance performance and prevent future issues.",
+  },
+];
 
+const Blog = () => {
   return (
-    <section className="bg-amber-50 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <div className="absolute top-0 right-0">
-        <div className="w-12 h-12 bg-amber-400 transform rotate-45 translate-x-6 -translate-y-6"></div>
-      </div>
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-amber-500 text-lg font-semibold mb-2">RECENT POSTS</h2>
-          <h3 className="text-4xl sm:text-5xl font-bold text-gray-900">Our Blog</h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">{post.title}</h4>
-                <span className="text-amber-500 text-sm mb-2 inline-block">{post.category}</span>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <div className="flex items-center">
-                      <FaUser className="mr-2" />
-                      <span>By {post.author}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <FaCalendar className="mr-2" />
-                      <span>{post.date}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between mt-2">
-                    <div className="flex items-center text-sm text-gray-500">
-                      <FaComments className="mr-2" />
-                      <span>{post.comments} Comments</span>
-                    </div>
-                    <button className="text-amber-500 hover:text-amber-600 transition-colors">
-                      Read more
-                    </button>
+
+    <div className="mx-auto  flex justify-center object-center mb-16 bg-[#fffbeb] ">
+      <div className="flex  justify-center object-center flex-col gap-12 sm:gap-16">
+        <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+          Blog
+        </h2>
+        <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3">
+          {services.map((service) => (
+            <div key={service.name} className=" group h-96 w-96 [perspective:1000px]">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+                  {service.imageUrl && (
+                    <img
+                      className="object-cover cursor-pointer object-left h-full w-full rounded-xl"
+                      src={service.imageUrl}
+                      alt={service.name}
+                      width={320}
+                      height={320}
+                    />
+                  )}
+                  <p className="md:my-6 text-2xl text-center font-semibold">{service.name}</p>
+                </div>
+
+                <div className="absolute inset-0 h-full w-full rounded-xl bg-[#003e52] px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h2 className="text-2xl font-bold mb-4">{service.name}</h2>
+                    <p className="text-lg text-pretty text-center mb-4">
+                      {service.description}
+                    </p>
+                    <a href="tel:555-555-5555" className="inline-flex">
+                      <button className="my-2 bg-[#e74f3d] hover:bg-[#f33e2a] transition-all duration-1000 text-white font-bold py-2 px-4 w-auto rounded-full inline-flex items-center">
+                        <span>Schedule Service</span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -82,6 +64,9 @@ export default function BlogSection() {
           ))}
         </div>
       </div>
-    </section>
-  )
-}
+    </div>
+
+  );
+};
+
+export default Blog;
