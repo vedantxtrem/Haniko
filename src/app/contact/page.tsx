@@ -13,7 +13,7 @@ function Page() {
     <section className="relative overflow-hidden">
       {/* Header Section */}
       <div
-        className={`${poppins.className} relative bg-grad bg-[#F36A3E] mt-8 mb-8 h-72 flex items-center justify-center`}
+        className={`${poppins.className} relative bg-grad bg-[#F36A3E] mb-8 h-72 flex items-center justify-center`}
       >
         <h1 className="text-[#ffffff] text-4xl sm:text-5xl font-bold text-center mb-2">
           Contact Us
