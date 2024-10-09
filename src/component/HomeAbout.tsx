@@ -25,16 +25,18 @@ export default function AboutUs() {
         <div className="w-12 h-12 bg-amber-400 transform rotate-45 -translate-x-6 -translate-y-6"></div>
         <div className="w-8 h-8 bg-amber-200 absolute top-8 left-8 transform rotate-45"></div>
       </div>
-      <div className="max-w-7xl mx-auto">
+
+      <div className=" mx-auto">
+
         <div className="text-center mb-16">
           <h2 className="text-amber-500 text-lg font-semibold mb-2">WHO WE ARE</h2>
           <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">About Us</h3>
-          <p className="max-w-2xl mx-auto text-xl text-gray-600">
-            Our company was founded in 2001. Our honey is 100% natural. We bring to you honey straight from the hive,
-            unheated, unprocessed, unpasteurized.
+          <p className="w-11/12 md:w-[60%] text-center mx-auto text-xl text-gray-600">
+          At Haniko, we believe in offering pure and finest sourced honey that supports sustainable beekeeping. We work closely with local beekeepers to ensure every jar of honey meets the highest standards of quality. With a variety of natural honey flavors such as Litchi, Multiflora, Mustard, Eucalyptus, we bring you the authentic taste of India.
+
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6">
               <feature.icon className="w-12 h-12 text-amber-500 mb-4" />
@@ -42,7 +44,7 @@ export default function AboutUs() {
               <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )

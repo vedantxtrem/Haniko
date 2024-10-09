@@ -24,14 +24,14 @@ const services = [
 const Blog = () => {
   return (
 
-    <div className="mx-auto  flex justify-center object-center mb-16 bg-[#fffbeb] ">
+    <div className="mx-auto  flex justify-center object-center mb-16 bg-[#fffbeb] px-3">
       <div className="flex  justify-center object-center flex-col gap-12 sm:gap-16">
-        <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+        <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
           Blog
         </h2>
-        <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3">
+        <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3 ">
           {services.map((service) => (
-            <div key={service.name} className=" group h-96 w-96 [perspective:1000px]">
+            <div key={service.name} className=" group h-96 w-96 [perspective:1000px] px-5">
               <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
                   {service.imageUrl && (
