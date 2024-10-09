@@ -1,5 +1,5 @@
-"use client"
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+"use client";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -22,11 +22,22 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-amber-600 mb-4">Menu</h3>
+              <h3 className="text-lg font-semibold text-amber-600 mb-4">
+                Menu
+              </h3>
               <ul className="space-y-2">
-                {['Home', 'Testimonials Honey', 'Contact Us Honey', 'Products', 'Cart'].map((item) => (
+                {[
+                  "Home",
+                  "Testimonials Honey",
+                  "Contact Us Honey",
+                  "Products",
+                  "Cart",
+                ].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-gray-600 hover:text-amber-600 transition-colors">
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-amber-600 transition-colors"
+                    >
                       {item}
                     </a>
                   </li>
@@ -34,26 +45,43 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-amber-600 mb-4">Contact Us</h3>
-              <p className="text-gray-600 mb-2">202 Honey Springs Rd, Crawford, TN 38554</p>
+              <h3 className="text-lg font-semibold text-amber-600 mb-4">
+                Contact Us
+              </h3>
+              <p className="text-gray-600 mb-2">
+                202 Honey Springs Rd, Crawford, TN 38554
+              </p>
               <p className="text-gray-600">Call Us: 800.275.8777</p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-amber-600 mb-4">Social Links</h3>
+              <h3 className="text-lg font-semibold text-amber-600 mb-4">
+                Social Links
+              </h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-amber-500 hover:text-amber-600 transition-colors">
-                  <Facebook size={24} />
+                <a
+                  href="#"
+                  className="text-amber-500 hover:text-amber-600 transition-colors"
+                >
+                  <FaFacebookF size={24} />
                 </a>
-                <a href="#" className="text-amber-500 hover:text-amber-600 transition-colors">
-                  <Instagram size={24} />
+                <a
+                  href="#"
+                  className="text-amber-500 hover:text-amber-600 transition-colors"
+                >
+                  <FaInstagram size={24} />
                 </a>
-                <a href="#" className="text-amber-500 hover:text-amber-600 transition-colors">
-                  <Twitter size={24} />
+                <a
+                  href="#"
+                  className="text-amber-500 hover:text-amber-600 transition-colors"
+                >
+                  <FaTwitter size={24} />
                 </a>
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-amber-600 mb-4">Subscribe to Newsletter</h3>
+              <h3 className="text-lg font-semibold text-amber-600 mb-4">
+                Subscribe to Newsletter
+              </h3>
               <form className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="email"
@@ -80,5 +108,5 @@ export default function Footer() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

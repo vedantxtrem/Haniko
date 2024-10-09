@@ -16,7 +16,7 @@ export default function Product() {
 
   const products = [
     { name: "Organic Honey", price: 120, oldPrice: 150, image: "/image/honey.jpg", sale: true, discount: 20 },
-    { name: "Raw Honey", price: 180, oldPrice: 200, image: "/image/honey.jpg", sale: true },
+    { name: "Raw Honey", price: 180, oldPrice: 200, image: "/image/honey.jpg", sale: false },
     { name: "Wild flower Honey", price: 100, oldPrice: 120, image: "/image/honey.jpg", discount: 20 },
     { name: "Natural Honey", price: 120, oldPrice: 150, image: "/image/honey.jpg" },
   ];
