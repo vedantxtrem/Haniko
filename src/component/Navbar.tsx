@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 
 const Navbar = () => {
@@ -9,10 +9,10 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-amber-50  p-4 flex justify-between items-center drop-shadow-2xl z-[100]">
+        <nav className="bg-amber-50 p-4 flex justify-between items-center drop-shadow-xl z-50 fixed w-full top-0 left-0">
             {/* Logo */}
             <div className="text-2xl font-bold ">
-                <img className='w-[100px] h-[50px]' src="/image/logo.png" alt="" />
+                <img className="w-[100px] h-[50px]" src="/image/logo.png" alt="Logo" />
             </div>
 
             {/* Hamburger Menu for Mobile */}
@@ -39,24 +39,38 @@ const Navbar = () => {
             </div>
 
             {/* Links for larger screens */}
-            <div className="hidden lg:flex space-x-8 pr-10">
-                <a href="/products" className="text-gray-700  text-xl hover:border-b-2 border-amber-500 hover:text-amber-500">
+            <div className="hidden lg:flex space-x-8 pr-10 font-medium">
+                <a
+                    href="/"
+                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
+                >
+                    Home
+                </a>
+                <a
+                    href="/products"
+                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
+                >
                     Product
                 </a>
-                <a href="/about-us" className="text-gray-700  text-xl hover:border-b-2 border-amber-500 hover:text-amber-500">
+                <a
+                    href="/about-us"
+                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
+                >
                     About Us
                 </a>
-                <a href="/contact" className="text-gray-700  text-xl hover:border-b-2 border-amber-500 hover:text-amber-500">
+                <a
+                    href="/contact"
+                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
+                >
                     Contact Us
                 </a>
             </div>
 
             {/* Sidebar for Mobile */}
             <div
-                className={`top-0 left-0 w-64 h-full bg-white shadow-md transform transition-transform duration-300 ease-in-out z-[1000] absolute ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`h-screen fixed top-0 left-0 w-64 bg-white shadow-md transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'
                     }`}
             >
-
                 <button
                     onClick={toggleSidebar}
                     className="text-gray-500 p-4 focus:outline-none"
@@ -77,9 +91,12 @@ const Navbar = () => {
                     </svg>
                 </button>
 
-                <nav className="bg-amber-50 p-4 space-y-4 z-[1000]">
+                <nav className="w-full bg-amber-50 p-4 space-y-4 flex flex-col justify-center items-center">
+                    <div>
+                        <img src="/image/logo.png" className='w-[130px] ' alt="" />
+                    </div>
                     <a
-                        href="/about"
+                        href="/about-us"
                         className="block text-gray-700 hover:text-gray-900"
                     >
                         About Us
@@ -102,7 +119,7 @@ const Navbar = () => {
             {isOpen && (
                 <div
                     onClick={toggleSidebar}
-                    className="fixed inset-0 bg-gray-800 bg-opacity-50 z-[100]"
+                    className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
                 />
             )}
         </nav>
