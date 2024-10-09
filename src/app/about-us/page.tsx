@@ -1,15 +1,127 @@
+'use client'
 import Image from 'next/image'
-import { Poppins, Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { useEffect, useState } from "react";
+import 'animate.css';
 
 const poppins = Poppins({
     subsets: ['latin'],
     weight: ["200", "300", "400", "500", "600", "700", "800", "900"]
-})
+});
+
+const slides = [
+    {
+        title: "Our Story",
+        description: "Haniko is more than just a honey brand; it's the culmination of decades of passion, dedication, and expertise in the world of honey. As a subsidiary of M B Exim Pvt. Ltd., a premium exporter of bulk honey with nearly three decades of experience, Haniko carries forward a rich legacy of quality and trust. Our parent company, M B Exim, has built its reputation by supporting small businesses and sharing the exceptional quality of Indian honey with the world.",
+        image: "https://www.indiewire.com/wp-content/uploads/2014/11/emma-stone.jpg?w=600&h=337&crop=1"
+        // image: "/image/logo.png"
+    },
+    {
+        title: "Supporting Sustainable Beekeeping",
+        description: "Haniko isn’t just about honey; it’s about the ecosystem that creates it. We work closely with beekeepers to promote sustainable practices, ensuring that the bees thrive while we harvest honey responsibly. Our focus on ethical beekeeping helps maintain the health of bee populations and supports the livelihoods of local communities.",
+        image: "https://media.glamourmagazine.co.uk/photos/62fcc7a20d8e64f859ecfd53/3:2/w_1920,h_1280,c_limit/MADISON%20BEER%20BEAUTY%20MEMO%20090822%20%20%20852A8843-edit1-(main-#2)_SQ.jpeg"
+    },
+    {
+        title: "Quality Assurance",
+        description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table. We are transparent about our processes, with certifications and rigorous testing at every stage to maintain the integrity of our honey.",
+        image: "https://miro.medium.com/v2/resize:fit:1200/1*_73eDIohonFWuFhQsBL-bw.png"
+    }
+];
 
 export default function AboutUs() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [hover, setHover] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = (event) => {
+            if (!hover) return;
+
+            if (event instanceof WheelEvent) {
+                if (currentSlide < slides.length - 1 && event.deltaY > 0) {
+                    changeSlide(currentSlide + 1);
+                } else if (currentSlide > 0 && event.deltaY < 0) {
+                    changeSlide(currentSlide - 1);
+                }
+                event.preventDefault();
+            } else if (event instanceof KeyboardEvent) {
+                if (event.key === 'ArrowDown' && currentSlide < slides.length - 1) {
+                    changeSlide(currentSlide + 1);
+                } else if (event.key === 'ArrowUp' && currentSlide > 0) {
+                    changeSlide(currentSlide - 1);
+                }
+                event.preventDefault();
+            }
+        };
+
+        window.addEventListener('wheel', handleScroll, { passive: false });
+        window.addEventListener('keydown', handleScroll);
+
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+            window.removeEventListener('keydown', handleScroll);
+        };
+    }, [currentSlide, hover]);
+
+    const changeSlide = (newSlide) => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+        setTimeout(() => {
+            setCurrentSlide(newSlide);
+            setIsAnimating(false);
+        }, 800);
+    };
+
+    return (
+        <>
+            <Top />
+
+            <div
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                className="overflow-hidden flex flex-row items-center justify-center gap-2 h-[500px] w-full"
+            >
+                <div className="w-1/2 flex justify-center items-center">
+                    <img
+                        src={slides[currentSlide].image}
+                        alt="Beekeepers"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className={`rounded-full h-full w-1/2 animate__fast ${isAnimating ? 'animate__animated animate__zoomOutDown' : 'animate__animated animate__zoomInDown'}`}
+                    />
+                </div>
+
+                <div className="w-1/2 mx-10 flex flex-col">
+                    <h3 className={`text-3xl sm:text-4xl font-bold mb-4 transition-opacity duration-300  animate__fast ${isAnimating ? 'animate__animated animate__backOutRight' : 'animate__animated animate__backInRight'}`}>
+                        {slides[currentSlide].title}
+                    </h3>
+                    <p className={`text-gray-600 mb-4 text-xl transition-opacity duration-300 animate__fast ${isAnimating ? 'animate__animated animate__backOutDown' : 'animate__animated animate__backInUp'}`}>
+                        {slides[currentSlide].description}
+                    </p>
+
+                    <div className="flex space-x-2 mt-4">
+                        {slides.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-[#292948]' : 'bg-[#fb7644]'} transition duration-300`}
+                                onClick={() => changeSlide(index)}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+
+            </div>
+
+            <Wave type="top" />
+        </>
+    );
+}
+function Top() {
     return (
         <section className="relative overflow-hidden">
-            <div className={`${poppins.className} relative bg-grad bg-[#F36A3E] mt-8 mb-8 h-72 flex items-center justify-center`}>
+            <div className={`${poppins.className} relative bg-grad bg-[#F36A3E] mb-8 h-72 flex items-center justify-center`}>
                 <h1 className="text-[#ffffff] text-4xl sm:text-5xl font-bold text-center mb-2">
                     About HANIKO
                 </h1>
@@ -92,74 +204,33 @@ export default function AboutUs() {
                         </g>
                     </svg>
                 </div>
-
             </div>
-
-            <div className="scale-y-[-1] -mt-10">
-                <svg
-                    id="wave"
-                    style={{ transform: 'rotate(0deg)', transition: '0.3s' }}
-                    viewBox="0 0 1440 100"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <defs>
-                        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-                            <stop stopColor="rgba(243, 106, 62, 1)" offset="0%" />
-                            <stop stopColor="rgba(255, 95, 30, 0.8)" offset="100%" />
-                        </linearGradient>
-                    </defs>
-                    <path
-                        style={{ transform: 'translate(0, 0px)', opacity: 1 }}
-                        fill="url(#sw-gradient-0)"
-                        d="M0,60L10.9,50C21.8,40,44,20,65,10C87.3,0,109,0,131,3.3C152.7,7,175,13,196,18.3C218.2,23,240,27,262,36.7C283.6,47,305,63,327,63.3C349.1,63,371,47,393,35C414.5,23,436,17,458,23.3C480,30,502,50,524,51.7C545.5,53,567,37,589,36.7C610.9,37,633,53,655,65C676.4,77,698,83,720,83.3C741.8,83,764,77,785,65C807.3,53,829,37,851,38.3C872.7,40,895,60,916,63.3C938.2,67,960,53,982,55C1003.6,57,1025,73,1047,71.7C1069.1,70,1091,50,1113,41.7C1134.5,33,1156,37,1178,38.3C1200,40,1222,40,1244,46.7C1265.5,53,1287,67,1309,75C1330.9,83,1353,87,1375,85C1396.4,83,1418,77,1440,75C1461.8,73,1484,77,1505,71.7C1527.3,67,1549,53,1560,46.7L1570.9,40L1570.9,100L1560,100C1549.1,100,1527,100,1505,100C1483.6,100,1462,100,1440,100C1418.2,100,1396,100,1375,100C1352.7,100,1331,100,1309,100C1287.3,100,1265,100,1244,100C1221.8,100,1200,100,1178,100C1156.4,100,1135,100,1113,100C1090.9,100,1069,100,1047,100C1025.5,100,1004,100,982,100C960,100,938,100,916,100C894.5,100,873,100,851,100C829.1,100,807,100,785,100C763.6,100,742,100,720,100C698.2,100,676,100,655,100C632.7,100,611,100,589,100C567.3,100,545,100,524,100C501.8,100,480,100,458,100C436.4,100,415,100,393,100C370.9,100,349,100,327,100C305.5,100,284,100,262,100C240,100,218,100,196,100C174.5,100,153,100,131,100C109.1,100,87,100,65,100C43.6,100,22,100,11,100L0,100Z"
-                    />
-                </svg>
-            </div>
-
-
-
-            <div className="flex flex-row gap-2">
-                <div className="w-1/2 flex justify-center items-center">
-                    <Image
-                        src="/image/logo.png"
-                        alt="Beekeepers"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className="rounded-full h-full w-1/2"
-                    />
-                </div>
-
-                <div className="w-1/2">
-                    <h2 className="text-amber-500 text-lg font-semibold mb-2">WHO WE ARE</h2>
-                    <h3 className="text-3xl sm:text-4xl font-bold mb-4">About Our Company</h3>
-                    <p className="text-gray-600 mb-4">
-                        Our company was founded in 2001. Our honey is 100% natural. We bring
-                        to you honey straight from the hive, unheated, unprocessed,
-                        unpasteurized.
-                    </p>
-                    <p className="text-gray-600 mb-4">
-                        We have been producing honey for many years and we are undeniably
-                        proud of the quality of our products.
-                    </p>
-                    <p className="text-gray-600 mb-6">
-                        The term beekeeper refers to a person who keeps honey bees in beehives,
-                        boxes, or other receptacles. The beekeeper does not control the creatures.
-                        The beekeeper owns the hives or boxes and associated equipment. The
-                        bees are free to forage or leave as they desire.
-                    </p>
-                    <button className="bg-pink-500 text-white py-2 px-6 rounded-full hover:bg-pink-600 transition duration-300 ease-in-out flex items-center">
-                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Watch Video
-                    </button>
-                </div>
-            </div>
-
-
+            <Wave type="bottom" />
         </section>
     )
 }
 
+function Wave({ type }: any) {
+    return (
+        <div className={`${type === "top" ? "scale-x-[-1]" : "scale-y-[-1]"} -mt-10`}>
+            <svg
+                id="wave"
+                style={{ transform: 'rotate(0deg)', transition: '0.3s' }}
+                viewBox="0 0 1440 100"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <defs>
+                    <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                        <stop stopColor="rgba(243, 106, 62, 1)" offset="0%" />
+                        <stop stopColor="rgba(255, 95, 30, 0.8)" offset="100%" />
+                    </linearGradient>
+                </defs>
+                <path
+                    style={{ transform: 'translate(0, 0px)', opacity: 1 }}
+                    fill="url(#sw-gradient-0)"
+                    d="M0,60L10.9,50C21.8,40,44,20,65,10C87.3,0,109,0,131,3.3C152.7,7,175,13,196,18.3C218.2,23,240,27,262,36.7C283.6,47,305,63,327,63.3C349.1,63,371,47,393,35C414.5,23,436,17,458,23.3C480,30,502,50,524,51.7C545.5,53,567,37,589,36.7C610.9,37,633,53,655,65C676.4,77,698,83,720,83.3C741.8,83,764,77,785,65C807.3,53,829,37,851,38.3C872.7,40,895,60,916,63.3C938.2,67,960,53,982,55C1003.6,57,1025,73,1047,71.7C1069.1,70,1091,50,1113,41.7C1134.5,33,1156,37,1178,38.3C1200,40,1222,40,1244,46.7C1265.5,53,1287,67,1309,75C1330.9,83,1353,87,1375,85C1396.4,83,1418,77,1440,75C1461.8,73,1484,77,1505,71.7C1527.3,67,1549,53,1560,46.7L1570.9,40L1570.9,100L1560,100C1549.1,100,1527,100,1505,100C1483.6,100,1462,100,1440,100C1418.2,100,1396,100,1375,100C1352.7,100,1331,100,1309,100C1287.3,100,1265,100,1244,100C1221.8,100,1200,100,1178,100C1156.4,100,1135,100,1113,100C1090.9,100,1069,100,1047,100C1025.5,100,1004,100,982,100C960,100,938,100,916,100C894.5,100,873,100,851,100C829.1,100,807,100,785,100C763.6,100,742,100,720,100C698.2,100,676,100,655,100C632.7,100,611,100,589,100C567.3,100,545,100,524,100C501.8,100,480,100,458,100C436.4,100,415,100,393,100C370.9,100,349,100,327,100C305.5,100,284,100,262,100C240,100,218,100,196,100C174.5,100,153,100,131,100C109.1,100,87,100,65,100C43.6,100,22,100,11,100L0,100Z"
+                />
+            </svg>
+        </div>
+    )
+}

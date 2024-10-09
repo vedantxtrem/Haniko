@@ -4,8 +4,12 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <div className='relative bottom-0 w-screen'>
+<<<<<<< HEAD
       <img src="/image/footerwave.svg" alt="" />
       <footer className="bg-amber-50  pt-16 pb-8 ">
+=======
+      <footer className="bg-amber-50 pt-16 pb-8 ">
+>>>>>>> 83977e9 (about us)
         <div className="absolute top-0 left-0 right-0">
           <svg
             className="w-full h-auto"
