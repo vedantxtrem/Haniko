@@ -3,11 +3,12 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="bg-amber-50 overflow-hidden">
+    <section className="bg-amber-50 overflow-hidden z-40">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Section */}
-          <div className="relative z-10">
+          
+          <div className=" z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
               <span className="text-amber-500">Sweet Honey</span>
               <br />
