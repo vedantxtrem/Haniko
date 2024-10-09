@@ -11,8 +11,8 @@ const Navbar = () => {
     return (
         <nav className="bg-amber-50  p-4 flex justify-between items-center drop-shadow-2xl z-[100]">
             {/* Logo */}
-            <div className="text-2xl font-bold">
-                <img className='w-[10   0px] h-[50px]' src="/image/logo.png" alt="" />
+            <div className="text-2xl font-bold ">
+                <img className='w-[100px] h-[50px]' src="/image/logo.png" alt="" />
             </div>
 
             {/* Hamburger Menu for Mobile */}
