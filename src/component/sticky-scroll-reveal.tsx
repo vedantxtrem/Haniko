@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
+import useStoreColor from "@/store/store";
 
 export const StickyScroll = ({
   content,
@@ -58,12 +59,20 @@ export const StickyScroll = ({
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
   }, [activeCard]);
 
+  const { changeColor } = useStoreColor();
+
+  useEffect(() => {
+    changeColor(backgroundColors[activeCard % backgroundColors.length]);
+  }, [activeCard, changeColor]);
+
+
+
   return (
     <motion.div
-      // animate={{
-      //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-      // }}
-      className="h-[30rem]  scroll-bar-hidden md:h-[33rem] overflow-y-auto w-11/12 md:w-full flex md:justify-center relative space-x-10 rounded-md md:p-10"
+      animate={{
+        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+      }}
+      className="h-[30rem] overflow-x-hidden scroll-bar-hidden md:h-[33rem] overflow-y-auto w-11/12 md:w-full flex md:justify-center relative space-x-10 rounded-md md:p-10"
       ref={ref}
     >
       <div className="relative flex items-start px-4">
@@ -92,7 +101,7 @@ export const StickyScroll = ({
                   alt={item.title}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                  className="h-[250px] object-cover rounded-2xl mx-auto" 
+                  className="h-[250px] object-cover rounded-2xl mx-auto"
                 />
               </div>
             </div>

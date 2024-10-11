@@ -17,22 +17,23 @@ const slides = [
         image: "/image/logo.png"
     },
     {
+        title: "Quality Assurance",
+        description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table.",
+        image: "https://hanio.peerduck.com/wp-content/uploads/2020/11/bermix-studio-Uw15zjNj8ao-unsplash-1536x1024.jpg"
+    },
+    {
         title: "Supporting Sustainable Beekeeping",
         description: "Haniko isn’t just about honey; it’s about the ecosystem that creates it. We work closely with beekeepers to promote sustainable practices, ensuring that the bees thrive while we harvest honey responsibly.",
         image: "https://hanio.peerduck.com/wp-content/uploads/2020/11/vero-photoart-lNjD7h3yXIg-unsplash-1536x994.jpg"
     },
-    {
-        title: "Quality Assurance",
-        description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table.",
-        image: "https://hanio.peerduck.com/wp-content/uploads/2020/11/bermix-studio-Uw15zjNj8ao-unsplash-1536x1024.jpg"
-    }
 ];
 
 export default function AboutUs() {
     return (
         <>
             <Top />
-            <div className="md:mt-16 bg-[#fff7ed]">
+
+            <div className="md:mt-16">
                 <StickyScroll content={slides}></StickyScroll>
             </div>
 

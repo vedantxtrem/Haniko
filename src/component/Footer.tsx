@@ -7,17 +7,7 @@ export default function Footer() {
       <img src="/image/footerwave.svg" alt="" />
       <footer className="bg-amber-50  pt-16 pb-8 ">
         <div className="absolute top-0 left-0 right-0">
-          <svg
-            className="w-full h-auto"
-            viewBox="0 0 1440 96"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 96L60 85.3C120 74.7 240 53.3 360 42.7C480 32 600 32 720 37.3C840 42.7 960 53.3 1080 58.7C1200 64 1320 64 1380 64H1440V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0V96Z"
-              fill="#FFF7ED"
-            />
-          </svg>
+          
         </div>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

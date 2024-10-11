@@ -27,7 +27,7 @@ function ShowCase() {
         <img
           src={'/image/showcase.png'}
           alt="showcase"
-          className="w-[90%] md:w-[25rem] h-auto object-cover"
+          className="w-[90%] md:w-[20rem] h-auto object-cover"
         />
         <h1 className="text-3xl text-[#013e52] mt-3 text-center">
           Discover Our Honey
