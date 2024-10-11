@@ -1,8 +1,9 @@
 'use client'
 import Image from 'next/image'
 import { Poppins } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import 'animate.css';
+import { StickyScroll } from "@/component/sticky-scroll-reveal";
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -12,116 +13,37 @@ const poppins = Poppins({
 const slides = [
     {
         title: "Our Story",
-        description: "Haniko is more than just a honey brand; it's the culmination of decades of passion, dedication, and expertise in the world of honey. As a subsidiary of M B Exim Pvt. Ltd., a premium exporter of bulk honey with nearly three decades of experience, Haniko carries forward a rich legacy of quality and trust. Our parent company, M B Exim, has built its reputation by supporting small businesses and sharing the exceptional quality of Indian honey with the world.",
+        description: "Haniko is more than just a honey brand; it's the culmination of decades of passion, dedication, and expertise in the world of honey. As a subsidiary of M B Exim Pvt. Ltd., a premium exporter of bulk honey with nearly three decades of experience, Haniko carries forward a rich legacy of quality and trust.",
         image: "/image/logo.png"
-        
     },
     {
         title: "Supporting Sustainable Beekeeping",
-        description: "Haniko isn’t just about honey; it’s about the ecosystem that creates it. We work closely with beekeepers to promote sustainable practices, ensuring that the bees thrive while we harvest honey responsibly. Our focus on ethical beekeeping helps maintain the health of bee populations and supports the livelihoods of local communities.",
+        description: "Haniko isn’t just about honey; it’s about the ecosystem that creates it. We work closely with beekeepers to promote sustainable practices, ensuring that the bees thrive while we harvest honey responsibly.",
         image: "https://hanio.peerduck.com/wp-content/uploads/2020/11/vero-photoart-lNjD7h3yXIg-unsplash-1536x994.jpg"
     },
     {
         title: "Quality Assurance",
-        description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table. We are transparent about our processes, with certifications and rigorous testing at every stage to maintain the integrity of our honey.",
+        description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table.",
         image: "https://hanio.peerduck.com/wp-content/uploads/2020/11/bermix-studio-Uw15zjNj8ao-unsplash-1536x1024.jpg"
     }
 ];
 
 export default function AboutUs() {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [hover, setHover] = useState(false);
-    const [isAnimating, setIsAnimating] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = (event:any ) => {
-            if (!hover) return;
-
-            if (event instanceof WheelEvent) {
-                if (currentSlide < slides.length - 1 && event.deltaY > 0) {
-                    changeSlide(currentSlide + 1);
-                } else if (currentSlide > 0 && event.deltaY < 0) {
-                    changeSlide(currentSlide - 1);
-                }
-                event.preventDefault();
-            } else if (event instanceof KeyboardEvent) {
-                if (event.key === 'ArrowDown' && currentSlide < slides.length - 1) {
-                    changeSlide(currentSlide + 1);
-                } else if (event.key === 'ArrowUp' && currentSlide > 0) {
-                    changeSlide(currentSlide - 1);
-                }
-                event.preventDefault();
-            }
-        };
-
-        window.addEventListener('wheel', handleScroll, { passive: false });
-        window.addEventListener('keydown', handleScroll);
-
-        return () => {
-            window.removeEventListener('wheel', handleScroll);
-            window.removeEventListener('keydown', handleScroll);
-        };
-    }, [currentSlide, hover]);
-
-    const changeSlide = (newSlide:any) => {
-        if (isAnimating) return;
-        setIsAnimating(true);
-        setTimeout(() => {
-            setCurrentSlide(newSlide);
-            setIsAnimating(false);
-        }, 800);
-    };
-
     return (
         <>
             <Top />
-
-            <div
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                className="overflow-hidden flex flex-row items-center justify-center gap-2 h-[500px] w-full"
-            >
-                <div className="w-1/2 flex justify-center items-center">
-                    <img
-                        src={slides[currentSlide].image}
-                        alt="Beekeepers"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className={`rounded-full h-full w-1/2 animate__fast ${isAnimating ? 'animate__animated animate__zoomOutDown' : 'animate__animated animate__zoomInDown'}`}
-                    />
-                </div>
-
-                <div className="w-1/2 mx-10 flex flex-col">
-                    <h3 className={`text-3xl sm:text-4xl font-bold mb-4 transition-opacity duration-300  animate__fast ${isAnimating ? 'animate__animated animate__backOutRight' : 'animate__animated animate__backInRight'}`}>
-                        {slides[currentSlide].title}
-                    </h3>
-                    <p className={`text-gray-600 mb-4 text-xl transition-opacity duration-300 animate__fast ${isAnimating ? 'animate__animated animate__backOutDown' : 'animate__animated animate__backInUp'}`}>
-                        {slides[currentSlide].description}
-                    </p>
-
-                    <div className="flex space-x-2 mt-4">
-                        {slides.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-[#292948]' : 'bg-[#fb7644]'} transition duration-300`}
-                                onClick={() => changeSlide(index)}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-
+            <div className="md:mt-16">
+                <StickyScroll content={slides}></StickyScroll>
             </div>
 
-            <Wave type="top" />
         </>
     );
 }
+
 function Top() {
     return (
         <section className="relative overflow-hidden">
-            <div className={`${poppins.className} relative bg-grad bg-[#F36A3E] mb-8 h-72 flex items-center justify-center`}>
+            <div className={`${poppins.className} relative bg-grad bg-[#F36A3E] mb-8 h-72 md:h-36 flex items-center justify-center`}>
                 <h1 className="text-[#ffffff] text-4xl sm:text-5xl font-bold text-center mb-2">
                     About HANIKO
                 </h1>
@@ -212,7 +134,7 @@ function Top() {
 
 function Wave({ type }: any) {
     return (
-        <div className={`${type === "top" ? "scale-x-[-1]" : "scale-y-[-1]"} -mt-10`}>
+        <div className={`${type === "top" ? "scale-x-[-1]" : "scale-y-[-1]"} hidden md:block md:-mt-10 -mt-8`}>
             <svg
                 id="wave"
                 style={{ transform: 'rotate(0deg)', transition: '0.3s' }}

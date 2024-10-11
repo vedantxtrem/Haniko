@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background: #fffbeb;
+
+.scroll-bar-hidden {
+    overflow-y: scroll;
+    /* Allows vertical scrolling */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.scroll-bar-hidden::-webkit-scrollbar {
+    display: none;
+    /* Hides the scrollbar */
+}
+
+/* For Firefox */
+.scroll-bar-hidden {
+    scrollbar-width: none;
+    /* Hides the scrollbar */
 }
