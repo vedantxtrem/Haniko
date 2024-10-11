@@ -1,6 +1,6 @@
 export default function Types({ imageSrc, title, description, bgColor }:any) {
     return (
-        <div className="shadow-xl w-fit mx-auto rounded-[35px]">
+        <div className="shadow-xl w-fit mx-auto rounded-[35px] hover:scale-105 cursor-pointer transition-all duration-500">
             <div
                 className={`md:w-[40rem] h-[18rem] rounded-[35px] flex justify-end mx-auto ${bgColor} relative overflow-hidden shadow-inner`}
             >
