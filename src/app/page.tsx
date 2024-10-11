@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import BlogSection from '@/component/Blog'
 import HeroSection from '@/component/Header'
@@ -8,13 +8,14 @@ import WhyChooseUs from '@/component/WhyChossus'
 import VideoSection from '@/component/VideoSection'
 import React, { useEffect } from 'react'
 import ShowCase from "@/component/Products"
-import useStoreColor from "@/store/store"
+// import useStoreColor from "@/store/useStore"
 
 function page() {
-  const { changeColor } = useStoreColor()
-  useEffect(() => {
-    changeColor("#fff7ed")
-  }, [])
+
+  // const { changeColor } = useStoreColor()
+  // useEffect(() => {
+  //   changeColor("#fff7ed")
+  // }, [])
   return (
     <div>
       <HeroSection />

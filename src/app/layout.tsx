@@ -5,7 +5,7 @@ import "./globals.css";
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 import { useStore } from "zustand";
-import useStoreColor from "@/store/store";
+import useStoreColor from "@/store/useStore";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

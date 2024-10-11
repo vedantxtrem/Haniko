@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
-import useStoreColor from "@/store/store";
+import useStoreColor from "@/store/useStore";
 
 export const StickyScroll = ({
   content,
