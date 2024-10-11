@@ -8,14 +8,11 @@ import WhyChooseUs from '@/component/WhyChossus'
 import VideoSection from '@/component/VideoSection'
 import React, { useEffect } from 'react'
 import ShowCase from "@/component/Products"
+import HoneyTypes from '@/component/Types'
 // import useStoreColor from "@/store/useStore"
 
 function page() {
 
-  // const { changeColor } = useStoreColor()
-  // useEffect(() => {
-  //   changeColor("#fff7ed")
-  // }, [])
   return (
     <div>
       <HeroSection />
@@ -24,6 +21,7 @@ function page() {
       <ShowCase />
       <VideoSection />
       <AboutUs />
+      <HoneyTypes/>
       <BlogSection />
     </div>
   )
