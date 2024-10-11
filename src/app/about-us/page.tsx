@@ -32,7 +32,7 @@ export default function AboutUs() {
     return (
         <>
             <Top />
-            <div className="md:mt-16">
+            <div className="md:mt-16 bg-[#fff7ed]">
                 <StickyScroll content={slides}></StickyScroll>
             </div>
 
@@ -43,7 +43,7 @@ export default function AboutUs() {
 function Top() {
     return (
         <section className="relative overflow-hidden">
-            <div className={`${poppins.className} relative bg-grad bg-[#F36A3E] mb-8 h-72 md:h-36 flex items-center justify-center`}>
+            <div className={`${poppins.className} relative bg-grad bg-[#F36A3E] mb-8 h-72 md:h-[20rem] flex items-center justify-center`}>
                 <h1 className="text-[#ffffff] text-4xl sm:text-5xl font-bold text-center mb-2">
                     About HANIKO
                 </h1>
