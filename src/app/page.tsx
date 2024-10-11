@@ -8,7 +8,7 @@ import WhyChooseUs from '@/component/WhyChossus'
 import VideoSection from '@/component/VideoSection'
 import React, { useEffect } from 'react'
 import ShowCase from "@/component/Products"
-import HoneyTypes from '@/component/Types'
+import Types from "@/component/Types"
 // import useStoreColor from "@/store/useStore"
 
 function page() {
@@ -16,8 +16,18 @@ function page() {
   return (
     <div>
       <HeroSection />
+      <div className="flex flex-col gap-10">
+        <div className="w-3/4 mx-auto gap-5 flex flex-col md:flex-row">
+          <Types />
+          <Types />
+        </div>
+
+        <div className="w-3/4 mx-auto gap-5 flex flex-col md:flex-row">
+          <Types />
+          <Types />
+        </div>
+      </div>
       <WhyChooseUs />
-      {/* <Product/> */}
       <ShowCase />
       <VideoSection />
       <AboutUs />

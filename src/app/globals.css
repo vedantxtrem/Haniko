@@ -5,13 +5,13 @@
 @font-face {
     font-family: 'Harman Sans';
     src: url('/font/Ahmet_Altun_-_Harman-Sans.otf') format('opentype'),
-      url('/font/ahmet_altun_-_harman-sans.woff') format('woff'),
-      url('/font/ahmet_altun_-_harman-sans.woff2') format('woff2');
+        url('/font/ahmet_altun_-_harman-sans.woff') format('woff'),
+        url('/font/ahmet_altun_-_harman-sans.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  
+
 
 .scroll-bar-hidden {
     overflow-y: scroll;
@@ -58,3 +58,4 @@
         flex: 0 0 33.33%;
     }
 }
+
