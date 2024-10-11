@@ -1,5 +1,7 @@
 "use client";
+import Link from 'next/link';
 import React, { useState } from 'react';
+import { HiMenuAlt2 } from 'react-icons/hi';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,119 +11,101 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-amber-50 p-4 flex justify-between items-center drop-shadow-xl z-50 fixed w-full top-0 left-0">
-            {/* Logo */}
-            <div className="text-2xl font-bold ">
-                <img className="w-[100px] h-[50px]" src="/image/logo.png" alt="Logo" />
-            </div>
-
-            {/* Hamburger Menu for Mobile */}
-            <div className="lg:hidden">
+        <nav className="fixed top-4 bg-amber-50 px-5  flex justify-between items-center drop-shadow-[0_0_5px_#fcd34d] z-50  w-11/12 rounded-full ">
+            {/* Hamburger Menu for Mobile (left-aligned) */}
+            <div className="lg:hidden flex items-center">
                 <button
                     onClick={toggleSidebar}
-                    className="text-gray-500 focus:outline-none"
+                    className="text-gray-500 text-2xl focus:outline-none"
                 >
-                    <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M4 6h16M4 12h16m-7 6h7"
-                        />
-                    </svg>
+                    <HiMenuAlt2  />
                 </button>
+            </div>
+
+            {/* Logo for mobile (centered in mobile view) */}
+            <div className="text-2xl font-bold lg:order-none lg:w-auto mx-auto lg:mx-0">
+                <img className="w-[100px]  h-[70px]" src="/image/logo.png" alt="Logo" />
             </div>
 
             {/* Links for larger screens */}
             <div className="hidden lg:flex space-x-8 pr-10 font-medium">
-                <a
-                    href="/"
-                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
-                >
-                    Home
-                </a>
-                <a
-                    href="/products"
-                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
-                >
-                    Product
-                </a>
-                <a
-                    href="/about-us"
-                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
-                >
-                    About Us
-                </a>
-                <a
-                    href="/contact"
-                    className="text-gray-700 text-xl hover:border-b-4  border-amber-500 hover:text-amber-500 px-1"
-                >
-                    Contact Us
-                </a>
+                <Link href="/" passHref>
+                    <div className="relative text-gray-700 text-xl px-1 cursor-pointer group ">
+                        <span className="group-hover:text-amber-500 ">Home</span>
+                        <div className="absolute left-0 -bottom-1 w-full h-1 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></div>
+                    </div>
+                </Link>
+
+                <Link href="/products" passHref>
+                    <div className="relative text-gray-700 text-xl px-1 cursor-pointer group">
+                        <span className="group-hover:text-amber-500">Product</span>
+                        <div className="absolute left-0  -bottom-1 w-full h-1 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></div>
+                    </div>
+                </Link>
+
+                <Link href="/about-us" passHref>
+                    <div className="relative text-gray-700 text-xl px-1 cursor-pointer group">
+                        <span className="group-hover:text-amber-500">About Us</span>
+                        <div className="absolute left-0 -bottom-1 w-full h-1 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></div>
+                    </div>
+                </Link>
+
+                <Link href="/contact" passHref>
+                    <div className="relative text-gray-700 text-xl px-1 cursor-pointer group">
+                        <span className="group-hover:text-amber-500">Contact Us</span>
+                        <div className="absolute left-0 -bottom-1 w-full h-1 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></div>
+                    </div>
+                </Link>
             </div>
 
             {/* Sidebar for Mobile */}
-            <div
-                className={`h-screen fixed top-0 left-0 w-64 bg-white shadow-md transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'
-                    }`}
-            >
-                <button
-                    onClick={toggleSidebar}
-                    className="text-gray-500 p-4 focus:outline-none"
-                >
-                    <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M6 18L18 6M6 6l12 12"
-                        />
-                    </svg>
-                </button>
-
-                <nav className="w-full bg-amber-50 p-4 space-y-4 flex flex-col justify-center items-center">
-                    <div>
-                        <img src="/image/logo.png" className='w-[130px] ' alt="" />
+            {
+                isOpen && (
+                    <div className="w-[60%] h-screen absolute -top-5 -left-6 ">
+                        
+                        <button
+                            onClick={toggleSidebar}
+                            className="text-gray-500 p-4 focus:outline-none absolute top-0 right-2"
+                        >
+                            <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+                        <nav className="w-full bg-amber-50  space-y-4 flex flex-col justify-center items-center">
+                            <div>
+                                <img src="/image/logo.png" className="w-[90%]" alt="Logo" />
+                            </div>
+                            <a href="/about-us" className="block text-gray-700 hover:text-gray-900">
+                                About Us
+                            </a>
+                            <a href="/products" className="block text-gray-700 hover:text-gray-900">
+                                Product
+                            </a>
+                            <a href="/contact" className="block text-gray-700 hover:text-gray-900">
+                                Contact Us
+                            </a>
+                        </nav>
                     </div>
-                    <a
-                        href="/about-us"
-                        className="block text-gray-700 hover:text-gray-900"
-                    >
-                        About Us
-                    </a>
-                    <a
-                        href="/products"
-                        className="block text-gray-700 hover:text-gray-900"
-                    >
-                        Product
-                    </a>
-                    <a
-                        href="/contact"
-                        className="block text-gray-700 hover:text-gray-900"
-                    >
-                        Contact Us
-                    </a>
-                </nav>
-            </div>
+                )
+            }
 
-            {isOpen && (
+            {/* {isOpen && (
                 <div
                     onClick={toggleSidebar}
                     className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
                 />
-            )}
+            )} */}
         </nav>
     );
 };
