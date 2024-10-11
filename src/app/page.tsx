@@ -49,7 +49,7 @@ function page() {
       </div>
       <WhyChooseUs />
       <ShowCase />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <AboutUs />
       <BlogSection />
     </div>
