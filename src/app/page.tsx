@@ -16,6 +16,10 @@ function page() {
   return (
     <div>
       <HeroSection />
+      <WhyChooseUs />
+      <ShowCase />
+      {/* <VideoSection /> */}
+      <AboutUs />
       <div className="flex flex-col gap-10">
         <div className="w-3/4 mx-auto gap-5 flex flex-col md:flex-row">
           <Types
@@ -47,10 +51,6 @@ function page() {
           />
         </div>
       </div>
-      <WhyChooseUs />
-      <ShowCase />
-      {/* <VideoSection /> */}
-      <AboutUs />
       <BlogSection />
     </div>
   )
