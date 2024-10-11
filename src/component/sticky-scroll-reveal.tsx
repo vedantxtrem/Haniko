@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
-import useStoreColor from "@/store/useStore";
 
 export const StickyScroll = ({
   content,
@@ -58,12 +57,6 @@ export const StickyScroll = ({
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
   }, [activeCard]);
-
-  const { changeColor } = useStoreColor();
-
-  useEffect(() => {
-    changeColor(backgroundColors[activeCard % backgroundColors.length]);
-  }, [activeCard, changeColor]);
 
 
 

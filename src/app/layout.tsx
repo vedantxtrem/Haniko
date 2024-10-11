@@ -1,11 +1,8 @@
-'use client'
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
-import { useStore } from "zustand";
-import useStoreColor from "@/store/useStore";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,14 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const { color } = useStoreColor()
-
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ backgroundColor: color ? color : "#fff7ed" }}
+        style={{ backgroundColor: "#fff7ed" }}
       >
 
         <div className="w-screen flex justify-center items-center">
