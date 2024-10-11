@@ -1,7 +1,7 @@
 export default function Types() {
     return (
-        <div className="shadow-2xl w-fit mx-auto rounded-2xl">
-            <div className=" md:w-[40rem] h-[18rem] flex justify-end mx-auto bg-[#ffdfcc] relative overflow-hidden rounded-2xl shadow-xl shadow-inner">
+        <div className="shadow-xl w-fit mx-auto rounded-3xl">
+            <div className=" md:w-[40rem] h-[18rem] rounded-3xl flex justify-end mx-auto bg-[#ffdfcc] relative overflow-hidden  shadow-inner">
                 <div className="absolute hidden md:block -left-20">
                     <img
                         src="https://brokenovenbaking.com/wp-content/uploads/2022/11/honey-bun-cookies-14.jpg"
