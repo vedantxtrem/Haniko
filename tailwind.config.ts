@@ -22,6 +22,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        harman: ['Harman Sans', 'sans-serif'],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

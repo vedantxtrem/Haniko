@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Posey';
+    src: url('PoseyRegular.eot');
+    src: local('Posey'), local('PoseyRegular'),
+        url('PoseyRegular.eot?#iefix') format('embedded-opentype'),
+        url('PoseyRegular.woff2') format('woff2'),
+        url('PoseyRegular.woff') format('woff'),
+        url('PoseyRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Posey Textured';
+    src: url('Posey-TexturedItalic.eot');
+    src: local('Posey Textured Italic'), local('Posey-TexturedItalic'),
+        url('Posey-TexturedItalic.eot?#iefix') format('embedded-opentype'),
+        url('Posey-TexturedItalic.woff2') format('woff2'),
+        url('Posey-TexturedItalic.woff') format('woff'),
+        url('Posey-TexturedItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Posey';
+    src: url('Posey-Italic.eot');
+    src: local('Posey Italic'), local('Posey-Italic'),
+        url('Posey-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Posey-Italic.woff2') format('woff2'),
+        url('Posey-Italic.woff') format('woff'),
+        url('Posey-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Posey Textured';
+    src: url('PoseyTexturedRegular.eot');
+    src: local('Posey Textured'), local('PoseyTexturedRegular'),
+        url('PoseyTexturedRegular.eot?#iefix') format('embedded-opentype'),
+        url('PoseyTexturedRegular.woff2') format('woff2'),
+        url('PoseyTexturedRegular.woff') format('woff'),
+        url('PoseyTexturedRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

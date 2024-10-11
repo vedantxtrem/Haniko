@@ -5,16 +5,18 @@ import Product from '@/component/Productsection'
 import WhyChooseUs from '@/component/WhyChossus'
 import VideoSection from '@/component/VideoSection'
 import React from 'react'
+import ShowCase from "@/component/Products"
 
 function page() {
   return (
     <div>
-      <HeroSection/>
-      <WhyChooseUs/>
-      <Product/>
+      <HeroSection />
+      <WhyChooseUs />
+      {/* <Product/> */}
+      <ShowCase />
       <VideoSection />
-      <AboutUs/>
-      <BlogSection/>
+      <AboutUs />
+      <BlogSection />
     </div>
   )
 }
