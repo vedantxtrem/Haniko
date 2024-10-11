@@ -31,7 +31,6 @@ function page() {
       <ShowCase />
       <VideoSection />
       <AboutUs />
-      <HoneyTypes/>
       <BlogSection />
     </div>
   )
