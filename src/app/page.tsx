@@ -19,7 +19,7 @@ function page() {
       <HeroSection />
       <WhyChooseUs />
       <ShowCase />
-      {/* <VideoSection /> */}
+      <VideoSection />
       <AboutUs />
       <TypeSection />
       <BlogSection />

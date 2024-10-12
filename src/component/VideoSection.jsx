@@ -10,9 +10,9 @@ function VideoSection() {
           loop
           muted
         >
-          <source src="/image/video.webm" type="video/webm" />
+          <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm" />
         </video>
-        <div className="absolute inset-0 bg-gray-400 opacity-40"></div>
+        <div className="absolute inset-0 bg-black opacity-20"></div>
       </div>
 
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
