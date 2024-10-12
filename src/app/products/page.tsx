@@ -14,7 +14,7 @@ function ProductShowcase() {
       id: 1,
       title: "Pure Organic Honey",
       description:
-        "Harvested from the finest Indian farms, our honey is perfect for adding natural sweetness to your meals.",
+        "Harvested from the finest Indian farms, our Pure Organic Honey is carefully collected from hives that are nurtured without any chemicals. This golden elixir is perfect for adding natural sweetness to your meals, whether drizzled over pancakes, blended in smoothies, or simply enjoyed by the spoonful. Experience the true taste of nature in every drop.",
       imageSrc:
         "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
     },
@@ -22,7 +22,7 @@ function ProductShowcase() {
       id: 2,
       title: "Golden Wildflower Honey",
       description:
-        "Experience the rich, floral taste of our wildflower honey, sourced from the heart of nature.",
+        "Experience the rich, floral taste of our Golden Wildflower Honey, sourced from the heart of diverse blooms. This delightful honey offers a complex flavor profile that varies with the seasons and the blossoms available. It's perfect for sweetening your tea, enhancing your baking, or simply enjoying on its own. Dive into the natural sweetness of wildflowers with every jar.",
       imageSrc:
         "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
     },
@@ -30,7 +30,7 @@ function ProductShowcase() {
       id: 3,
       title: "Creamed Honey",
       description:
-        "Our creamed honey offers a smooth texture, perfect for spreading on toast or mixing into your tea.",
+        "Our Creamed Honey offers a smooth, spreadable texture that's perfect for breakfast or snacking. Unlike regular honey, which can be runny, creamed honey retains all the natural goodness while providing a delightful consistency. Spread it on toast, mix it into oatmeal, or use it in your favorite recipes. It's the perfect addition to your kitchen pantry for any time of the day.",
       imageSrc:
         "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
     },
@@ -38,7 +38,7 @@ function ProductShowcase() {
       id: 4,
       title: "Raw Honeycomb",
       description:
-        "Enjoy the purest form of honey with our natural honeycomb, straight from the hive.",
+        "Enjoy the purest form of honey with our Raw Honeycomb, straight from the hive. Each piece is bursting with flavor and packed with nutrients. Honeycomb can be enjoyed on its own or paired with cheese for a sophisticated appetizer. It’s a true delicacy that connects you to the natural world, allowing you to experience honey as it was meant to be enjoyed.",
       imageSrc:
         "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
     },
@@ -46,11 +46,12 @@ function ProductShowcase() {
       id: 5,
       title: "Flavored Honey",
       description:
-        "Indulge in our unique flavored honey, perfect for adding a twist to your drinks and desserts.",
+        "Indulge in our unique Flavored Honey, infused with a variety of natural flavors to elevate your culinary creations. Whether you’re adding a twist to your drinks, enhancing desserts, or simply drizzling it over yogurt, our flavored honey provides an exciting taste experience. Explore different varieties such as vanilla, cinnamon, and citrus for a delightful addition to your kitchen.",
       imageSrc:
         "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
     },
   ];
+  
 
   return (
     <div className="bg-yellow-50 py-16 px-4 mt-10 sm:px-6 lg:px-8">
