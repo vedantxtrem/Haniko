@@ -1,4 +1,4 @@
-export default function Types({ imageSrc, title, description, bgColor }:any) {
+export default function TypesCard({ imageSrc, title, description, bgColor }:any) {
     return (
         <div className="shadow-xl w-fit mx-auto rounded-[35px] hover:scale-105 cursor-pointer transition-all duration-500">
             <div
@@ -23,7 +23,7 @@ export default function Types({ imageSrc, title, description, bgColor }:any) {
                         </span>
                     </div>
 
-                    <span className="text-xl mb-5 text-slate-800 drop-shadow-xl mx-10 border-b-2 border-slate-800 w-fit border-dotted font-semibold">
+                    <span className="text-xl mb-5 text-amber-500 drop-shadow-xl mx-10 border-b-2 border-amber-500 w-fit border-dashed font-semibold">
                         Learn More
                     </span>
                 </div>
