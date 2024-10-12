@@ -53,6 +53,9 @@ function ProductShowcase() {
   ];
   
 
+
+  
+
   return (
     <div className="bg-yellow-50 py-16 px-4 mt-10 sm:px-6 lg:px-8">
       {/* Hero Section with Heading */}
