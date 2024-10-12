@@ -24,7 +24,7 @@ const services = [
 const Blog = () => {
   return (
 
-    <div className="mx-auto  flex justify-center object-center mb-16 bg-[#fffbeb] px-3">
+    <div className="mx-auto  flex justify-center object-center mb-16 bg-[#fffbeb] px-3 mt-16">
       <div className="flex  justify-center object-center flex-col gap-12 sm:gap-16">
         <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
           Blog

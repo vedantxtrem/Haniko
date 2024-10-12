@@ -57,7 +57,7 @@ function TypeSection() {
         ></div>
 
         <div className="relative z-30">
-          <div className="w-full max-w-7xl mx-auto gap-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="w-full max-w-7xl mx-auto gap-10 xl:gap-x-20 grid grid-cols-1 xl:grid-cols-2">
             <TypesCard
               imageSrc="https://brokenovenbaking.com/wp-content/uploads/2022/11/honey-bun-cookies-14.jpg"
               title="Linden Honey"
@@ -74,7 +74,7 @@ function TypeSection() {
               imageSrc="https://img.freepik.com/free-photo/honey-jar-with-wooden-honey-dipper_23-2149442339.jpg"
               title="Organic Honey"
               description="Organic honey is highly nutritious honey made by bees that…"
-              bgColor="bg-[#feb3b2]"
+              bgColor="bg-[#f3f3f3]"
             />
             <TypesCard
               imageSrc="https://cdn.shopify.com/s/files/1/0020/7978/5023/files/a-jar-of-brightland-raw-california-honey.jpg?v=1642822491"
