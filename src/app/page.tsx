@@ -6,7 +6,7 @@ import AboutUs from '@/component/HomeAbout'
 import Product from '@/component/Productsection'
 import WhyChooseUs from '@/component/WhyChossus'
 import VideoSection from '@/component/VideoSection'
-import React, { useEffect } from 'react'
+import React from 'react'
 import ShowCase from "@/component/Products"
 import TypeSection from '@/component/TypeSection'
 
