@@ -46,14 +46,14 @@ const Blog = () => {
                   <p className="md:my-6 text-2xl text-center font-semibold">{service.name}</p>
                 </div>
 
-                <div className="absolute inset-0 h-full w-full rounded-xl bg-[#003e52] px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div className="absolute inset-0 h-full w-full rounded-xl bg-amber-300 px-12 text-center text-gray-950 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                   <div className="flex min-h-full flex-col items-center justify-center">
                     <h2 className="text-2xl font-bold mb-4">{service.name}</h2>
                     <p className="text-lg text-pretty text-center mb-4">
                       {service.description}
                     </p>
                     <a href="tel:555-555-5555" className="inline-flex">
-                      <button className="my-2 bg-[#e74f3d] hover:bg-[#f33e2a] transition-all duration-1000 text-white font-bold py-2 px-4 w-auto rounded-full inline-flex items-center">
+                      <button className="my-2 bg-red-600 hover:bg-[#f33e2a] transition-all duration-1000 text-white font-bold py-2 px-4 w-auto rounded-full inline-flex items-center">
                         <span>Schedule Service</span>
                       </button>
                     </a>
