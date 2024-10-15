@@ -13,7 +13,7 @@ import TypeSection from '@/component/TypeSection'
 // import useStoreColor from "@/store/useStore"
 
 function page() {
-
+  //test
   return (
     <div>
       <HeroSection />
