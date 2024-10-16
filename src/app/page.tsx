@@ -10,8 +10,6 @@ import React from 'react'
 import ShowCase from "@/component/Products"
 import TypeSection from '@/component/TypeSection'
 
-// import useStoreColor from "@/store/useStore"
-
 function page() {
   //test
   return (
