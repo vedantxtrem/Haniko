@@ -2,12 +2,15 @@
 
 import React, { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 function ShowCase() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true });
+  const autoplay = Autoplay({ delay: 3000 });
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true }, [autoplay]);
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
-  const [hover, setHover] = useState(-1); // Initialize with -1 for no hover
+  const [hover, setHover] = useState(-1);
 
   const onSelect = () => {
     if (!emblaApi) return;
@@ -35,7 +38,7 @@ function ShowCase() {
       </div>
 
       <div
-        className="overflow-hidden relative mt-10 w-[75%] user-select-none"
+        className="overflow-hidden relative mt-10 w-[100%] user-select-none"
         ref={emblaRef}
       >
         <div className="embla__container flex">
@@ -73,7 +76,7 @@ function ShowCase() {
       </div>
 
       {/* Previous and Next buttons */}
-      <button
+      {/* <button
         className={`embla__prev absolute left-4 top-1/2 transform -translate-y-1/2  p-2 transition duration-200`}
         onClick={() => emblaApi && emblaApi.scrollPrev()}
         disabled={prevBtnDisabled}
@@ -87,7 +90,7 @@ function ShowCase() {
         disabled={nextBtnDisabled}
       >
         <img src={'/image/next.png'} alt="next" className="" />
-      </button>
+      </button> */}
     </main >
   );
 }

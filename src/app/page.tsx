@@ -16,9 +16,6 @@ function page() {
   //test
   return (
     <>
-      <div className="w-screen flex justify-center items-center">
-        <Navbar contactLink="#contact" />
-      </div>
       <div>
         <HeroSection />
         <WhyChooseUs />
