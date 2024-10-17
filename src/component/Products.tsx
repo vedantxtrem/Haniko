@@ -50,9 +50,9 @@ function ShowCase() {
               className="embla__slide flex-shrink-0 w-full p-4"
             >
               <img
-                src={'/image/bottle.png'}
+                src={'/image/honey.png'}
                 alt="bottle"
-                className={`w-full h-auto max-w-[5rem] object-cover mx-auto transition-transform duration-1000 cursor-pointer ${hover === index ? 'scale-110' : ''}`}
+                className={`w-full h-auto max-w-[10rem] object-cover mx-auto transition-transform duration-1000 cursor-pointer ${hover === index ? 'scale-110' : ''}`}
               />
 
               <div className="flex leading-3 flex-col">

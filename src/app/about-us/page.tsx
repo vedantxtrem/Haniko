@@ -43,7 +43,7 @@ const ScrollSections = () => {
           <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24 relative z-30">
             <div className="w-full flex justify-center items-center">
               {/* Text Section */}
-              <div className="z-20 w-full flex flex-col justify-center items-center ">
+              <div className="z-20 w-full flex flex-col justify-center items-center text-center">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-amber-700">
                   <span className="text-amber-500 text-8xl">About Haniko</span>
                   <br />
