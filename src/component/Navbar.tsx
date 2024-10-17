@@ -107,6 +107,7 @@ const Navbar = ({contactLink}:{contactLink:string}) => {
 };
 
 export default Navbar;
+
 // import Head from 'next/head';
 // import Link from 'next/link';
 // import { useState } from 'react';

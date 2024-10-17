@@ -16,7 +16,7 @@ function page() {
   return (
     <>
       <div className="w-screen flex justify-center items-center">
-        <Navbar />
+        <Navbar contactLink="@contact" />
       </div>
       <div>
         <HeroSection />
