@@ -15,6 +15,10 @@ body{
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 .scroll-bar-hidden {
     overflow-y: scroll;
