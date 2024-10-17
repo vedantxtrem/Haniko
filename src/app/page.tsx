@@ -10,13 +10,14 @@ import React from 'react'
 import ShowCase from "@/component/Products"
 import TypeSection from '@/component/TypeSection'
 import Navbar from "@/component/Navbar"
+import Contact from '@/component/Contact'
 
 function page() {
   //test
   return (
     <>
       <div className="w-screen flex justify-center items-center">
-        <Navbar contactLink="@contact" />
+        <Navbar contactLink="#contact" />
       </div>
       <div>
         <HeroSection />
@@ -26,6 +27,7 @@ function page() {
         <AboutUs />
         <TypeSection />
         <BlogSection />
+        <Contact />
       </div>
     </>
   )
