@@ -43,7 +43,7 @@ const Navbar = ({contactLink}:{contactLink:string}) => {
                     </div>
                 </Link>
 
-                <Link href="/slide/index.html" passHref>
+                <Link href="/about-us" passHref>
                     <div className="relative text-gray-700 text-xl px-1 cursor-pointer group">
                         <span className="group-hover:text-amber-500">About Us</span>
                         <div className="absolute left-0 -bottom-1 w-full h-1 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></div>

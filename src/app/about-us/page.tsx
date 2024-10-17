@@ -27,7 +27,6 @@ const ScrollSections = () => {
       <header>
         <div>
           <h1 className="text-orange-700">About Haniko</h1>
-          {/* <p className="text-orange-700">👇 Scroll down to see more.</p> */}
         </div>
       </header>
       <main className="">
