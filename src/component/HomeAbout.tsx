@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutHoney = () => {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center py-12 lg:py-24 px-6 lg:px-20 bg-white overflow-hidden">
+    <section className="relative flex flex-col lg:flex-row items-center py-12 lg:py-24 px-6 lg:px-20  overflow-hidden">
       {/* Decorative background shapes */}
       <div className='w-full lg:w-[50%] flex'>
         <div className="absolute inset-0 z-0">
@@ -22,7 +22,7 @@ const AboutHoney = () => {
 
           <div className="p-8 rounded-full">
             <Image
-              src="https://hanio.peerduck.com/wp-content/uploads/2021/02/Group-174.png" // Replace with the correct path to your image
+              src="https://hanio.peerduck.com/wp-content/uploads/2021/02/Group-174.png" // Replace  image
               alt="Honey"
               width={400}
               height={400}
