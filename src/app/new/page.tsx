@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 
 const products = [
@@ -35,13 +36,57 @@ const ProductPage: React.FC = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
-            <div key={index} className="flex flex-col items-center bg-orange-500 p-6 rounded-lg shadow-lg">
-              <img 
-                src={product.imageUrl} 
-                alt={product.name} 
-                className="w-48 h-48 mb-6" 
-              />
-              <h2 className="text-xl font-semibold">{product.name}</h2>
+            <div key={index} className="relative flex flex-col items-center ">
+              {/* Hexagon background */}
+              <div className="hexagon absolute ">
+                <div className="bg-orange-500 w-32 h-32"></div>
+              </div>
+
+              {/* Image inside hexagon */}
+              <div className="absolute z-10">
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}  // Dynamic alt text
+                  className="w-[200px] h-40 object-contain"
+                />
+              </div>
+
+              {/* Text below the image */}
+              <h2 className="mt-4 text-xl font-bold text-black">{product.name}</h2>
+
+              {/* Hexagon styling */}
+              <style jsx>{`
+                .hexagon {
+                  display: inline-block;
+                  position: relative;
+                  width: 120px;
+                  height: 104px;
+                  background-color: transparent;
+                }
+                .hexagon::before,
+                .hexagon::after {
+                  content: '';
+                  position: absolute;
+                  width: 0;
+                  border-left: 60px solid transparent;
+                  border-right: 60px solid transparent;
+                }
+                .hexagon::before {
+                  top: -30px;
+                  border-bottom: 30px solid #f97316; /* Orange color */
+                }
+                .hexagon::after {
+                  bottom: -30px;
+                  border-top: 30px solid #f97316; /* Orange color */
+                }
+                .hexagon > div {
+                  position: absolute;
+                  top: 0;
+                  width: 120px;
+                  height: 104px;
+                  background-color: #f97316; /* Orange color */
+                }
+              `}</style>
             </div>
           ))}
         </div>

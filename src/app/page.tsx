@@ -18,9 +18,10 @@ function page() {
   return (
     <>
       <div>
+        <VideoSectionBanner />
         <VideoSection />
         <WhyChooseUs />
-        <ShowCase />    
+        <ShowCase />
         <AboutUs />
         <TypeSection />
         <BlogSection />
