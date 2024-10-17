@@ -19,11 +19,11 @@ function page() {
     <>
       <div>
         <VideoSectionBanner />
-        <VideoSection />
         <WhyChooseUs />
         <ShowCase />
         <AboutUs />
         <TypeSection />
+        <VideoSection />
         <BlogSection />
         <Contact />
       </div>
