@@ -33,7 +33,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ backgroundColor: "#fffbeb" }}
       >
-
         <div className="w-screen flex justify-center items-center">
           <Navbar />
         </div>
