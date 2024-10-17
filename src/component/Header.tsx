@@ -94,17 +94,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Section */}
           <div className="z-20">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-amber-700">
-              <span className="text-amber-500">Sweet Honey</span>
-              <br />
-              <span className="text-gray-900">from our hive</span>
-            </h1>
-            <p className="text-gray-600 mb-8 max-w-lg">
-              Experience the finest honey sourced directly from our hives. Crafted with love, delivered with care.
-            </p>
-            <button className="bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-              View Products
-            </button>
+            
           </div>
 
           {/* Image Section */}

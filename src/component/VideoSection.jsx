@@ -2,7 +2,7 @@ import React from "react";
 
 function VideoSection() {
   return (
-    <main className="relative h-[80vh] w-full">
+    <main className="w-screen relative h-[100vh] ">
       <div className="absolute top-0 left-0 w-full h-full">
         <video
           className="w-full h-full object-cover backdrop-blur-xl"
@@ -12,26 +12,26 @@ function VideoSection() {
         >
           <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm" />
         </video>
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0  opacity-20"></div>
       </div>
 
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
-        <img
-          src="/image/videoImage.png"
-          alt="video image"
-          className="w-[200px] md:w-[300px]"
-        />
-        <h1 className="text-4xl md:text-6xl font-bold text-[#013e52] drop-shadow-lg">
-          HANIKO
-        </h1>
-        <h2 className="text-xl md:text-2xl font-bold text-[#F28729] mt-4 drop-shadow-md">
-          Every bottle supports Indian beekeepers.
-          <br />
-          100% harvested & bottled in India.
-        </h2>
-        <button className="bg-[#F28729] text-white font-bold py-2 px-6 rounded-xl mt-8 hover:bg-[#E67E33] transition-all duration-300 shadow-lg border-4">
-          Learn More
-        </button>
+      <div className="w-full h-full absolute flex flex-col lg:justify-items-center ">
+
+        <div className="p-10 my-auto pl-28">
+          <h1 className="text-4xl lg:text-7xl font-bold mb-4 text-amber-700">
+            <span className="text-white  ">The finest taste </span>
+            <br />
+            <span className="text-white ">of <span className="text-[#f2b104] "> Nature </span></span>
+          </h1>
+
+          <p className="text-white mb-8 max-w-lg text-xl lg:text-2xl">
+            At Haniko, we deliver the finest honey straight from the source to you
+          </p>
+          <button className="bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-yellow-400 transition duration-300 ease-in-out transform hover:scale-105">
+            View Products
+          </button>
+        </div>
+
       </div>
     </main>
   );

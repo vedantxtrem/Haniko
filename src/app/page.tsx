@@ -17,10 +17,11 @@ function page() {
   return (
     <>
       <div>
-        <HeroSection />
+        {/* <HeroSection /> */}
+        <VideoSection />
         <WhyChooseUs />
         <ShowCase />
-        <VideoSection />
+       
         <AboutUs />
         <TypeSection />
         <BlogSection />
