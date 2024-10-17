@@ -11,7 +11,7 @@
     font-style: normal;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -64,4 +64,44 @@ html {
     .embla__slide {
         flex: 0 0 33.33%;
     }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-4px, 0);
+    }
+    50% {
+        transform: translate(4px, 0);
+    }
+    75% {
+        transform: translate(-2px, 0);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.bee-shake {
+    animation: shake 0.5s ease-in-out infinite, rotate 1s ease-in-out infinite;
 }

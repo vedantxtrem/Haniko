@@ -1,24 +1,37 @@
 "use client";
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HiMenuAlt2 } from 'react-icons/hi';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [contactLink, setContactLink] = useState('/contact-us');
+    const [stick, setStick] = useState(true);
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
 
-    let contactLink = '/contact-us';
-    if (window.location.pathname === '/') {
-        contactLink = '#contact';
-    } else {
-        contactLink = '/#contact';
-    }
+
+    useEffect(() => {
+        if (window.location.pathname === '/') {
+            setContactLink('#contact');
+        } else {
+            setContactLink('/#contact-us');
+        }
+    }, []);
+
+
+    useEffect(() => {
+        if (window.location.pathname === '/about-us') {
+            setStick(false)
+        } else {
+            setStick(true)
+        }
+    }, []);
 
     return (
-        <nav className="fixed top-4 bg-amber-50 px-5 flex justify-between items-center drop-shadow-[0_0_5px_#fcd34d] z-50 w-11/12 rounded-full">
+        <nav className={`${stick ? "fixed" : "absolute"} top-4 bg-amber-50 px-5 flex justify-between items-center drop-shadow-[0_0_5px_#fcd34d] z-50 w-11/12 rounded-full`}>
             {/* Hamburger Menu for Mobile (left-aligned) */}
             <div className="lg:hidden flex items-center">
                 <button
@@ -114,95 +127,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// import Head from 'next/head';
-// import Link from 'next/link';
-// import { useState } from 'react';
-
-// const Navbar = () => {
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-//   const toggleMobileMenu = () => {
-//     setIsMobileMenuOpen(!isMobileMenuOpen);
-//   };
-
-//   return (
-//     <>
-//       <Head>
-//         <meta charSet="UTF-8" />
-//         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-//         <title>Site Title</title>
-//       </Head>
-
-//       <nav className="navbar bg-gray-900 text-white px-4 py-2">
-//         <div className="container mx-auto flex justify-between items-center">
-//           <Link href="/">
-//             <span className="text-lg font-bold">Site Name</span>
-//           </Link>
-//           <button
-//             id="mobile-toggle"
-//             aria-label="Toggle Mobile Menu"
-//             className="ml-4 inline-flex items-center px-3 py-2 border rounded text-gray-400 border-gray-700 hover:text-white hover:border-white md:hidden"
-//             onClick={toggleMobileMenu}
-//           >
-//             <span className="icon-bar" />
-//             <span className="icon-bar" />
-//             <span className="icon-bar" />
-//           </button>
-
-//           <div className={`navbar-collapse ${isMobileMenuOpen ? 'block' : 'hidden'} md:flex md:items-center md:space-x-6`}>
-//             <ul className="navbar-nav flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-//               <li><Link href="/about"><span className="text-white hover:text-gray-400">About</span></Link></li>
-//               <li><Link href="/services"><span className="text-white hover:text-gray-400">Services</span></Link></li>
-//               <li><Link href="/contact"><span className="text-white hover:text-gray-400">Contact</span></Link></li>
-//             </ul>
-
-//             <div className="header-info mt-4 md:mt-0 flex flex-col md:flex-row md:space-x-6">
-//               <Link href="https://goo.gl/maps/XyANinc4EoxHZguc9" target="_blank" className="text-white hover:text-gray-400">
-//                 <p>202 Honey Springs Rd, Crawford, TN</p>
-//               </Link>
-//               <Link href="tel:8002758777" className="text-white hover:text-gray-400">
-//                 <p className="font-bold">800.275.8777</p>
-//                 <p className="text-sm">Call Us</p>
-//               </Link>
-//             </div>
-//           </div>
-
-//           <div className="header-icons flex items-center space-x-4">
-//             <form className="search-form">
-//               <input
-//                 type="text"
-//                 placeholder="Search..."
-//                 className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-//               />
-//             </form>
-//             <Link href="/cart">
-//               <span className="text-white hover:text-gray-400">Cart</span>
-//             </Link>
-//           </div>
-//         </div>
-//       </nav>
-
-//       <header className="header-bg bg-gray-800 text-white py-10">
-//         <div className="container mx-auto text-center">
-//           <h1 className="header-title text-3xl font-bold">
-//             Page Title {/* Dynamic page title */}
-//           </h1>
-
-//           <div className="breadcrumbs mt-4">
-//             <Link href="/">
-//               <span className="text-gray-400 hover:text-white">Home</span>
-//             </Link> / <span>Current Page</span>
-//           </div>
-//         </div>
-
-//         <div className="header-wave mt-10">
-//           {/* Add a decorative wave or SVG graphic here */}
-//         </div>
-//       </header>
-//     </>
-//   );
-// };
-
-// export default Navbar;
-

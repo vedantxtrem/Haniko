@@ -103,7 +103,6 @@ const ScrollSections = () => {
               </div>
             </li>
           ))}
-
         </ul>
       </main>
       <aside>

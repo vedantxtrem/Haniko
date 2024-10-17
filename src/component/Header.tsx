@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function HeroSection() {
   const [isMobile, setIsMobile] = useState(false);
@@ -13,8 +13,83 @@ export default function HeroSection() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const beeRef = useRef<HTMLDivElement>(null);
+  const [maxDimensions, setMaxDimensions] = useState({ maxWidth: 0, maxHeight: 0 });
+
+  let targetX = 0;
+  let targetY = 0;
+
+  useEffect(() => {
+    const updateMaxDimensions = () => {
+      setMaxDimensions({
+        maxWidth: window.innerWidth - 16,
+        maxHeight: window.innerHeight - 16,
+      });
+    };
+
+    // Update dimensions on initial mount
+    updateMaxDimensions();
+
+    // Update dimensions on window resize
+    window.addEventListener('resize', updateMaxDimensions);
+    return () => {
+      window.removeEventListener('resize', updateMaxDimensions);
+    };
+  }, []);
+
+  useEffect(() => {
+    const beeContainer = beeRef.current;
+
+    const getRandomWaypoint = () => ({
+      x: Math.random() * maxDimensions.maxWidth,
+      y: Math.random() * maxDimensions.maxHeight,
+    });
+
+    const moveBee = () => {
+      const { x, y } = getRandomWaypoint();
+      targetX = x;
+      targetY = y;
+    };
+
+    const animate = () => {
+      if (beeContainer) {
+        const currentTransform = beeContainer.style.transform;
+        const [_, x, y] = /translate\(([^px]+)px, ([^px]+)px\)/.exec(currentTransform) || [0, 0, 0];
+        const newX = parseFloat(x as string) + (targetX - parseFloat(x as string)) * 0.1; // Adjust the speed of movement
+        const newY = parseFloat(y as string) + (targetY - parseFloat(y as string)) * 0.1;
+
+        beeContainer.style.transform = `translate(${newX}px, ${newY}px)`;
+      }
+
+      requestAnimationFrame(animate); // Loop the animation
+    };
+
+    // Start moving to a random waypoint initially
+    moveBee();
+    animate();
+
+  
+    const intervalId = setInterval(moveBee, 800);
+
+    return () => {
+      clearInterval(intervalId); // Cleanup on unmount
+    };
+  }, [maxDimensions]);
+
   return (
     <section className="bg-amber-50 overflow-hidden relative p-4 mt-16 lg:mt-0">
+      <div ref={beeRef} className="absolute z-20 w-12 h-12 transition-transform  ease-in-out">
+        <Image
+          src="/image/bee.webp"
+          alt="Flying Bee"
+          width={16}
+          height={16}
+          className="bee-shake"
+        />
+      </div>
+
+      <span></span>
+
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24 relative z-30">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Section */}
@@ -56,104 +131,10 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Flying Honeybee */}
-        <div className="absolute z-20 w-12 h-12 bee-container">
-          <Image
-            src="/image/bee.webp" // Replace with the actual honeybee image path
-            alt="Flying Bee"
-            width={48}
-            height={48}
-            className="animate-fly"
-          />
-        </div>
       </div>
 
       {/* Keyframes for animations */}
-      <style jsx>{`
-        .animate-fly {
-          animation: fly 20s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite, rotateBee 1.5s linear infinite;
-        }
 
-        @keyframes fly {
-          0% {
-            transform: translate(0, 0);
-          }
-          25% {
-            transform: translate(60vw, -30vh) rotate(20deg);
-          }
-          50% {
-            transform: translate(-50vw, 40vh) rotate(-10deg);
-          }
-          75% {
-            transform: translate(40vw, -20vh) rotate(10deg);
-          }
-          100% {
-            transform: translate(0, 0);
-          }
-        }
-
-        @keyframes rotateBee {
-          0%, 100% {
-            transform: rotate(0deg);
-          }
-          50% {
-            transform: rotate(360deg);
-          }
-        }
-
-        .bee-container {
-          position: absolute;
-          top: 10%;
-          left: 10%;
-          width: 48px;
-          height: 48px;
-          z-index: 50;
-        }
-
-        .animate-pulse-slow {
-          animation: pulse 6s ease-in-out infinite;
-        }
-
-        .animate-bounce-slow {
-          animation: bounce 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.1);
-            opacity: 0.7;
-          }
-        }
-
-        @keyframes bounce {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-
-        /* Honeycomb animation */
-        @keyframes honeycombAnim {
-          0%, 100% {
-            transform: scale(1);
-            opacity: 0.2;
-          }
-          50% {
-            transform: scale(1.1);
-            opacity: 0.6;
-          }
-        }
-
-        .animate-honeycomb {
-          animation: honeycombAnim 10s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 }
