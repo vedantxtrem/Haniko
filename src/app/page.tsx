@@ -11,13 +11,14 @@ import ShowCase from "@/component/Products";
 import TypeSection from "@/component/TypeSection";
 import Navbar from "@/component/Navbar";
 import Contact from "@/component/Contact";
+import VideoSectionBanner from "@/component/VideoSectionBanner";
 
 function page() {
   //test
   return (
     <>
       <div>
-        <HeroSection />
+        <VideoSectionBanner />
         <VideoSection />
         <WhyChooseUs />
         <ShowCase />
