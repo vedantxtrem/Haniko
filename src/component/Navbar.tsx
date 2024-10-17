@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { HiMenuAlt2 } from 'react-icons/hi';
 
-const Navbar = () => {
+const Navbar = ({contactLink}:{contactLink:string}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -50,7 +50,7 @@ const Navbar = () => {
                     </div>
                 </Link>
 
-                <Link href="/contact" passHref>
+                <Link href={contactLink} passHref>
                     <div className="relative text-gray-700 text-xl px-1 cursor-pointer group">
                         <span className="group-hover:text-amber-500">Contact Us</span>
                         <div className="absolute left-0 -bottom-1 w-full h-1 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></div>
@@ -89,7 +89,7 @@ const Navbar = () => {
                     <a href="/products" className="block text-gray-700 hover:text-gray-900">
                         Product
                     </a>
-                    <a href="/contact" className="block text-gray-700 hover:text-gray-900">
+                    <a href={contactLink} className="block text-gray-700 hover:text-gray-900">
                         Contact Us
                     </a>
                 </nav>

@@ -9,19 +9,25 @@ import VideoSection from '@/component/VideoSection'
 import React from 'react'
 import ShowCase from "@/component/Products"
 import TypeSection from '@/component/TypeSection'
+import Navbar from "@/component/Navbar"
 
 function page() {
   //test
   return (
-    <div>
-      <HeroSection />
-      <WhyChooseUs />
-      <ShowCase />
-      <VideoSection />
-      <AboutUs />
-      <TypeSection />
-      <BlogSection />
-    </div>
+    <>
+      <div className="w-screen flex justify-center items-center">
+        <Navbar />
+      </div>
+      <div>
+        <HeroSection />
+        <WhyChooseUs />
+        <ShowCase />
+        <VideoSection />
+        <AboutUs />
+        <TypeSection />
+        <BlogSection />
+      </div>
+    </>
   )
 }
 
