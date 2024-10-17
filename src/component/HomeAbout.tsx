@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 
 const AboutHoney = () => {
@@ -18,7 +17,7 @@ const AboutHoney = () => {
         </div>
 
         {/* Image Section */}
-        <div className="relative w-full lg:w-[90%] flex justify-center z-10">
+        <div className="relative w-full lg:w-[95%] flex justify-center z-10">
 
           <div className="p-8 rounded-full">
             <Image
@@ -36,8 +35,8 @@ const AboutHoney = () => {
       {/* Text Section */}
       <div className="relative lg:w-[35%] z-10 mt-8 lg:mt-0 lg:ml-12 text-center lg:text-left">
         <p className="text-yellow-500 font-semibold mb-2">INFORMATION</p>
-        <h2 className="text-5xl font-bold mb-4">About Honey</h2>
-        <p className="text-lg mb-6">
+        <h2 className="text-5xl font-bold mb-4 text-black">About Honey</h2>
+        <p className="text-lg mb-6 text-black">
           Over its history as a food, the main uses of honey are in cooking, baking, desserts,
           as a spread on bread, as an addition to various beverages such as tea,
           and as a sweetener in some commercial beverages.

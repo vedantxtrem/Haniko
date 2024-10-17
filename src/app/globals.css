@@ -61,7 +61,3 @@ body{
         flex: 0 0 33.33%;
     }
 }
-
-html {
-    scroll-behavior: smooth;
-  }
