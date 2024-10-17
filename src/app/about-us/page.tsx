@@ -88,6 +88,7 @@ const ScrollSections = () => {
 
         </div>
       </header>
+
       <main className="">
         <ul id="cards">
           {data.map((item, index) => (
