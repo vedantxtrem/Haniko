@@ -19,13 +19,13 @@ function page() {
       <div>
         {/* <HeroSection /> */}
         <VideoSection />
-        <WhyChooseUs />
-        <ShowCase />
-       
+        {/* <WhyChooseUs />
+        <ShowCase /> */}
+{/*        
         <AboutUs />
         <TypeSection />
         <BlogSection />
-        <Contact />
+        <Contact /> */}
       </div>
     </>
   )

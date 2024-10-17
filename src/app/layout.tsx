@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ backgroundColor: "#fffbeb" }}
       >
-        
+          <Navbar />
 
         {children}
 
