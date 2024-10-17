@@ -14,7 +14,7 @@ const Navbar = () => {
     if (window.location.pathname === '/') {
         contactLink = '#contact';
     } else {
-        contactLink = '/contact';
+        contactLink = '/#contact';
     }
 
     return (
