@@ -3,12 +3,19 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { HiMenuAlt2 } from 'react-icons/hi';
 
-const Navbar = ({contactLink}:{contactLink:string}) => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
+
+    let contactLink = '/contact-us';
+    if (window.location.pathname === '/') {
+        contactLink = '#contact';
+    } else {
+        contactLink = '/#contact';
+    }
 
     return (
         <nav className="fixed top-4 bg-amber-50 px-5 flex justify-between items-center drop-shadow-[0_0_5px_#fcd34d] z-50 w-11/12 rounded-full">

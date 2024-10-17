@@ -121,6 +121,8 @@ header {
   place-items: center;
 }
 
+
+
 #cards {
   list-style: none;
   outline: calc(var(--outline-width) * 10) solid blue;

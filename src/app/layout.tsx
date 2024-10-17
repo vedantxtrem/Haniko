@@ -34,7 +34,9 @@ export default function RootLayout({
         style={{ backgroundColor: "#fffbeb" }}
       >
 
-
+        <div className="w-screen flex justify-center items-center">
+          <Navbar />
+        </div>
 
         {children}
 
