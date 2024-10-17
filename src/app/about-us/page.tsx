@@ -52,9 +52,11 @@ const ScrollSections = () => {
                 <p className="text-gray-600 mb-8 max-w-lg">
                   Experience the finest honey sourced directly from our hives. Crafted with love, delivered with care.
                 </p>
-                <button className="bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-pink-600  transform hover:scale-105 animate-bounce duration-1000 flex justify-center items-center gap-4 ">
-                  view all <FaArrowDown />
-                </button>
+                <img
+                  src="https://xplore2k22.netlify.app/assets/scroll.c5d146f6.gif"
+                  alt=""
+                  className="w-20  animate-bounce-slow cursor-pointer"
+                />
 
               </div>
 
