@@ -37,7 +37,7 @@ const Navbar = () => {
 
     const options = [
         { name: "About Us", icon: <AiOutlineInfoCircle className="font-bold mt-1" />, link: "/about-us" },
-        { name: "Shop", icon: <BsCart className="font-bold mt-1" />, link: "/new" },
+        { name: "Shop", icon: <BsCart className="font-bold mt-1" />, link: "/products" },
         { name: "Blogs", icon: <HiOutlineGlobeAlt className="font-bold mt-1" />, link: blog }
     ];
 
