@@ -70,15 +70,19 @@ html {
     0% {
         transform: translate(0);
     }
+
     25% {
         transform: translate(-4px, 0);
     }
+
     50% {
         transform: translate(4px, 0);
     }
+
     75% {
         transform: translate(-2px, 0);
     }
+
     100% {
         transform: translate(0);
     }
@@ -88,15 +92,19 @@ html {
     0% {
         transform: rotate(0deg);
     }
+
     25% {
         transform: rotate(15deg);
     }
+
     50% {
         transform: rotate(0deg);
     }
+
     75% {
         transform: rotate(-15deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -120,3 +128,10 @@ html {
       0% 50%
     );
   }
+.glass-card {
+    background: rgba( 240, 168, 45, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+}
