@@ -91,7 +91,7 @@ const ProductPage: React.FC = () => {
             />
           </div>
           {images.map((image, index) => (
-            <div key={index} className="h-full w-full flex-shrink-0">
+            <div key={index} className="h-full font w-full flex-shrink-0">
               <div
                 className="h-full w-full backdrop-blur-xl"
                 style={{
@@ -133,12 +133,21 @@ const ProductPage: React.FC = () => {
       </div>
 
       <div className="w-full h-full flex flex-col justify-center items-center mt-3">
-        <div className="w-[70%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
+
+        <div className="w-[60%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
           {products.map((product) => (
             <ProductCard key={product.name} name={product.name} imageUrl={product.imageUrl} />
           ))}
         </div>
+
+        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">HOT HONEY</h1>
+
+        <div className=" h-full flex justify-items-center ">
+            <ProductCard  name="Hot Honey" imageUrl="/image/honey.png" />
+        </div>
+      
       </div>
+
     </div>
   );
 };
