@@ -26,13 +26,13 @@ function ShowCase() {
 
   return (
     <main className="w-full h-full flex flex-col items-center relative  mb-10 font-harman">
-      <div className="flex flex-col items-center mt-10">
-        <img
+      <div className="flex flex-col items-center mt-20">
+        {/* <img
           src={'/image/showcase.png'}
           alt="showcase"
           className="w-[100%] md:w-[20rem] h-auto object-cover"
-        />
-        <h1 className="text-3xl text-[#013e52] mt-3 text-center">
+        /> */}
+        <h1 className="text-4xl text-[#013e52] mt-3 text-center">
           Discover Our Honey
         </h1>
       </div>
@@ -52,7 +52,7 @@ function ShowCase() {
               <img
                 src={'/image/honey.png'}
                 alt="bottle"
-                className={`w-full h-auto max-w-[10rem] object-cover mx-auto transition-transform duration-1000 cursor-pointer ${hover === index ? 'scale-110' : ''}`}
+                className={`w-full h-auto max-w-[35rem] object-cover mx-auto transition-transform duration-1000 cursor-pointer ${hover === index ? 'scale-110' : ''}`}
               />
 
               <div className="flex leading-3 flex-col">
