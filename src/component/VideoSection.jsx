@@ -8,53 +8,38 @@ const poppins = Poppins({
 
 function VideoSection() {
   return (
-    <section className="flex flex-col md:flex-row h-[80vh] w-full">
-      {/* Video Section */}
-      <div className="w-full md:w-1/2 h-full relative">
+    <section className={`relative h-[80vh] w-full flex items-center justify-center text-center md:text-left ${poppins.className}`}>
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
         <video
-          className="w-full h-full object-cover backdrop-blur-xl"
+          className="w-full h-full object-cover"
           autoPlay
           loop
           muted
           playsInline
-          aria-label="Organic honey drizzling video"
+          aria-label="Video showcasing organic honey production"
         >
           <source src="/image/video.webm" type="video/webm" />
+          <source src="/image/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black opacity-25"></div>
+        {/* Overlay for text visibility */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
       {/* Content Section */}
-      <div className="w-full md:w-1/2 relative flex flex-col justify-center items-center p-6 md:p-28 text-center md:text-left bg-white">
-        {/* Honeycomb animation */}
-        <div className="absolute top-1/4 right-4 rotate-45 grid grid-cols-5 gap-2 opacity-20 z-0 animate-honeycomb">
-          {[...Array(25)].map((_, i) => (
-            <div
-              key={i}
-              className="w-4 h-4 bg-amber-500 rounded-full"
-            ></div>
-          ))}
-        </div>
-
+      <div className="relative z-10 w-full md:w-3/4 lg:w-1/2 px-6 md:px-12 text-white ">
         {/* Text Content */}
-        <h1 className="text-4xl font-extrabold text-yellow-800 leading-tight tracking-tight sm:text-5xl lg:text-6xl z-10">
+        <h1 className="text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl text-start lg:text-center">
           Organic Hive
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 my-4 z-10">
+        <p className="text-xl md:text-2xl my-4">
           We traveled over 5,000 miles to find a light & sweet, 100% organic
           honey and support the local beekeepers who produce it.
         </p>
-        <button className="bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:scale-105 duration-200 transition-all ease-out">
+        <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105 ">
           Learn More
         </button>
-
-        {/* Honey bottle image */}
-        <img
-          src="/image/honey.png"
-          alt="Honey bottle"
-          className="w-full h-auto max-w-[9rem] absolute -rotate-[30deg] bottom-4 right-4 hidden lg:block"
-        />
       </div>
     </section>
   );
