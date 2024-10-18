@@ -4,19 +4,19 @@ const services = [
   {
     step: "01",
     name: "Honey",
-    imageUrl: "https://localhivehoney.com/cdn/shop/articles/11_FallScone_1080x1920_1_large.png?v=1727467939",
+    imageUrl: "https://www.verywellfit.com/thmb/wYu_hvb6hLUhVqXpAupfXqc9uhg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1255787221-3589d5984cb84925983714fb522608c0.jpg",
     description: "State-of-the-art diagnostics to accurately identify vehicle issues.",
   },
   {
     step: "02",
     name: "How to make Honey",
-    imageUrl: "https://localhivehoney.com/cdn/shop/articles/cover_image_pistakioxlocalhive_large.jpg?v=1727206394",
+    imageUrl: "https://carolinahoneybees.com/wp-content/uploads/2021/10/recipes-using-honey-.jpg",
     description: "Engine overhauls to brake replacements, we ensure high-quality work for your vehicle’s longevity.",
   },
   {
     step: "03",
     name: "Are you Honey ?",
-    imageUrl: "https://localhivehoney.com/cdn/shop/articles/11_FallScone_1080x1920_1_large.png?v=1727467939",
+    imageUrl: "https://honestandsimple.com/wp-content/uploads/2021/05/Chai-Spiced-Honey_Unsplash-scaled-e1620310581566.jpg",
     description: "Oil changes, tire rotations, and more to enhance performance and prevent future issues.",
   },
 ];

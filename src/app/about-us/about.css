@@ -186,13 +186,14 @@ aside p {
 
 @media (max-width: 768px) {
   :root {
-    --card-height: 90vh;
-    --card-margin: 2vw;
+    --card-height: 100vh;
+    --card-margin: 0vw;
   }
 
   header,
   main {
-    width: 90vw;
+    width: 100vw;
+    height: 100vh;
     margin: 0 auto;
   }
 
@@ -210,6 +211,7 @@ aside p {
     flex-direction: column-reverse;
     justify-content: start;
     height: 100%;
+    width: 100%;
   }
 
   aside {
