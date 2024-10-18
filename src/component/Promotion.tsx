@@ -11,7 +11,7 @@ const honeyTypes = [
 ];
 
 // Function to duplicate an array n times
-function duplicateArray(arr, n) {
+function duplicateArray(arr: any, n: any) {
   return Array.from({ length: n }, () => arr).flat();
 }
 
