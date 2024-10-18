@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
 
             <div className="md:hidden relative bg-transparent  w-11/12 flex flex-row justify-center items-center py-3 mx-auto">
-                <div onClick={toggleSidebar} className="absolute top-1/2 left-1 transform -translate-y-1/2">
+                <div onClick={toggleSidebar} className="z-[500] absolute top-1/2 left-1 transform -translate-y-1/2">
                     <GiHamburgerMenu />
                 </div>
                 <img src="/new/logo.webp" alt="" className="max-w-20" />

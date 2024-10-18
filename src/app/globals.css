@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
 @font-face {
     font-family: 'Harman Sans';
     src: url('/font/Ahmet_Altun_-_Harman-Sans.otf') format('opentype'),
@@ -11,6 +13,49 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Campton';
+    src: url('/font/campton/CamptonBlackItalic.otf') format('opentype'),
+        url('/font/campton/CamptonBlack.otf') format('opentype'),
+        url('/font/campton/CamptonBold.otf') format('opentype');
+    font-weight: 900;
+    /* Black */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Campton';
+    src: url('/font/campton/CamptonBlack.otf') format('opentype');
+    font-weight: 900;
+    /* Black */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Campton';
+    src: url('/font/campton/CamptonBold.otf') format('opentype');
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playwrite';
+    src: url('/font/Playwrite_GB_S/static/PlaywriteGBS-ExtraLight.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/static/PlaywriteGBS-ExtraLightItalic.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/static/PlaywriteGBS-Light.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/static/PlaywriteGBS-LightItalic.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/static/PlaywriteGBS-Regular.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/static/PlaywriteGBS-Italic.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/static/PlaywriteGBS-Thin.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/static/PlaywriteGBS-ThinItalic.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/PlaywriteGBS-VariableFont_wght.ttf') format('truetype'),
+        url('/font/Playwrite_GB_S/PlaywriteGBS-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: normal;
+}
+
+
 body {
     overflow-x: hidden;
 }
@@ -19,6 +64,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.stroke {
+    -webkit-text-stroke: 2px ;
+    text-stroke: 2px black;
+}
 
 .scroll-bar-hidden {
     overflow-y: scroll;
@@ -129,9 +178,9 @@ html {
     );
   }
 .glass-card {
-    background: rgba( 240, 168, 45, 0.3 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 6.5px );
-    -webkit-backdrop-filter: blur( 6.5px );
+    background: rgba(240, 168, 45, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
     border-radius: 10px;
 }

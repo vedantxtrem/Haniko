@@ -24,6 +24,8 @@ const config = {
     extend: {
       fontFamily: {
         harman: ['Harman Sans', 'sans-serif'],
+        campton: ['Campton', 'sans-serif'],
+        playwrite: ['Playwrite', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

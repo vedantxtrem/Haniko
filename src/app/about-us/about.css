@@ -1,5 +1,5 @@
 :root {
-  --card-height: 40vw;
+  --card-height: 100vh;
   --card-margin: 4vw;
   --card-top-offset: 1em;
   --numcards: 4;
@@ -32,7 +32,9 @@
 .card {
   position: sticky;
   top: 0;
-  padding-top: calc(var(--index) * var(--card-top-offset));
+  height: var(--card-height); /* Use full height */
+  width: var(--card-width);   /* Use full width */
+  margin-bottom: var(--card-margin);
 }
 
 @supports (animation-timeline: works) {
@@ -79,31 +81,9 @@
   }
 }
 
-/** DEBUG **/
-
-#debug {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-}
-
-#debug::after {
-  content: " Show Debug";
-  margin-left: 1.5em;
-  color: white;
-  white-space: nowrap;
-}
-
-#debug:checked~main {
-  --outline-width: 1px;
-}
-
-
-
-
 body {
   background: rgb(58 29 43);
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   /* text-align: center; */
 
   font-size: calc(1em + 0.5vw);
@@ -111,7 +91,7 @@ body {
 
 header,
 main {
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -139,7 +119,7 @@ header {
 
 .card__content {
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
   color: rgb(10, 5, 7);
   border-radius: 1em;
   overflow: hidden;
@@ -150,7 +130,8 @@ header {
   grid-template-rows: auto;
 
   align-items: stretch;
-  outline: var(--outline-width) solid lime;
+  height: 100%;
+  width: 100%;
 }
 
 .card__content>div {
@@ -162,6 +143,7 @@ header {
   display: grid;
   gap: 1em;
   place-items: start;
+  
 }
 
 .card__content>figure {
