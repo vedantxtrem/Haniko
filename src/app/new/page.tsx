@@ -132,7 +132,7 @@ const ProductPage: React.FC = () => {
         <h1 className="font-harman text-4xl font-bold py-4">Raw & Unfiltered Honey</h1>
       </div>
 
-      <div className="w-full h-full flex flex-col justify-center items-center mt-3">
+      <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 via-white to-white">
 
         <div className="w-[80%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
           {products.map((product) => (

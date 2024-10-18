@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AboutHoney = () => {
   return (
@@ -35,7 +36,7 @@ const AboutHoney = () => {
       {/* Text Section */}
       <div className="relative lg:w-[35%] z-10 mt-8 lg:mt-0 lg:ml-12 text-center lg:text-left">
         <p className="text-yellow-500 font-semibold mb-2">INFORMATION</p>
-        <h2 className="text-5xl font-bold mb-4 text-black">About Honey</h2>
+        <h2 className="text-5xl font-bold mb-4 text-black">About Haniko</h2>
         <p className="text-lg mb-6 text-black">
           Over its history as a food, the main uses of honey are in cooking, baking, desserts,
           as a spread on bread, as an addition to various beverages such as tea,
@@ -45,9 +46,11 @@ const AboutHoney = () => {
           hunter-gatherer cultures in warm climates, with the Hadza people ranking
           honey as their favorite food.
         </p>
-        <button className="bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-md">
-          Learn More
-        </button>
+        <Link href={"/about-us"}>
+          <button className="bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-md">
+            Learn More
+          </button>
+        </Link>
       </div>
 
     </section>

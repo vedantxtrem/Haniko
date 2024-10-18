@@ -1,5 +1,6 @@
 import React from "react";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -36,9 +37,11 @@ function VideoSection() {
           {/* <button className="bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-yellow-400 transition duration-300 ease-in-out transform hover:scale-105">
             View Products
           </button> */}
+          <Link href={"/new"}>
           <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105">
            View Products
           </button>
+          </Link>
         </div>
 
       </div>
