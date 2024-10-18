@@ -37,19 +37,20 @@ const products = [
 
 const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({ name, imageUrl }) => {
   return (
-    <div className="w-fit  h-full flex flex-col justify-center items-center p-6">
-      <div className="w-full flex items-center justify-center">
-        <div className="absolute ">
-          <img className='w-[300px] h-[250px]' src="/image/hexagon.svg" alt="Hexagon" />
-        </div>
-        <img src={imageUrl} alt={name} className="relative w-[400px] -bottom-10 z-10" />
+    <div className="w-fit h-full flex flex-col justify-center items-center p-6">
+      <div 
+        className="relative w-[400px] h-[400px] flex items-center justify-center bg-no-repeat bg-center"
+        style={{ backgroundImage: `url('/image/hexagon.svg')` }} // Set the hexagon as background image
+      >
+        <img src={imageUrl} alt={name} className="absolute -bottom-4 w-[700px] z-10" /> {/* You can adjust the product image size freely */}
       </div>
-      <div className="bottom-6 w-full text-center text-black z-10">
+      <div className="w-full text-center text-black z-10">
         <h2 className="font-bold text-xl">{name}</h2>
       </div>
     </div>
   );
 };
+
 
 const ProductPage: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(1); // Start at 1 for the first duplicated image
@@ -128,9 +129,13 @@ const ProductPage: React.FC = () => {
         </button>
       </div>
 
+
+
       <div className="w-full h-full flex flex-col justify-center items-center bg-yellow-400">
         <h1 className="font-harman text-4xl font-bold py-4">Raw & Unfiltered Honey</h1>
       </div>
+
+
 
       <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 via-white to-white">
 

@@ -28,12 +28,12 @@ function VideoSection() {
       </div>
 
       {/* Content Section */}
-      <div className="relative z-10 w-full md:w-3/4 lg:w-1/2 px-6 md:px-12 text-white ">
+      <div className="relative z-10 w-full md:w-3/4 lg:w-1/2 px-6 md:px-12 text-white flex flex-col justify-center items-center ">
         {/* Text Content */}
         <h1 className="text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl text-start lg:text-center">
           Organic Hive
         </h1>
-        <p className="text-xl md:text-2xl my-4">
+        <p className="text-xl md:text-2xl my-4 text-center">
           We traveled over 5,000 miles to find a light & sweet, 100% organic
           honey and support the local beekeepers who produce it.
         </p>

@@ -1,8 +1,9 @@
 <svg width="400" height="346" viewBox="0 0 400 346" xmlns="http://www.w3.org/2000/svg">
   <polygon
-    points="124,173 150,0 400,173 100,273 299,346 0,273"
+    points="200,10 365,95 365,250 200,335 35,250 35,95"
     fill="#facc15"
     stroke=""
     strokeWidth="5"
+    transform="rotate(90, 200, 173)" 
   />
 </svg>
