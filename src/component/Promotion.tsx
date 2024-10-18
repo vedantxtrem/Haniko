@@ -1,16 +1,39 @@
-import React from 'react'
+import { log } from "console";
+import React from "react";
 
-function Promotion() {
-  return (
-    <div className="overflow-hidden whitespace-nowrap bg-gray-800 text-white py-2">
-    <div className="inline-block animate-marquee text-2xl">
-        CERTIFIED B CORP® 100% TRACEABLE GLYPHOSATE RESIDUE-FREE NON-GMO CERTIFIED B CORP® 100% TRACEABLE GLYPHOSATE RESIDUE-FREE NON-GMO
-    </div>
-    <div className="inline-block animate-marquee text-2xl">
-        CERTIFIED B CORP® 100% TRACEABLE GLYPHOSATE RESIDUE-FREE NON-GMO CERTIFIED B CORP® 100% TRACEABLE GLYPHOSATE RESIDUE-FREE NON-GMO
-    </div>
-</div>
-  )
+const honeyTypes = [
+  "Wildflower Honey - Rich & Floral!",
+  "Manuka Honey - Antibacterial Properties!",
+  "Clover Honey - Sweet & Delicate!",
+  "Buckwheat Honey - Bold & Dark!",
+  "Orange Blossom Honey - Citrusy & Light!",
+  "Acacia Honey - Mild & Buttery!",
+];
+
+// Function to duplicate an array n times
+function duplicateArray(arr: any, n: number) {
+  return Array.from({ length: n }, () => arr).flat();
 }
 
-export default Promotion
+function Promotion() {
+  const duplicatedHoneyTypes = duplicateArray(honeyTypes, 100);
+//   console.log(duplicatedHoneyTypes);
+  
+
+  return (
+    <div className="relative overflow-hidden bg-yellow-400 py-4">
+      <div className="marquee flex space-x-16 animate-marquee items-center h-full w-[200%]">
+        {duplicatedHoneyTypes.map((honey, index) => (
+          <h1
+            key={index}
+            className="font-harman text-4xl font-bold text-white min-w-max"
+          >
+            {honey}
+          </h1>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Promotion;

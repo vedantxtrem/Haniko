@@ -1,48 +1,57 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import Promotion from "@/component/Promotion";
+import React, { useState, useEffect } from "react";
 
 const images = [
-  '/image/Product_Page_Banner-5.jpg',
-  '/image/Product_Page_Banner-5.jpg',
-  '/image/Product_Page_Banner-5.jpg',
+  "/image/Product_Page_Banner-5.jpg",
+  "/image/Product_Page_Banner-5.jpg",
+  "/image/Product_Page_Banner-5.jpg",
 ];
 
 const products = [
   {
-    name: 'Raw & Unfiltered Honey',
-    imageUrl: '/image/honey.png',
+    name: "Raw & Unfiltered Honey",
+    imageUrl: "/image/honey.png",
   },
   {
-    name: 'Raw Honey Pouch',
-    imageUrl: '/image/honey.png',
+    name: "Raw Honey Pouch",
+    imageUrl: "/image/honey.png",
   },
   {
-    name: 'Honey Minis',
-    imageUrl: '/image/honey.png',
+    name: "Honey Minis",
+    imageUrl: "/image/honey.png",
   },
   {
-    name: 'Organic Raw Honey',
-    imageUrl: '/image/honey.png',
+    name: "Organic Raw Honey",
+    imageUrl: "/image/honey.png",
   },
   {
-    name: 'Organic Honey Pouch',
-    imageUrl: '/image/honey.png',
+    name: "Organic Honey Pouch",
+    imageUrl: "/image/honey.png",
   },
   {
-    name: 'Raw Honey & Comb',
-    imageUrl: '/image/honey.png',
+    name: "Raw Honey & Comb",
+    imageUrl: "/image/honey.png",
   },
 ];
 
-const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({ name, imageUrl }) => {
+const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({
+  name,
+  imageUrl,
+}) => {
   return (
     <div className="w-fit h-full flex flex-col justify-center items-center p-6">
-      <div 
+      <div
         className="relative w-[400px] h-[400px] flex items-center justify-center bg-no-repeat bg-center"
         style={{ backgroundImage: `url('/image/hexagon.svg')` }} // Set the hexagon as background image
       >
-        <img src={imageUrl} alt={name} className="absolute -bottom-4 w-[700px] z-10" /> {/* You can adjust the product image size freely */}
+        <img
+          src={imageUrl}
+          alt={name}
+          className="absolute -bottom-4 w-[700px] z-10"
+        />{" "}
+        {/* You can adjust the product image size freely */}
       </div>
       <div className="w-full text-center text-black z-10">
         <h2 className="font-bold text-xl">{name}</h2>
@@ -50,7 +59,6 @@ const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({ name, image
     </div>
   );
 };
-
 
 const ProductPage: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(1); // Start at 1 for the first duplicated image
@@ -60,8 +68,8 @@ const ProductPage: React.FC = () => {
   };
 
   const slideToPrev = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length + 1 : prevIndex - 1 // Decrement the index
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex === 0 ? images.length + 1 : prevIndex - 1) // Decrement the index
     );
   };
 
@@ -86,8 +94,8 @@ const ProductPage: React.FC = () => {
               className="h-full w-full backdrop-blur-xl"
               style={{
                 backgroundImage: `url('${images[images.length - 1]}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'top',
+                backgroundSize: "cover",
+                backgroundPosition: "top",
               }}
             />
           </div>
@@ -97,8 +105,8 @@ const ProductPage: React.FC = () => {
                 className="h-full w-full backdrop-blur-xl"
                 style={{
                   backgroundImage: `url('${image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'top',
+                  backgroundSize: "cover",
+                  backgroundPosition: "top",
                 }}
               />
             </div>
@@ -108,8 +116,8 @@ const ProductPage: React.FC = () => {
               className="h-full w-full backdrop-blur-xl"
               style={{
                 backgroundImage: `url('${images[0]}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'top',
+                backgroundSize: "cover",
+                backgroundPosition: "top",
               }}
             />
           </div>
@@ -129,31 +137,33 @@ const ProductPage: React.FC = () => {
         </button>
       </div>
 
-
-
-      <div className="w-full h-full flex flex-col justify-center items-center bg-yellow-400">
-        <h1 className="font-harman text-4xl font-bold py-4">Raw & Unfiltered Honey</h1>
-      </div>
-
-
+      <Promotion />
 
       <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 via-white to-white">
-
         <div className="w-[60%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
           {products.map((product) => (
-            <ProductCard key={product.name} name={product.name} imageUrl={product.imageUrl} />
+            <ProductCard
+              key={product.name}
+              name={product.name}
+              imageUrl={product.imageUrl}
+            />
           ))}
         </div>
 
-        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">HOT HONEY</h1>
+        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">
+          HOT HONEY
+        </h1>
 
         <div className=" h-full flex justify-items-center ">
           <ProductCard name="Hot Honey" imageUrl="/image/honey.png" />
         </div>
 
-        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300"> Manuka Honey </h1>
+        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">
+          {" "}
+          Manuka Honey{" "}
+        </h1>
 
-        <div className='w-[60%] justify-center ' >
+        <div className="w-[60%] justify-center ">
           <div className="w-full h-full flex justify-center ">
             <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
             <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
@@ -164,9 +174,7 @@ const ProductPage: React.FC = () => {
             <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
           </div>
         </div>
-
       </div>
-
     </div>
   );
 };
