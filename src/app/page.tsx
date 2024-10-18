@@ -10,7 +10,6 @@ import React from "react";
 import ShowCase from "@/component/Products";
 import TypeSection from "@/component/TypeSection";
 import Navbar from "@/component/Navbar";
-import Contact from "@/component/Contact";
 import VideoSectionBanner from "@/component/VideoSectionBanner";
 
 function page() {
@@ -25,7 +24,6 @@ function page() {
         <TypeSection />
         <VideoSection />
         <BlogSection />
-        <Contact />
       </div>
     </>
   );
