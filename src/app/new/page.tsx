@@ -37,12 +37,12 @@ const products = [
 
 const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({ name, imageUrl }) => {
   return (
-    <div className=" flex flex-col justify-center items-center p-6">
+    <div className="w-fit  h-full flex flex-col justify-center items-center p-6">
       <div className="w-full flex items-center justify-center">
         <div className="absolute ">
           <img className='w-[300px] h-[250px]' src="/image/hexagon.svg" alt="Hexagon" />
         </div>
-        <img src={imageUrl} alt={name} className="relative w-[30rem] h-[20rem]  -bottom-10 z-10" />
+        <img src={imageUrl} alt={name} className="relative w-[400px] -bottom-10 z-10" />
       </div>
       <div className="bottom-6 w-full text-center text-black z-10">
         <h2 className="font-bold text-xl">{name}</h2>
@@ -134,7 +134,7 @@ const ProductPage: React.FC = () => {
 
       <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 via-white to-white">
 
-        <div className="w-[80%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
+        <div className="w-[60%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
           {products.map((product) => (
             <ProductCard key={product.name} name={product.name} imageUrl={product.imageUrl} />
           ))}
@@ -148,7 +148,7 @@ const ProductPage: React.FC = () => {
 
         <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300"> Manuka Honey </h1>
 
-        <div className='w-[80%] justify-center ' >
+        <div className='w-[60%] justify-center ' >
           <div className="w-full h-full flex justify-center ">
             <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
             <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
