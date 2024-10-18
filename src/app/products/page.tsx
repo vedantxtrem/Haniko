@@ -1,111 +1,174 @@
 "use client";
-import React, { useEffect } from "react";
-import "animate.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
-function ProductShowcase() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+import React, { useState, useEffect } from 'react';
 
-  const products = [
-    {
-      id: 1,
-      title: "Pure Organic Honey",
-      description:
-        "Harvested from the finest Indian farms, our Pure Organic Honey is carefully collected from hives that are nurtured without any chemicals. This golden elixir is perfect for adding natural sweetness to your meals, whether drizzled over pancakes, blended in smoothies, or simply enjoyed by the spoonful. Experience the true taste of nature in every drop.",
-      imageSrc:
-        "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
-    },
-    {
-      id: 2,
-      title: "Golden Wildflower Honey",
-      description:
-        "Experience the rich, floral taste of our Golden Wildflower Honey, sourced from the heart of diverse blooms. This delightful honey offers a complex flavor profile that varies with the seasons and the blossoms available. It's perfect for sweetening your tea, enhancing your baking, or simply enjoying on its own. Dive into the natural sweetness of wildflowers with every jar.",
-      imageSrc:
-        "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
-    },
-    {
-      id: 3,
-      title: "Creamed Honey",
-      description:
-        "Our Creamed Honey offers a smooth, spreadable texture that's perfect for breakfast or snacking. Unlike regular honey, which can be runny, creamed honey retains all the natural goodness while providing a delightful consistency. Spread it on toast, mix it into oatmeal, or use it in your favorite recipes. It's the perfect addition to your kitchen pantry for any time of the day.",
-      imageSrc:
-        "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
-    },
-    {
-      id: 4,
-      title: "Raw Honeycomb",
-      description:
-        "Enjoy the purest form of honey with our Raw Honeycomb, straight from the hive. Each piece is bursting with flavor and packed with nutrients. Honeycomb can be enjoyed on its own or paired with cheese for a sophisticated appetizer. It’s a true delicacy that connects you to the natural world, allowing you to experience honey as it was meant to be enjoyed.",
-      imageSrc:
-        "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
-    },
-    {
-      id: 5,
-      title: "Flavored Honey",
-      description:
-        "Indulge in our unique Flavored Honey, infused with a variety of natural flavors to elevate your culinary creations. Whether you’re adding a twist to your drinks, enhancing desserts, or simply drizzling it over yogurt, our flavored honey provides an exciting taste experience. Explore different varieties such as vanilla, cinnamon, and citrus for a delightful addition to your kitchen.",
-      imageSrc:
-        "https://static.vecteezy.com/system/resources/previews/032/508/291/non_2x/natural-jar-of-liquid-honey-products-with-fruits-and-wooden-spoon-isolated-on-a-transparent-background-ai-generative-free-png.png",
-    },
-  ];
-  
+const images = [
+  '/image/Product_Page_Banner-5.jpg',
+  '/image/Product_Page_Banner-5.jpg',
+  '/image/Product_Page_Banner-5.jpg',
+];
 
+const products = [
+  {
+    name: 'Raw & Unfiltered Honey',
+    imageUrl: '/image/honey.png',
+  },
+  {
+    name: 'Raw Honey Pouch',
+    imageUrl: '/image/honey.png',
+  },
+  {
+    name: 'Honey Minis',
+    imageUrl: '/image/honey.png',
+  },
+  {
+    name: 'Organic Raw Honey',
+    imageUrl: '/image/honey.png',
+  },
+  {
+    name: 'Organic Honey Pouch',
+    imageUrl: '/image/honey.png',
+  },
+  {
+    name: 'Raw Honey & Comb',
+    imageUrl: '/image/honey.png',
+  },
+];
 
-  
-
+const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({ name, imageUrl }) => {
   return (
-    <div className="bg-yellow-50 py-16 px-4 mt-10 sm:px-6 lg:px-8">
-      {/* Hero Section with Heading */}
-      <div className="max-w-3xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-yellow-800 leading-tight tracking-tight sm:text-5xl lg:text-6xl animate__animated animate__zoomInDown">
-          Discover the Distinct Flavors of India
-        </h1>
-        <p className="mt-4 text-lg text-gray-600 sm:text-xl max-w-2xl mx-auto animate__animated animate__fadeInUp">
-          Harvested from carefully nurtured hives, our honey brings the rich
-          flavors of India straight to your kitchen.
-        </p>
+    <div className="w-fit h-full flex flex-col justify-center items-center p-6">
+      <div 
+        className="relative w-[400px] h-[400px] flex items-center justify-center bg-no-repeat bg-center"
+        style={{ backgroundImage: `url('/image/hexagon.svg')` }} // Set the hexagon as background image
+      >
+        <img src={imageUrl} alt={name} className="absolute -bottom-4 w-[700px] z-10" /> {/* You can adjust the product image size freely */}
       </div>
-
-      {/* Product Showcase */}
-      {products.map((product, index) => (
-        <div
-          key={product.id}
-          className={`flex flex-col items-center lg:flex-row lg:space-x-12 justify-center lg:items-center mb-12 ${
-            index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-          }`}
-          data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-          data-aos-delay={`${index * 100}`}
-        >
-          {/* Product Image */}
-          <div className="w-full lg:w-1/2 xl:w-1/3 mb-3 lg:mb-0 animate__animated animate__bounceIn">
-            <img
-              src={product.imageSrc}
-              alt={product.title}
-              className="transform transition-transform duration-300 hover:scale-105 hover:rotate-1 hover:shadow-lg"
-            />
-          </div>
-
-          {/* Product Description and CTA */}
-          <div className="text-center lg:text-left lg:w-1/2 animate__animated animate__fadeInRight">
-            <h2 className="text-3xl font-bold mb-4 text-yellow-800">
-              {product.title}
-            </h2>
-            <p className="text-lg text-gray-700 mb-6">{product.description}</p>
-            {/* Call to Action */}
-            <button
-              className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-full shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 animate__animated animate__pulse"
-              aria-label={`Shop for ${product.title}`}
-            >
-              Shop Now
-            </button>
-          </div>
-        </div>
-      ))}
+      <div className="w-full text-center text-black z-10">
+        <h2 className="font-bold text-xl">{name}</h2>
+      </div>
     </div>
   );
-}
+};
 
-export default ProductShowcase;
+
+const ProductPage: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(1); // Start at 1 for the first duplicated image
+
+  const slideToNext = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % (images.length + 2)); // Increment the index
+  };
+
+  const slideToPrev = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length + 1 : prevIndex - 1 // Decrement the index
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(slideToNext, 2000); // Change image every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="min-h-screen w-screen text-white">
+      {/* Carousel Div */}
+      <div className="relative h-[360px] w-full flex justify-center items-center overflow-hidden">
+        <div
+          className="absolute h-full w-full flex transition-transform duration-1000"
+          style={{
+            transform: `translateX(-${(currentImageIndex - 1) * 100}%)`, // Adjusted for the duplicated images
+          }}
+        >
+          {/* Duplicated images for seamless looping */}
+          <div className="h-full w-full flex-shrink-0">
+            <div
+              className="h-full w-full backdrop-blur-xl"
+              style={{
+                backgroundImage: `url('${images[images.length - 1]}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'top',
+              }}
+            />
+          </div>
+          {images.map((image, index) => (
+            <div key={index} className="h-full font w-full flex-shrink-0">
+              <div
+                className="h-full w-full backdrop-blur-xl"
+                style={{
+                  backgroundImage: `url('${image}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'top',
+                }}
+              />
+            </div>
+          ))}
+          <div className="h-full w-full flex-shrink-0">
+            <div
+              className="h-full w-full backdrop-blur-xl"
+              style={{
+                backgroundImage: `url('${images[0]}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'top',
+              }}
+            />
+          </div>
+        </div>
+        {/* Navigation Buttons */}
+        <button
+          onClick={slideToPrev}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
+        >
+          &#8592; {/* Left Arrow */}
+        </button>
+        <button
+          onClick={slideToNext}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
+        >
+          &#8594; {/* Right Arrow */}
+        </button>
+      </div>
+
+
+
+      <div className="w-full h-full flex flex-col justify-center items-center bg-yellow-400">
+        <h1 className="font-harman text-4xl font-bold py-4">Raw & Unfiltered Honey</h1>
+      </div>
+
+
+
+      <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 via-white to-white">
+
+        <div className="w-[60%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
+          {products.map((product) => (
+            <ProductCard key={product.name} name={product.name} imageUrl={product.imageUrl} />
+          ))}
+        </div>
+
+        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">HOT HONEY</h1>
+
+        <div className=" h-full flex justify-items-center ">
+          <ProductCard name="Hot Honey" imageUrl="/image/honey.png" />
+        </div>
+
+        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300"> Manuka Honey </h1>
+
+        <div className='w-[60%] justify-center ' >
+          <div className="w-full h-full flex justify-center ">
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+          </div>
+          <div className="w-full h-full flex justify-center ">
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  );
+};
+
+export default ProductPage;
