@@ -37,7 +37,7 @@ const products = [
 
 const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({ name, imageUrl }) => {
   return (
-    <div className="flex flex-col justify-center items-center p-6">
+    <div className=" flex flex-col justify-center items-center p-6">
       <div className="w-full flex items-center justify-center">
         <div className="absolute ">
           <img className='w-[300px] h-[250px]' src="/image/hexagon.svg" alt="Hexagon" />
@@ -134,7 +134,7 @@ const ProductPage: React.FC = () => {
 
       <div className="w-full h-full flex flex-col justify-center items-center mt-3">
 
-        <div className="w-[60%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
+        <div className="w-[80%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
           {products.map((product) => (
             <ProductCard key={product.name} name={product.name} imageUrl={product.imageUrl} />
           ))}
@@ -143,9 +143,23 @@ const ProductPage: React.FC = () => {
         <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">HOT HONEY</h1>
 
         <div className=" h-full flex justify-items-center ">
-            <ProductCard  name="Hot Honey" imageUrl="/image/honey.png" />
+          <ProductCard name="Hot Honey" imageUrl="/image/honey.png" />
         </div>
-      
+
+        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300"> Manuka Honey </h1>
+
+        <div className='w-[80%] justify-center ' >
+          <div className="w-full h-full flex justify-center ">
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+          </div>
+          <div className="w-full h-full flex justify-center ">
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
+          </div>
+        </div>
+
       </div>
 
     </div>
