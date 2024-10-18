@@ -42,18 +42,10 @@ const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({
 }) => {
   return (
     <div className="w-fit h-full flex flex-col justify-center items-center p-6">
-      <div
-        className="relative w-[400px] h-[400px] flex items-center justify-center bg-no-repeat bg-center"
-        style={{ backgroundImage: `url('/image/hexagon.svg')` }} // Set the hexagon as background image
-      >
-        <img
-          src={imageUrl}
-          alt={name}
-          className="absolute -bottom-4 w-[700px] z-10"
-        />{" "}
-        {/* You can adjust the product image size freely */}
-      </div>
-      <div className="w-full text-center text-black z-10">
+
+      <div className="w-full text-center text-black z-10 relative">
+        <img src="/image/hexagon.svg" alt="" className="-z-10 absolute w-[200px] h-[150px] left-1/2 bottom-[40px] -ml-1 -translate-x-1/2" />
+        <img src={imageUrl} alt={name} className="min-w-[300px] z-50" />
         <h2 className="font-bold text-xl">{name}</h2>
       </div>
     </div>

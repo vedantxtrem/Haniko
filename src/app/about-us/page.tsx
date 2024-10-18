@@ -109,7 +109,7 @@ const ScrollSections = () => {
           {data.map((item, index) => (
             <li
               key={index}
-              className="card rounded-2xl overflow-hidden"
+              className="card overflow-hidden"
               id="card_1"
               style={{ background: item.background }}
             >

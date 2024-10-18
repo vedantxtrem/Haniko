@@ -1,12 +1,25 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Footer() {
+  const [isOpen, setIsOpen] = useState(false);
+
+
+
+  useEffect(() => {
+      if (window.location.pathname === '/about-us') {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+  }, []);
+
+
   return (
-    <footer className="bg-yellow-100 text-black p-10">
+    <footer className={`${isOpen ? "bg-yellow-100 text-black p-10" : "hidden"}`}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
         <div>
           <img

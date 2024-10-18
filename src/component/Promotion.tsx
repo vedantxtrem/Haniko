@@ -11,18 +11,16 @@ const honeyTypes = [
 ];
 
 // Function to duplicate an array n times
-function duplicateArray(arr: any, n: number) {
+function duplicateArray(arr, n) {
   return Array.from({ length: n }, () => arr).flat();
 }
 
 function Promotion() {
-  const duplicatedHoneyTypes = duplicateArray(honeyTypes, 100);
-//   console.log(duplicatedHoneyTypes);
-  
+  const duplicatedHoneyTypes = duplicateArray(honeyTypes, 10); // Adjust the multiplier for desired length
 
   return (
     <div className="relative overflow-hidden bg-yellow-400 py-4">
-      <div className="marquee flex space-x-16 animate-marquee items-center h-full w-[200%]">
+      <div className="flex animate-marquee items-center h-full">
         {duplicatedHoneyTypes.map((honey, index) => (
           <h1
             key={index}

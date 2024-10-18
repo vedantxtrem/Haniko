@@ -47,8 +47,8 @@ const Navbar = () => {
                 <img src="/new/logo.webp" alt="" className="max-w-20" />
                 <div className={`${poppins.className} flex flex-row gap-5`}>
                     {options.map((option, index) => (
-                        <Link href={option.link}>
-                            <div key={index} className="flex cursor-pointer text-slate-950 text-xl flex-row gap-2 items-start justify-center font-semibold">
+                        <Link key={index} href={option.link}>
+                            <div className="flex cursor-pointer text-slate-950 text-xl flex-row gap-2 items-start justify-center font-semibold">
                                 <span>{option.name}</span>
                                 {option.icon}
                             </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
                 <div className={`animate__animated animate__slideInDown absolute mt-3 w-11/12 left-5 transform -translate-x-1/2  glass-card duration-700 transition-transform z-50 flex flex-col items-center justify-center p-5`}>
                     <div className={`${poppins.className} mx-auto min-w-[70%] flex flex-col justify-center items-center gap-3`}>
                         {options.map((option, index) => (
-                            <Link href={option.link}>
+                            <Link href={option.link} onClick={toggleSidebar} className="z-[100]">
                                 <div key={index} className="flex w-full bg-amber-500 py-1.5 rounded-2xl bg-opacity-10 mx-auto text-center items-center justify-center text-slate-950 text-xl gap-2 font-semibold">
                                     {option.icon}
                                     {option.name}
