@@ -60,9 +60,9 @@ const ScrollSections = () => {
               {/* Text Section */}
               <div className="z-20 w-full flex flex-col justify-center items-center text-center">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-amber-700">
-                  <span className="text-amber-500 text-8xl font-campton">About Haniko</span>
+                  <span className="text-amber-500 text-8xl font-harman">About Haniko</span>
                   <br />
-                  <span className="text-gray-900 font-campton">From our Hive</span>
+                  <span className="text-gray-900 font-harman">From our Hive</span>
                 </h1>
                 <p className={`${nunito.className} text-gray-600 mb-8 max-w-lg `}>
                   Experience the finest honey sourced directly from our hives. Crafted with love, delivered with care.
@@ -118,7 +118,7 @@ const ScrollSections = () => {
               <div className="card__content">
                 <div className="my-auto ">
                   <h2
-                    className="font-playwrite stroke"
+                    className="font-harman stroke"
                     style={{ color: item.text }}
                   >{item.title}</h2>
                   <p
