@@ -5,7 +5,7 @@ import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Footer() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
 
 

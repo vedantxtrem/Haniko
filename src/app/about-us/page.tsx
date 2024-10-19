@@ -4,6 +4,8 @@ import './about.css'
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Fauna_One, Hammersmith_One, Nunito_Sans, Playfair } from "next/font/google";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { MdPhoneInTalk } from "react-icons/md";
 
 const hammer = Hammersmith_One({
   subsets: ['latin'],
@@ -132,8 +134,11 @@ const ScrollSections = () => {
           ))}
         </ul>
       </main>
+    
     </>
   );
 };
+
+
 
 export default ScrollSections;

@@ -7,9 +7,9 @@
 }
 
 #cards {
-  padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+  /* padding-bottom: calc(var(--numcards) * var(--card-top-offset)); */
   /* Make place at bottom, as items will slide to that position*/
-  margin-bottom: var(--card-margin);
+  /* margin-bottom: var(--card-margin); */
   /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
@@ -34,7 +34,7 @@
   top: 0;
   height: var(--card-height); /* Use full height */
   width: var(--card-width);   /* Use full width */
-  margin-bottom: var(--card-margin);
+  /* margin-bottom: var(--card-margin); */
 }
 
 @supports (animation-timeline: works) {
@@ -175,14 +175,11 @@ p {
 
 
 aside {
-  width: 50vw;
+  width: 100vw;
   margin: 0 auto;
   text-align: left;
 }
 
-aside p {
-  margin-bottom: 1em;
-}
 
 @media (max-width: 768px) {
   :root {
@@ -203,7 +200,7 @@ aside p {
 
   .card {
     height: var(--card-height);
-    margin-bottom: var(--card-margin);
+    /* margin-bottom: var(--card-margin); */
   }
 
   .card__content {
@@ -215,6 +212,6 @@ aside p {
   }
 
   aside {
-    width: 90vw;
+    width: 100vw;
   }
 }
