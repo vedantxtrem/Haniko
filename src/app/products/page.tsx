@@ -1,6 +1,7 @@
 "use client";
 
 import Promotion from "@/component/Promotion";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const images = [
@@ -36,21 +37,53 @@ const products = [
   },
 ];
 
+const HeartIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+    className="w-6 h-6 text-red-500 cursor-pointer transition-colors duration-300 hover:text-red-700"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+    />
+  </svg>
+);
+
 const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({
   name,
   imageUrl,
 }) => {
+  const [heartColor, setHeartColor] = useState(false);
+
+  const toggleHeartColor = () => {
+    setHeartColor(!heartColor);
+  };
   return (
-    <div className="w-full md:w-fit h-full flex flex-col justify-center items-center p-6">
-      <div className="w-full text-center text-black z-10 relative">
-        <img
-          src="/image/hexagon.svg"
-          alt=""
-          className="-z-10 absolute w-[200px] h-[150px] left-1/2 bottom-[40px] -ml-1 -translate-x-1/2"
-        />
-        <img src={imageUrl} alt={name} className="min-w-[150px] md:min-w-[300px] z-50" />
-        <h2 className="font-bold text-lg md:text-xl">{name}</h2>
+    <div className="w-full md:w-fit h-full flex flex-col justify-center items-center p-4">
+      <div className="w-full text-center text-black relative">
+        <div className="relative mt-2 rounded-2xl bg-gradient-to-r from-amber-300 via-white to-amber-300 z-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center">
+          <span onClick={toggleHeartColor} className="absolute right-2 top-2">
+            <HeartIcon />
+          </span>
+          <img
+            src={imageUrl}
+            alt={name}
+            className="w-[100%] max-w-[300px] md:max-w-[550px] "
+          />
+        </div>
+        <h2 className="font-bold text-lg md:text-xl mt-4">{name}</h2>
       </div>
+      <Link
+        href="/contact"
+        className="mt-5 bg-yellow-400 text-black font-bold text-base md:text-xl px-8 py-2 md:px-10 md:py-3 rounded-3xl hover:bg-white border-2 border-yellow-400 transition-colors duration-300"
+      >
+        Shop Now
+      </Link>
     </div>
   );
 };
@@ -134,8 +167,8 @@ const ProductPage: React.FC = () => {
 
       <Promotion />
 
-      <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 via-white to-white">
-        <div className="w-full md:w-[60%] h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center my-3">
+      <div className="w-full h-full flex flex-col justify-center items-center p-6 md:p-12">
+        <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-1 justify-items-center">
           {products.map((product) => (
             <ProductCard
               key={product.name}
@@ -143,24 +176,6 @@ const ProductPage: React.FC = () => {
               imageUrl={product.imageUrl}
             />
           ))}
-        </div>
-
-        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">
-          HOT HONEY
-        </h1>
-
-        <div className="w-full sm:w-[60%] flex justify-center my-4">
-          <ProductCard name="Hot Honey" imageUrl="/image/honey.png" />
-        </div>
-
-        <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">
-          Manuka Honey
-        </h1>
-
-        <div className="w-full sm:w-[60%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
-          <ProductCard name="Manuka Honey" imageUrl="/image/honey.png" />
-          <ProductCard name="Manuka Honey" imageUrl="/image/honey.png" />
-          <ProductCard name="Manuka Honey" imageUrl="/image/honey.png" />
         </div>
       </div>
     </div>
