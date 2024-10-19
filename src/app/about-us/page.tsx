@@ -134,7 +134,9 @@ const ScrollSections = () => {
           ))}
         </ul>
       </main>
-    
+      <aside>
+
+      </aside>
     </>
   );
 };
