@@ -1,14 +1,17 @@
 import React from "react";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
 
 const poppins = Poppins({
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-})
+});
 
 function VideoSection() {
   return (
-    <section className={`relative h-[80vh] w-full flex items-center justify-center text-center md:text-left ${poppins.className}`}>
+    <section
+      className={`relative h-[80vh] w-full flex items-center justify-center text-center md:text-left ${poppins.className}`}
+    >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -31,15 +34,17 @@ function VideoSection() {
       <div className="relative z-10 w-full md:w-3/4 lg:w-1/2 px-6 md:px-12 text-white flex flex-col justify-center items-center ">
         {/* Text Content */}
         <h1 className="text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl text-start lg:text-center">
-          Organic Hive
+          The Journey
         </h1>
         <p className="text-xl md:text-2xl my-4 text-center">
-          We traveled over 5,000 miles to find a light & sweet, 100% organic
-          honey and support the local beekeepers who produce it.
+          At Haniko, we are committed to upholding the integrity of our product
+          for our customers. We believe in full transparency, sharing the
+          origins of our product and the sustainable journey it follows from
+          hive to jar, ensuring you receive pure, natural honey every time.
         </p>
-        <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105 ">
+        <Link href={'/about-us'} className="bg-gradient-to-r py-3 px-8 from-amber-500 text-xl to-[#ffde4a]  font-medium  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105 ">
           Learn More
-        </button>
+        </Link>
       </div>
     </section>
   );

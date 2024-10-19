@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React from "react";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -26,7 +26,8 @@ function Page() {
             Reach Us At
           </h3>
           <p className="text-white mb-2 sm:mb-4">
-            <strong>Address:</strong> 1234 Honeybee Lane, Beekeeper City, HB 56789
+            <strong>Address:</strong> 1234 Honeybee Lane, Beekeeper City, HB
+            56789
           </p>
           <p className="text-white mb-2 sm:mb-4">
             <strong>Email:</strong> contact@haniko.com
@@ -37,15 +38,22 @@ function Page() {
         </div>
 
         {/* Contact Form */}
-        <div className="lg:w-1/2 bg-white p-6 lg:p-10">
+        <div className="lg:w-1/2 bg-white p-6 lg:px-10">
           <h1 className="text-amber-500 text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-10">
             Contact Us
           </h1>
-          <h2 className="text-gray-800 text-lg font-semibold mb-4">
-            Get In Touch
+          <h2 className="text-gray-800 text-lg font-semibold">
+            Get in Touch with Us
           </h2>
+          <h1 className="mb-4">
+            Whether you have questions about our products or are looking for a
+            trusted B2B honey supplier, we’re here to help.
+          </h1>
 
-          <form className="space-y-4 sm:space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form
+            className="space-y-4 sm:space-y-6"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className="flex flex-col">
               <label htmlFor="name" className="sr-only">
                 Name
