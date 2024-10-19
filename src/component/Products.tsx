@@ -3,11 +3,12 @@
 import React, { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 function ShowCase() {
   const autoplay = Autoplay({ delay: 3000 });
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true }, [autoplay]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: false }, [autoplay]);
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [hover, setHover] = useState(-1);
@@ -32,7 +33,7 @@ function ShowCase() {
           alt="showcase"
           className="w-[100%] md:w-[20rem] h-auto object-cover"
         /> */}
-        <h1 className="text-4xl text-[#013e52] mt-3 text-center">
+        <h1 className="lg:text-6xl border-b-[6px] border-double border-[#013e52] text-4xl text-[#013e52] mt-3 text-center">
           Discover Our Honey
         </h1>
       </div>
@@ -73,24 +74,12 @@ function ShowCase() {
             </div>
           ))}
         </div>
+        <div className="w-full text-center mt-1">
+        <Link href={'/products'} className="px-10 underline underline-offset-2 font-medium text-[#003e52]">
+          Shop More...
+        </Link>
+        </div>
       </div>
-
-      {/* Previous and Next buttons */}
-      {/* <button
-        className={`embla__prev absolute left-4 top-1/2 transform -translate-y-1/2  p-2 transition duration-200`}
-        onClick={() => emblaApi && emblaApi.scrollPrev()}
-        disabled={prevBtnDisabled}
-      >
-        <img src={'/image/prev.png'} alt="previous" className="" />
-      </button>
-
-      <button
-        className={`embla__next absolute right-4 top-1/2 transform -translate-y-1/2  p-2  transition duration-200`}
-        onClick={() => emblaApi && emblaApi.scrollNext()}
-        disabled={nextBtnDisabled}
-      >
-        <img src={'/image/next.png'} alt="next" className="" />
-      </button> */}
     </main >
   );
 }

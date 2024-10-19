@@ -10,7 +10,6 @@ const honeyTypes = [
   "Acacia Honey - Mild & Buttery!",
 ];
 
-// Function to duplicate an array n times
 function duplicateArray(arr: any, n: any) {
   return Array.from({ length: n }, () => arr).flat();
 }

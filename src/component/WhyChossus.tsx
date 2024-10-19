@@ -1,60 +1,73 @@
-
-
 export default function WhyChooseUs() {
   const features = [
     {
-      icon: "/image/honeycomb.webp" ,
-      title: 'Organic Honey',
+      icon: "/image/honeycomb.webp",
+      title: "Organic Honey",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh.',
+        "Enjoy the purest, most organic honey straight from the beehives, carefully sourced to ensure the highest quality.",
+      gradient: "bg-gradient-to-tr from-[#8b45ba] to-[#d669e7]",
     },
     {
       icon: "/image/bee.webp",
-      title: 'Queen Bee Honey',
+      title: "Queen Bee Honey",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh.',
+        "Our Queen Bee Honey is harvested with great care, providing a rich, sweet flavor like no other.",
+      gradient: "bg-gradient-to-tr from-[#EFA820] to-[#FFCB74]",
     },
     {
       icon: "/image/honey.webp",
-      title: 'Hygienic Packing',
+      title: "Hygienic Packing",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh.',
+        "Packaged in a clean and hygienic environment to preserve the freshness and purity of our honey.",
+      gradient: "bg-gradient-to-tr from-[#225D67] to-[#49C5D5]",
     },
     {
       icon: "/image/fast.webp",
-      title: 'Fast Delivery',
+      title: "Fast Delivery",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh.',
+        "Our delivery system ensures that you get your honey fast and fresh, straight to your doorstep.",
+      gradient: "bg-gradient-to-tr from-[#E75D6B] to-[#FF9DAB]",
     },
-  ]
+  ];
 
   return (
-    <section className="w-screen mt-16">
-      <div className="w-full flex flex-col justify-center items-center">
-
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Why Choose Our Honey
-          </h2>
-          <p className="text-gray-600 max-w-2xl ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor ipsum dolor sit amet, consectetur adipiscing elit.
+    <section className="w-screen py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+        <h1 className="text-4xl text-[#013e52] mt-3 text-center font-bold">
+        Why Choose Our Honey
+        </h1>
+  
+          <p className="text-yellow-700 max-w-2xl mx-auto leading-relaxed font-semibold">
+            Our honey is harvested with precision and love, ensuring each drop
+            offers the best flavor and health benefits. Here's why our customers
+            love us.
           </p>
         </div>
 
-        <div className="w-full flex flex-col md:flex-row justify-evenly items-center gap-5 px-5 lg:px-24 ">
-
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-5 lg:px-0">
           {features.map((feature, index) => (
-
-            <div key={index} className="w-full flex flex-col justify-center items-center md:w-[300px] ">
-              <img src={feature.icon} className='w-24' alt="" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">{feature.title}</h3>
-              <p className="text-gray-600 text-center">{feature.description}</p>
+            <div
+              key={index}
+              className={`w-full flex flex-col items-center p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ${feature.gradient}`}
+            >
+              <img
+                src={feature.icon}
+                className="w-24 h-24 mb-4"
+                alt={feature.title}
+              />
+              <h3 className="text-2xl font-semibold text-white mb-3 text-center">
+                {feature.title}
+              </h3>
+              <p className="text-white text-center leading-relaxed">
+                {feature.description}
+              </p>
             </div>
-
           ))}
-
         </div>
       </div>
     </section>
-  )
+  );
 }
