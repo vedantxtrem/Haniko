@@ -37,14 +37,14 @@ const products = [
   },
 ];
 
-const HeartIcon = () => (
+const HeartIcon = ({ filled }: { filled: boolean }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="none"
+    fill={filled ? "red" : "none"}
     viewBox="0 0 24 24"
     strokeWidth={2}
     stroke="currentColor"
-    className="w-6 h-6 text-red-500 cursor-pointer transition-colors duration-300 hover:text-red-700"
+    className="w-6 h-6 cursor-pointer text-red-500 transition-colors duration-300 hover:text-red-700"
   >
     <path
       strokeLinecap="round"
@@ -61,14 +61,15 @@ const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({
   const [heartColor, setHeartColor] = useState(false);
 
   const toggleHeartColor = () => {
-    setHeartColor(!heartColor);
+    setHeartColor(prev => !prev);
   };
+
   return (
     <div className="w-full md:w-fit h-full flex flex-col justify-center items-center p-4">
       <div className="w-full text-center text-black relative">
         <div className="relative mt-2 rounded-2xl bg-gradient-to-r from-amber-300 via-white to-amber-300 z-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center">
           <span onClick={toggleHeartColor} className="absolute right-2 top-2">
-            <HeartIcon />
+            <HeartIcon filled={heartColor} /> {/* Pass filled prop based on state */}
           </span>
           <img
             src={imageUrl}
