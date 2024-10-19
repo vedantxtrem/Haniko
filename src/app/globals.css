@@ -194,4 +194,8 @@ html {
     animation: marquee 15s linear infinite;
     white-space: nowrap;
   }
-  
+
+
+.user-select-none {
+    user-select: none; /* Prevent text selection */
+}

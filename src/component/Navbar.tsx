@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiClothJar, GiHamburgerMenu } from "react-icons/gi";
 import { BsCart } from "react-icons/bs";
 
 import "animate.css";
@@ -48,6 +48,12 @@ const Navbar: React.FC = () => {
       icon: <BsCart className="font-bold mt-1" />,
       link: "/products",
     },
+    {
+      name: "Business Segment",
+      icon: <GiClothJar className="font-bold mt-1" />,
+      link: '/b2b',
+    },
+
     {
       name: "Blogs",
       icon: <HiOutlineGlobeAlt className="font-bold mt-1" />,
