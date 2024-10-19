@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
 
           <p className="text-yellow-700 max-w-2xl mx-auto leading-relaxed font-semibold">
             Our honey is harvested with precision and love, ensuring each drop
-            offers the best flavor and health benefits. Here's why our customers
+            offers the best flavor and health benefits. Here why our customers
             love us.
           </p>
         </div>

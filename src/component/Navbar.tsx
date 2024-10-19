@@ -98,20 +98,20 @@ const Navbar = () => {
             className={`${poppins.className} mx-auto min-w-[70%] flex flex-col justify-center items-center gap-3`}
           >
             {options.map((option, index) => (
-              <Link
-                href={option.link}
-                onClick={toggleSidebar}
-                className="z-[100]"
-              >
-                <div
-                  key={index}
-                  className="flex w-full bg-amber-500 py-1.5 rounded-2xl bg-opacity-10 mx-auto text-center items-center justify-center text-slate-950 text-xl gap-2 font-semibold"
-                >
-                  {option.icon}
-                  {option.name}
-                </div>
-              </Link>
-            ))}
+  <Link
+    key={index}  // Corrected: Added the key here
+    href={option.link}
+    onClick={toggleSidebar}
+    className="z-[100]"
+  >
+    <div
+      className="flex w-full bg-amber-500 py-1.5 rounded-2xl bg-opacity-10 mx-auto text-center items-center justify-center text-slate-950 text-xl gap-2 font-semibold"
+    >
+      {option.icon}
+      {option.name}
+    </div>
+  </Link>
+))}
           </div>
           <Link
             href={"/contact"}
