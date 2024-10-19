@@ -41,12 +41,15 @@ const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({
   imageUrl,
 }) => {
   return (
-    <div className="w-fit h-full flex flex-col justify-center items-center p-6">
-
+    <div className="w-full md:w-fit h-full flex flex-col justify-center items-center p-6">
       <div className="w-full text-center text-black z-10 relative">
-        <img src="/image/hexagon.svg" alt="" className="-z-10 absolute w-[200px] h-[150px] left-1/2 bottom-[40px] -ml-1 -translate-x-1/2" />
-        <img src={imageUrl} alt={name} className="min-w-[300px] z-50" />
-        <h2 className="font-bold text-xl">{name}</h2>
+        <img
+          src="/image/hexagon.svg"
+          alt=""
+          className="-z-10 absolute w-[200px] h-[150px] left-1/2 bottom-[40px] -ml-1 -translate-x-1/2"
+        />
+        <img src={imageUrl} alt={name} className="min-w-[150px] md:min-w-[300px] z-50" />
+        <h2 className="font-bold text-lg md:text-xl">{name}</h2>
       </div>
     </div>
   );
@@ -66,7 +69,7 @@ const ProductPage: React.FC = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(slideToNext, 2000); // Change image every 3 seconds
+    const interval = setInterval(slideToNext, 2000); // Change image every 2 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -132,7 +135,7 @@ const ProductPage: React.FC = () => {
       <Promotion />
 
       <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 via-white to-white">
-        <div className="w-[60%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-3">
+        <div className="w-full md:w-[60%] h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center my-3">
           {products.map((product) => (
             <ProductCard
               key={product.name}
@@ -146,25 +149,18 @@ const ProductPage: React.FC = () => {
           HOT HONEY
         </h1>
 
-        <div className=" h-full flex justify-items-center ">
+        <div className="w-full sm:w-[60%] flex justify-center my-4">
           <ProductCard name="Hot Honey" imageUrl="/image/honey.png" />
         </div>
 
         <h1 className="font-harman text-4xl font-bold py-4 text-yellow-300">
-          {" "}
-          Manuka Honey{" "}
+          Manuka Honey
         </h1>
 
-        <div className="w-[60%] justify-center ">
-          <div className="w-full h-full flex justify-center ">
-            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
-            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
-            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
-          </div>
-          <div className="w-full h-full flex justify-center ">
-            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
-            <ProductCard name="Manuka Honey " imageUrl="/image/honey.png" />
-          </div>
+        <div className="w-full sm:w-[60%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+          <ProductCard name="Manuka Honey" imageUrl="/image/honey.png" />
+          <ProductCard name="Manuka Honey" imageUrl="/image/honey.png" />
+          <ProductCard name="Manuka Honey" imageUrl="/image/honey.png" />
         </div>
       </div>
     </div>

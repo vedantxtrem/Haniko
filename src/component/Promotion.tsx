@@ -16,7 +16,7 @@ function duplicateArray(arr: any, n: any) {
 }
 
 function Promotion() {
-  const duplicatedHoneyTypes = duplicateArray(honeyTypes, 10); // Adjust the multiplier for desired length
+  const duplicatedHoneyTypes = duplicateArray(honeyTypes, 10); 
 
   return (
     <div className="relative overflow-hidden bg-yellow-400 py-4">

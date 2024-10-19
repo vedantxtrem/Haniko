@@ -47,7 +47,7 @@ const AboutHoney = () => {
           honey as their favorite food.
         </p>
         <Link href={"/about-us"}>
-          <button className="bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-md">
+          <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105 ">
             Learn More
           </button>
         </Link>
