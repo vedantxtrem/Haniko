@@ -101,17 +101,15 @@ export default function Page() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={` max-w-screen bg-white flex flex-col-reverse md:flex ${
+              className={`max-w-screen bg-white flex flex-col-reverse md:flex ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              <div className="w-full h-[50vh] md:w-[50%] md:h-[90vh]">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-[50vh] md:w-[50%] md:h-[90vh] object-cover"
+              />
               <div className="p-8 md:p-32 w-full md:w-[50%] md:mt-20">
                 <h3 className="text-3xl md:text-6xl font-bold mb-4 text-amber-600">
                   {service.title}
