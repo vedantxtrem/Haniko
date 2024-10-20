@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 function Footer() {
   const [isOpen, setIsOpen] = useState(true);
@@ -30,13 +31,12 @@ function Footer() {
     }
   ];
 
+
+  const currentPath = usePathname();
+
   useEffect(() => {
-    if (window.location.pathname === "/about-us") {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
-  }, []);
+    setIsOpen(currentPath === "about-us" ? false : true);
+  }, [currentPath]);
 
   return (
     <footer
