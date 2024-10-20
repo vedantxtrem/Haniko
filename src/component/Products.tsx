@@ -57,7 +57,7 @@ function ShowCase() {
       </div>
 
       <div
-        className="overflow-hidden relative mt-10 w-full user-select-none"
+        className="overflow-hidden relative mt-5 md:mt-10 w-full user-select-none"
         ref={emblaRef}
       >
         <div className="embla__container flex">
@@ -68,12 +68,12 @@ function ShowCase() {
                 onMouseEnter={() => setHover(index)}
                 onMouseLeave={() => setHover(-1)}
                 key={index}
-                className="h-[600px] embla__slide flex-shrink-0 w-full p-4 flex flex-col items-center justify-center"
+                className="md:h-[600px] embla__slide flex-shrink-0 w-full p-4 flex flex-col items-center justify-center"
               >
                 <img
                   src={product.imageUrl}
                   alt={product.name}
-                  className={`h-auto object-cover mx-auto  duration-1000 cursor-pointer transition-all  ${isActive ? 'w-[35%]' : 'w-[30%]'} ${hover === index ? 'scale-105' : ''}`}
+                  className={`h-auto object-cover mx-auto  duration-1000 cursor-pointer transition-all w-1/2  ${isActive ? 'md:w-[35%]' : 'md:w-[30%]'} ${hover === index ? 'scale-105' : ''}`}
                 />
 
                 <div className="flex leading-3 flex-col mt-6 gap-1">
