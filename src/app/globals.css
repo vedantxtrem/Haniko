@@ -68,6 +68,8 @@ html {
     -webkit-text-stroke: 2px ;
     text-stroke: 2px black;
 }
+   
+   
 
 .scroll-bar-hidden {
     overflow-y: scroll;

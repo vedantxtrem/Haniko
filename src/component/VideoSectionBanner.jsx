@@ -7,7 +7,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
-function VideoSection() {
+function VideoSectionBanner() {
   return (
     <main className="w-screen relative min-h-screen">
       <div className="absolute top-0 left-0 w-full h-full">
@@ -49,4 +49,4 @@ function VideoSection() {
   );
 }
 
-export default VideoSection;
+export default VideoSectionBanner;
