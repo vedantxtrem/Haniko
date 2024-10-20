@@ -33,7 +33,7 @@ function ShowCase() {
           alt="showcase"
           className="w-[100%] md:w-[20rem] h-auto object-cover"
         /> */}
-        <h1 className="lg:text-6xl border-b-[6px] border-double border-[#013e52] text-4xl text-[#013e52] mt-3 text-center">
+        <h1 className="lg:text-6xl md:border-b-[6px] border-double border-[#013e52] text-4xl text-[#013e52] mt-3 text-center">
           Discover Our Honey
         </h1>
       </div>

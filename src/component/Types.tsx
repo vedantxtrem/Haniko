@@ -14,16 +14,16 @@ export default function TypesCard({ imageSrc, title, description, bgColor }:any)
 
                 <div className="md:min-w-[15rem] md:max-w-[10rem]"></div>
                 <div className="flex md:ml-10 flex-col gap-5 justify-evenly items-end w-full">
-                    <div className="flex flex-col gap-3 p-5">
+                    <div className="flex flex-col p-5">
                         <span className="text-3xl font-semibold text-white">
                             {title}
                         </span>
-                        <span className="text-xl font-medium text-white">
+                        <span className="text-base md:text-xl font-medium text-white">
                             {description}
                         </span>
                     </div>
 
-                    <span className="text-xl mb-5 text-amber-500 drop-shadow-xl mx-10 border-b-2 border-amber-500 w-fit border-dashed font-semibold">
+                    <span className="text-xl mb-5 text-white drop-shadow-xl mx-10 border-b-2 border-white w-fit border-dashed font-semibold">
                         Learn More
                     </span>
                 </div>

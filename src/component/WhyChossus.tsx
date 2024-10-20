@@ -55,11 +55,11 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-5 lg:px-0">
+        <div className="w-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-5 md:px-10">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`w-full flex flex-col items-center justify-evenly p-8 rounded-xl  ${feature.gradient}`}
+              className={`h-auto w-full flex flex-col items-center justify-evenly p-6 rounded-xl  ${feature.gradient}`}
             >
               <img
                 src={feature.icon}
