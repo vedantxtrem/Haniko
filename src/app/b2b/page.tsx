@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
+import Packaging from "@/component/Packaging";
 
 const services = [
   {
@@ -171,6 +172,8 @@ export default function Page() {
           }
         `}</style>
       </div >
+
+      <Packaging />
 
       {/* CTA Section */}
       < div className="w-full bg-white md:pb-20" >
