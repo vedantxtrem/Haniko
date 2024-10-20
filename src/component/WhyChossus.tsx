@@ -1,17 +1,25 @@
+import { Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
 export default function WhyChooseUs() {
   const features = [
     {
       icon: "/image/honeycomb.png",
       title: "Organic Honey",
       description:
-        "Enjoy the purest, most organic honey straight from the beehives, carefully sourced to ensure the highest quality.",
+        "Our honey is 100% natural, harvested straight from the finest blossoms without any additives and each variety offers unique, naturally occurring flavors.",
       gradient: "bg-gradient-to-tr from-[#8b45ba] to-[#d669e7]",
     },
     {
       icon: "/image/bee.png",
-      title: "Queen Bee Honey",
+      title: "Sustainable",
       description:
-        "Our Queen Bee Honey is harvested with great care, providing a rich, sweet flavor like no other.",
+        "During the honey harvesting process, we ensure that our beekeepers follow ethical practices that protect bee populations and preserve the environment, promoting sustainability and ecological balance.",
       gradient: "bg-gradient-to-tr from-[#EFA820] to-[#FFCB74]",
     },
     {
@@ -22,7 +30,7 @@ export default function WhyChooseUs() {
       gradient: "bg-gradient-to-tr from-[#225D67] to-[#49C5D5]",
     },
     {
-      icon: "/image/fast.png",
+      icon: "/image/flower.png",
       title: "Fast Delivery",
       description:
         "Our delivery system ensures that you get your honey fast and fresh, straight to your doorstep.",
@@ -59,10 +67,10 @@ export default function WhyChooseUs() {
                 alt={feature.title}
               />
               <div>
-                <h3 className="text-2xl font-semibold text-white mb-3 text-center">
+                <h3 className="text-2xl font-semibold text-white mb-3 text-center font-campton">
                   {feature.title}
                 </h3>
-                <p className="text-white text-center leading-relaxed">
+                <p className={`${poppins.className} text-white text-center leading-relaxed font-medium`}>
                   {feature.description}
                 </p>
               </div>
