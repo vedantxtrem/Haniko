@@ -9,32 +9,36 @@ const poppins = Poppins({
 export default function WhyChooseUs() {
   const features = [
     {
-      icon: "/image/honeycomb.png",
+      icon: "/image/honeycomb.webp",
       title: "Honey",
       description:
         "Our honey is 100% natural, harvested straight from the finest blossoms without any additives and each variety offers unique, naturally occurring flavors.",
-      gradient: "bg-gradient-to-tr from-[#8b45ba] to-[#d669e7]",
+      gradient: "",
+      // gradient: "bg-gradient-to-tr from-[#8b45ba] to-[#d669e7]",
     },
     {
-      icon: "/image/bee.png",
+      icon: "/image/bee.webp",
       title: "Sustainable and Ethical",
       description:
         "During the honey harvesting process, we ensure that our beekeepers follow ethical practices that protect bee populations and preserve the environment, promoting sustainability and ecological balance.",
-      gradient: "bg-gradient-to-tr from-[#EFA820] to-[#FFCB74]",
+      gradient: "",
+      // gradient: "bg-gradient-to-tr from-[#EFA820] to-[#FFCB74]",
     },
     {
-      icon: "/image/honey_1.png",
+      icon: "/image/honey.webp",
       title: "Hygienic Packing",
       description:
         "Packaged in a clean and hygienic environment to preserve the freshness and purity of our honey.",
-      gradient: "bg-gradient-to-tr from-[#225D67] to-[#49C5D5]",
+      gradient: "",
+      // gradient: "bg-gradient-to-tr from-[#225D67] to-[#49C5D5]",
     },
     {
-      icon: "/image/flower.png",
+      icon: "/image/flower1.png",
       title: "Floral Specific",
       description:
         "We source honey of specific nectar blossoms, resulting into distinct and natural flavors unique to each variety. These floral-specific varieties ensure that every spoonful delivers an authentic and unadulterated taste of nature.",
-      gradient: "bg-gradient-to-tr from-[#E75D6B] to-[#FF9DAB]",
+      gradient: "",
+      // gradient: "bg-gradient-to-tr from-[#E75D6B] to-[#FF9DAB]",
     },
   ];
 
@@ -59,21 +63,23 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`h-auto w-full flex flex-col items-center justify-evenly p-6 rounded-xl  ${feature.gradient}`}
+              className={`h-auto w-full flex flex-col items-center justify-between p-6 rounded-xl  ${feature.gradient}`}
             >
               <img
                 src={feature.icon}
-                className="w-24 max-h-24 mb-4 bg-cover "
+                className="w-24 h-24 mb-4 bg-cover "
                 alt={feature.title}
               />
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-3 text-center font-campton">
+
+              <div className="flex flex-col justify-center items-start">
+                <h3 className="text-2xl font-semibold text-black mb-3 text-center font-campton">
                   {feature.title}
                 </h3>
-                <p className={`${poppins.className} text-white text-center leading-relaxed font-medium`}>
+                <p className={`${poppins.className} text-black text-center leading-relaxed font-medium`}>
                   {feature.description}
                 </p>
               </div>
+
             </div>
           ))}
         </div>
