@@ -73,7 +73,7 @@ function TypeSection() {
             <TypesCard
               imageSrc="https://www.shutterstock.com/shutterstock/photos/2513008237/display_1500/stock-photo-phaseolus-coccineus-known-as-runner-bean-scarlet-runner-bean-or-multiflora-bean-is-a-plant-in-2513008237.jpg"
               title="Multiflora Honey"
-              description="Honey: Multiflora honey is a harmonious blend of nectars from various wildflowers, offering a rich and diverse flavor profile with natural goodness."
+              description="Multiflora honey is a harmonious blend of nectars from various wildflowers, offering a rich and diverse flavor profile with natural goodness."
               bgColor="bg-[#225D67]"
             />
             <TypesCard

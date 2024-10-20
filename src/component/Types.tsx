@@ -28,12 +28,12 @@ export default function TypesCard({
             </span>
           </div>
 
-          <Link
+          {/* <Link
             href={"/about-us"}
             className="text-xl mb-5 text-white drop-shadow-xl mx-10 border-b-2 border-white w-fit border-dashed font-semibold"
           >
             Learn More
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
