@@ -27,13 +27,10 @@ const services = [
 ];
 
 const certifications = [
-  "https://www.designerpeople.com//wp-content/uploads/2020/08/honey-jar-shape-design-2.jpg",
-  "https://www.designerpeople.com//wp-content/uploads/2020/08/honey-jar-shape-design-2.jpg",
-  "https://www.designerpeople.com//wp-content/uploads/2020/08/honey-jar-shape-design-2.jpg",
-  "https://www.designerpeople.com//wp-content/uploads/2020/08/honey-jar-shape-design-2.jpg",
-  "https://www.designerpeople.com//wp-content/uploads/2020/08/honey-jar-shape-design-2.jpg",
-  "https://www.designerpeople.com//wp-content/uploads/2020/08/honey-jar-shape-design-2.jpg",
+  '/certificate/apeda.png', '/certificate/eic.png', '/certificate/fda.png', '/certificate/fssai.png', '/certificate/fssc.png', '/certificate/halal.png', '/certificate/nbb.png',
 ];
+
+
 
 export default function Page() {
   const autoplay = Autoplay({ delay: 3000 });
@@ -141,13 +138,13 @@ export default function Page() {
         {/* Certifications Carousel */}
         <div className="max-w-6xl mx-auto">
           <div className="embla" ref={emblaRef}>
-            <div className="embla__container">
+            <div className="embla__container ">
               {certifications.map((image, index) => (
-                <div className="embla__slide user-select-none" key={index}>
+                <div className="embla__slide user-select-none flex items-center justify-center" key={index}>
                   <img
                     src={image}
                     alt={`Certification ${index + 1}`}
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="max-w-48 max-h-48 object-cover rounded-lg"
                   />
                 </div>
               ))}
@@ -164,7 +161,7 @@ export default function Page() {
             display: flex;
           }
           .embla__slide {
-            min-width: 50%;
+            min-width: 33%;
             position: relative;
             box-sizing: border-box; /* Ensure padding/margins don't affect width */
           }
