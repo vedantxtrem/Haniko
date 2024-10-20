@@ -45,7 +45,7 @@ function Page() {
           <h2 className="text-gray-800 text-lg font-semibold">
             Get in Touch with Us
           </h2>
-          <h1 className="mb-4">
+          <h1 className="mb-4 text-sm md:text-xl">
             Whether you have questions about our products or are looking for a
             trusted B2B honey supplier, we’re here to help.
           </h1>
