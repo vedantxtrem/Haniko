@@ -10,7 +10,7 @@ export default function WhyChooseUs() {
   const features = [
     {
       icon: "/image/honeycomb.webp",
-      title: "Honey",
+      title: "Honey as it is",
       description:
         "Our honey is 100% natural, harvested straight from the finest blossoms without any additives and each variety offers unique, naturally occurring flavors.",
       gradient: "",
@@ -47,15 +47,15 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl text-[#013e52] mt-3 text-center font-bold">
+          <h1 className="text-5xl text-[#013e52] mt-3 text-center font-bold">
             Why Choose Our Honey
           </h1>
 
-          <p className="text-yellow-700 max-w-2xl mx-auto leading-relaxed font-semibold">
+          {/* <p className="text-yellow-700 max-w-2xl mx-auto leading-relaxed font-semibold">
             Our honey is harvested with precision and love, ensuring each drop
             offers the best flavor and health benefits. Here why our customers
             love us.
-          </p>
+          </p> */}
         </div>
 
         {/* Features Grid */}
@@ -71,13 +71,17 @@ export default function WhyChooseUs() {
                 alt={feature.title}
               />
 
-              <div className="flex flex-col justify-center items-center text-center">
-                <h3 className="text-2xl font-semibold text-black mb-3 text-center font-campton">
-                  {feature.title}
-                </h3>
-                <p className={`${poppins.className} text-black text-center leading-relaxed font-medium`}>
-                  {feature.description}
-                </p>
+              <div className="w-full h-full flex flex-col justify-between items-center">
+                <div className="flex flex-col justify-center items-center text-center">
+                  <h3 className="text-2xl font-semibold text-black mb-3 text-center font-campton">
+                    {feature.title}
+                  </h3>
+                </div>
+                <div className="w-full h-full flex flex-col justify-center items-center text-center">
+                  <p className={`${poppins.className} text-black text-center leading-relaxed font-medium`}>
+                    {feature.description}
+                  </p>
+                </div>
               </div>
 
             </div>

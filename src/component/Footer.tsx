@@ -25,7 +25,7 @@ function Footer() {
       link: "/contact",
     },
     {
-      label: "Business",
+      label: "Export Inquiry",
       link: "/b2b",
     }
   ];
