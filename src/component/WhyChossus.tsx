@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="w-screen py-16 bg-gray-50">
+    <section className="w-screen py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
         {/* Section Heading */}
         <div className="text-center mb-16">
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`w-full flex flex-col items-center justify-evenly p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ${feature.gradient}`}
+              className={`w-full flex flex-col items-center justify-evenly p-8 rounded-xl  ${feature.gradient}`}
             >
               <img
                 src={feature.icon}

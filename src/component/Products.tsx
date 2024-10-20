@@ -26,8 +26,8 @@ function ShowCase() {
   }, [emblaApi]);
 
   return (
-    <main className="w-full h-full flex flex-col items-center relative  mb-10 font-harman">
-      <div className="flex flex-col items-center mt-20">
+    <main className="w-full h-full flex flex-col items-center relative font-harman">
+      <div className="flex flex-col items-center">
         {/* <img
           src={'/image/showcase.png'}
           alt="showcase"

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const AboutHoney = () => {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center py-12 lg:py-24 px-6 lg:px-20  overflow-hidden">
+    <section className="relative flex flex-col lg:flex-row items-center py-12 lg:py-20 px-6 lg:px-20  overflow-hidden">
       {/* Decorative background shapes */}
       <div className='w-full lg:w-[50%] flex'>
         <div className="absolute inset-0 z-0">

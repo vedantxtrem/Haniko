@@ -3,7 +3,7 @@ import TypesCard from "@/component/Types";
 
 function TypeSection() {
   return (
-    <div className="flex flex-col gap-10 px-4 md:px-0 my-10">
+    <div className="flex flex-col gap-10 px-4 md:px-0 mb-20">
       <img
         src="/image/hexgon.png"
         alt="spot"
