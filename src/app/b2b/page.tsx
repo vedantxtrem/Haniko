@@ -101,7 +101,7 @@ export default function Page() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`max-w-screen bg-white flex flex-col-reverse md:flex ${
+              className={` max-w-screen bg-white flex flex-col-reverse md:flex ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
