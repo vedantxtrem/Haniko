@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function TypesCard({ imageSrc, title, description, bgColor }:any) {
     return (
         <div className="shadow-xl w-fit mx-auto rounded-[35px] hover:scale-[1.01] cursor-pointer transition-all duration-500">
@@ -23,9 +25,9 @@ export default function TypesCard({ imageSrc, title, description, bgColor }:any)
                         </span>
                     </div>
 
-                    <span className="text-xl mb-5 text-white drop-shadow-xl mx-10 border-b-2 border-white w-fit border-dashed font-semibold">
+                    <Link href={'/about-us'} className="text-xl mb-5 text-white drop-shadow-xl mx-10 border-b-2 border-white w-fit border-dashed font-semibold">
                         Learn More
-                    </span>
+                    </Link>
                 </div>
             </div>
         </div>
