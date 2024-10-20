@@ -31,9 +31,9 @@ export default function WhyChooseUs() {
     },
     {
       icon: "/image/flower.png",
-      title: "Fast Delivery",
+      title: "Floral Specific",
       description:
-        "Our delivery system ensures that you get your honey fast and fresh, straight to your doorstep.",
+        "We source honey of specific nectar blossoms, resulting into distinct and natural flavors unique to each variety. These floral-specific varieties ensure that every spoonful delivers an authentic and unadulterated taste of nature.",
       gradient: "bg-gradient-to-tr from-[#E75D6B] to-[#FF9DAB]",
     },
   ];
