@@ -80,8 +80,8 @@ const Navbar: React.FC = () => {
           {options.map((option, index) => (
             <Link key={index} href={option.link}>
               <div className="flex cursor-pointer text-black text-xl items-center gap-2 transition-transform duration-300 hover:scale-105 hover:opacity-80">
-                <span className="flex items-center">{option.icon}</span>
-                <span className="flex items-center mt-0.5">{option.name}</span>
+                <span className="flex items-center font-semibold">{option.icon}</span>
+                <span className="flex items-center mt-0.5 font-medium">{option.name}</span>
               </div>
             </Link>
           ))}

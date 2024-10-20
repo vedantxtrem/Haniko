@@ -7,19 +7,37 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 function Footer() {
   const [isOpen, setIsOpen] = useState(true);
 
-
+  const options = [
+    {
+      label: "Home",
+      link: "/",
+    },
+    {
+      label: "Product",
+      link: "/products",
+    },
+    {
+      label: "About Us",
+      link: "/about-us",
+    },
+    {
+      label: "Contact Us",
+      link: "/contact",
+    },
+  ];
 
   useEffect(() => {
-      if (window.location.pathname === '/about-us') {
-        setIsOpen(false);
-      } else {
-        setIsOpen(true);
-      }
+    if (window.location.pathname === "/about-us") {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
   }, []);
 
-
   return (
-    <footer className={`${isOpen ? "bg-yellow-100 text-black p-10" : "hidden"}`}>
+    <footer
+      className={`${isOpen ? "bg-yellow-100 text-black p-10" : "hidden"}`}
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
         <div>
           <img
@@ -35,15 +53,15 @@ function Footer() {
             <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
           </h6>
           <ul className="space-y-3">
-            {["Home", "Product", "About Us", "Contact Us"].map((service) => (
-              <li key={service}>
+            {options.map((service, index) => (
+              <li key={index}>
                 <a
-                  href="#"
+                  href={service.link}
                   className="block text-gray-900 font-medium relative hover:text-yellow-600 transition duration-300"
                   aria-label={`Learn more about ${service}`}
                 >
                   <span className="absolute inset-0 bg-yellow-600 scale-x-0 transition-transform duration-300 origin-left hover:scale-x-100" />
-                  <span className="relative">{service}</span>
+                  <span className="relative">{service.label}</span>
                 </a>
               </li>
             ))}

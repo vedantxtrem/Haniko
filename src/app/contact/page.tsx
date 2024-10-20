@@ -14,7 +14,7 @@ function Page() {
         {/* Contact Information */}
         <div className="lg:w-1/2 flex flex-col items-center lg:items-start bg-amber-500 text-white p-6 lg:p-12 rounded-br-[50%] lg:rounded-br-full shadow-xl">
           <img
-            src="/image/logo.png"
+            src="/new/logo.webp"
             alt="Beekeepers"
             className="rounded-full h-36 w-36 sm:h-48 sm:w-48 lg:h-56 lg:w-56 mb-4 sm:mb-6 shadow-md bg-white border-4 border-white"
           />
@@ -45,7 +45,7 @@ function Page() {
           <h2 className="text-gray-800 text-lg font-semibold">
             Get in Touch with Us
           </h2>
-          <h1 className="mb-4 text-sm md:text-xl">
+          <h1 className="mb-4 text-sm md:text-lg">
             Whether you have questions about our products or are looking for a
             trusted B2B honey supplier, we’re here to help.
           </h1>
