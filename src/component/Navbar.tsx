@@ -3,13 +3,14 @@
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { HiHome, HiOutlineGlobeAlt } from "react-icons/hi";
+import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { GiClothJar, GiHamburgerMenu } from "react-icons/gi";
 import { BsCart } from "react-icons/bs";
 
 import "animate.css";
 import { usePathname } from "next/navigation";
+import { GoHome } from "react-icons/go";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -41,7 +42,7 @@ const Navbar: React.FC = () => {
   const options = [
     {
       name: currentPath !== "/" ? "Home" : null,
-      icon: currentPath !== "/" ? <HiHome className="font-bold" /> : null,
+      icon: currentPath !== "/" ? <GoHome className="font-bold" /> : null,
       link: currentPath !== "/" ? "/" : "",
     },
     {
@@ -86,7 +87,7 @@ const Navbar: React.FC = () => {
           ))}
         </div>
         <Link href="/contact">
-          <button className="bg-gradient-to-r h-12 px-6 from-[#fc6571] to-[#ff934a] text-base font-semibold text-white rounded-full transition duration-300 ease-in-out transform hover:scale-x-110">
+          <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-x-110">
             Contact Us
           </button>
         </Link>
@@ -119,7 +120,7 @@ const Navbar: React.FC = () => {
             ))}
           </div>
           <Link href="/contact" className="flex w-full justify-center items-center">
-            <button className="bg-gradient-to-r h-10 min-w-[70%] mt-5 px-6 from-[#fc6571] to-[#ff934a] text-base font-semibold text-white rounded-full transition duration-300 ease-in-out transform hover:scale-x-110">
+            <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-x-110">
               Contact Us
             </button>
           </Link>
