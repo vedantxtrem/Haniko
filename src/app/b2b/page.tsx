@@ -104,8 +104,9 @@ export default function Page() {
               className={`max-w-screen bg-white flex flex-col-reverse md:flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
             >
-              <div className="relative w-full h-[50vh] md:w-[50%] md:h-[90vh]">
-                <div className={`h-full w-14 bg-white opacity-90 absolute ${index % 2 === 0 ? "right-0" : "left-0"}`}></div>
+              <div className={`${index % 2 === 0 ? "md:w-[58%]" : "md:w-[50%]"} relative w-full h-[50vh]  md:h-[90vh]`}>
+                {/* <div className={`h-full w-14 bg-red-500 opacity-90 absolute ${index % 2 === 0 ? "-right-10" : "-left-0"}`}></div> */}
+                <div className={`h-full w-14 bg-white opacity-80 absolute ${index % 2 === 0 ? "right-0" : "left-0"}`}></div>
                 <div className={`h-full w-14 bg-white opacity-40 absolute ${index % 2 === 0 ? "right-14" : "left-14"}`}></div>
                 <img
                   src={service.image}
