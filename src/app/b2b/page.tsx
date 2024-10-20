@@ -105,6 +105,8 @@ export default function Page() {
                 }`}
             >
               <div className="relative w-full h-[50vh] md:w-[50%] md:h-[90vh]">
+                <div className={`h-full w-14 bg-white opacity-90 absolute ${index % 2 === 0 ? "right-0" : "left-0"}`}></div>
+                <div className={`h-full w-14 bg-white opacity-40 absolute ${index % 2 === 0 ? "right-14" : "left-14"}`}></div>
                 <img
                   src={service.image}
                   alt={service.title}
@@ -122,10 +124,10 @@ export default function Page() {
             </div>
           ))}
         </div>
-      </div>
+      </div >
 
       {/* Quality Assurance Section */}
-      <div className="md:py-20 py-10 bg-white">
+      < div className="md:py-20 py-10 bg-white" >
         <h2 className="text-4xl text-center font-extrabold mb-10">
           Quality Assurance
         </h2>
@@ -170,10 +172,10 @@ export default function Page() {
             height: auto; /* Maintain aspect ratio */
           }
         `}</style>
-      </div>
+      </div >
 
       {/* CTA Section */}
-      <div className="w-full bg-white md:pb-20">
+      < div className="w-full bg-white md:pb-20" >
         <div className="md:w-3/4 w-full  mx-auto md:rounded-2xl py-10 px-3 md:py-20 text-center bg-gradient-to-tr from-amber-500 via-amber-500 to-amber-300">
           <h2 className="text-3xl font-extrabold mb-4 text-white">
             Ready to Partner with Us?
@@ -189,7 +191,7 @@ export default function Page() {
             Contact Us
           </a>
         </div>
-      </div>
+      </div >
     </>
   );
 }
