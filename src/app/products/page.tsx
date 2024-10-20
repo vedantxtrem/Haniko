@@ -12,27 +12,23 @@ const images = [
 
 const products = [
   {
-    name: "Raw & Unfiltered Honey",
+    name: "Honey",
     imageUrl: "/image/honey.png",
   },
   {
-    name: "Raw Honey Pouch",
+    name: "Jamun Honey",
     imageUrl: "/image/honey.png",
   },
   {
-    name: "Honey Minis",
+    name: "Mustard Honey",
     imageUrl: "/image/honey.png",
   },
   {
-    name: "Organic Raw Honey",
+    name: "Multiflora Honey",
     imageUrl: "/image/honey.png",
   },
   {
-    name: "Organic Honey Pouch",
-    imageUrl: "/image/honey.png",
-  },
-  {
-    name: "Raw Honey & Comb",
+    name: "Litchi Honey",
     imageUrl: "/image/honey.png",
   },
 ];
@@ -69,7 +65,7 @@ const ProductCard: React.FC<{ name: string; imageUrl: string }> = ({
       <div className="w-full text-center text-black relative">
         <div className="relative mt-2 rounded-2xl bg-gradient-to-r from-amber-300 via-white to-amber-300 z-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center">
           <span onClick={toggleHeartColor} className="absolute right-2 top-2">
-            <HeartIcon filled={heartColor} /> {/* Pass filled prop based on state */}
+            <HeartIcon filled={heartColor} /> 
           </span>
           <img
             src={imageUrl}
