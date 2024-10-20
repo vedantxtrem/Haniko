@@ -7,44 +7,45 @@ import Link from "next/link";
 
 const products = [
   {
-    name: "Honey",
-    imageUrl: "/image/honey.png",
+    name: "Pure",
+    imageUrl: "/product/pure-front.png",
   },
   {
-    name: "Jamun Honey",
-    imageUrl: "/image/honey.png",
+    name: "Jamun",
+    imageUrl: "/product/jamun-front.png",
   },
   {
-    name: "Mustard Honey",
-    imageUrl: "/image/honey.png",
+    name: "Mustard",
+    imageUrl: "/product/mustard-front.png",
   },
   {
-    name: "Multiflora Honey",
-    imageUrl: "/image/honey.png",
+    name: "Multiflora",
+    imageUrl: "/product/multiflora-front.png",
   },
   {
-    name: "Litchi Honey",
-    imageUrl: "/image/honey.png",
+    name: "Litchi",
+    imageUrl: "/product/litchi-front.png",
   },
 ];
 
 function ShowCase() {
-  const autoplay = Autoplay({ delay: 3000 });
+  const autoplay = Autoplay({ delay: 4500 });
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, dragFree: false }, [autoplay]);
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [hover, setHover] = useState(-1);
-
-  const onSelect = () => {
-    if (!emblaApi) return;
-    setPrevBtnDisabled(!emblaApi.canScrollPrev());
-    setNextBtnDisabled(!emblaApi.canScrollNext());
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    onSelect();
+    if (!emblaApi) return; 
+  
+    const handleSelect = () => {
+      setActiveIndex(emblaApi.selectedScrollSnap());
+    };
+  
+    emblaApi.on("select", handleSelect);
+    
+    return () => {
+      emblaApi.off("select", handleSelect); 
+    };
   }, [emblaApi]);
 
   return (
@@ -60,30 +61,37 @@ function ShowCase() {
         ref={emblaRef}
       >
         <div className="embla__container flex">
-          {products.map((product, index) => (
-            <div
-              onMouseEnter={() => setHover(index)}
-              onMouseLeave={() => setHover(-1)}
-              key={index}
-              className="embla__slide flex-shrink-0 w-full p-4"
-            >
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className={`w-full h-auto max-w-[35rem] object-cover mx-auto transition-transform duration-1000 cursor-pointer ${hover === index ? 'scale-110' : ''}`}
-              />
+          {products.map((product, index) => {
+            const isActive = activeIndex === index;
+            return (
+              <div
+                onMouseEnter={() => setHover(index)}
+                onMouseLeave={() => setHover(-1)}
+                key={index}
+                className="h-[550px] embla__slide flex-shrink-0 w-full p-4 flex flex-col items-center justify-center"
+              >
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className={`h-auto object-cover mx-auto  duration-1000 cursor-pointer transition-all  ${isActive ? 'w-[40%]' : 'w-[30%]'} ${hover === index ? 'scale-110' : ''}`}
+                />
 
-              <div className="flex leading-3 flex-col">
-                <h2 className={`text-3xl mt-3 text-center ${hover === index ? 'text-[#003e52]' : 'text-[#e75542]'} transition-colors duration-500`}>
-                  {product.name}
-                </h2>
+                <div className="flex leading-3 flex-col mt-6 gap-1">
+                  <h2 className={`text-3xl text-center ${hover === index ? 'text-[#003e52]' : 'text-[#e75542]'} transition-colors duration-500`}>
+                    {product.name}
+                  </h2>
+
+                  <h2 className={`text-3xl text-center ${hover === index ? 'text-[#e75542]' : 'text-[#003e52]'} transition-colors duration-500`}>
+                    Honey
+                  </h2>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
       <div className="w-full flex justify-center items-center mt-4">
-        <Link href={'/products'} >
+        <Link href={'/products'}>
           <div className="w-fit bg-gradient-to-r h-12 px-6 flex justify-center items-center from-amber-500 text-xl to-[#ffde4a] text-black rounded-full transition duration-300 ease-in-out transform hover:scale-105">
             Shop More
           </div>
