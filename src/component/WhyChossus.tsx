@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
                 alt={feature.title}
               />
 
-              <div className="flex flex-col justify-center items-start">
+              <div className="flex flex-col justify-center items-center text-center">
                 <h3 className="text-2xl font-semibold text-black mb-3 text-center font-campton">
                   {feature.title}
                 </h3>
