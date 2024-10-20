@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
           </div>
-          <Link href="/contact" onClick={toggleSidebar} className="flex w-full justify-center items-center">
+          <Link href="/contact" onClick={toggleSidebar} className="mt-5 flex w-full justify-center items-center">
             <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-x-110">
               Contact Us
             </button>
