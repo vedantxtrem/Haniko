@@ -24,6 +24,10 @@ function Footer() {
       label: "Contact Us",
       link: "/contact",
     },
+    {
+      label: "business",
+      link: "/b2b",
+    }
   ];
 
   useEffect(() => {
@@ -52,7 +56,7 @@ function Footer() {
             Services
             <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
           </h6>
-          <ul className="space-y-3">
+          <ul className="space-y-1">
             {options.map((service, index) => (
               <li key={index}>
                 <a
