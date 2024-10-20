@@ -99,9 +99,13 @@ export default function Page() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`max-w-screen bg-white flex flex-col-reverse md:flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              className={`relative max-w-screen bg-white flex flex-col-reverse md:flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
             >
+
+              {index === 0 && (<div className="w-12 h-12 bg-[#f7a919] rotate-45 absolute z-[100] lg:block hidden  -bottom-3 left-[48.5%]"></div>)}
+
+
               <div className={`${index % 2 === 0 ? "md:w-[50%]" : "md:w-[50%]"} relative w-full h-[50vh]  md:h-[90vh]`}>
                 {/* <div className={`h-full w-14 bg-red-500 opacity-90 absolute ${index % 2 === 0 ? "-right-10" : "-left-0"}`}></div> */}
                 <div className={`h-full w-14 bg-white opacity-80 absolute ${index % 2 === 0 ? "right-0" : "left-0"}`}></div>
