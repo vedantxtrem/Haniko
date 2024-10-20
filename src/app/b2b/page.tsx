@@ -128,7 +128,7 @@ export default function Page() {
       </div >
 
       {/* Quality Assurance Section */}
-      < div className="md:py-20 py-10 bg-white" >
+      < div className="md:py-10 py-10 bg-white" >
         <h2 className="text-4xl text-center font-extrabold mb-10">
           Quality Assurance
         </h2>
