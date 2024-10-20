@@ -36,15 +36,13 @@ const AboutHoney = () => {
       {/* Text Section */}
       <div className="relative lg:w-[35%] z-10 mt-8 lg:mt-0 lg:ml-12 text-center lg:text-left">
         <p className="text-yellow-500 font-semibold mb-2">INFORMATION</p>
-        <h2 className="text-5xl font-bold mb-4 text-black">About Haniko</h2>
+        <h2 className="text-5xl font-bold mb-4 text-black">About Us</h2>
         <p className="text-lg mb-6 text-black">
-          Over its history as a food, the main uses of honey are in cooking, baking, desserts,
-          as a spread on bread, as an addition to various beverages such as tea,
-          and as a sweetener in some commercial beverages.
-          <br /><br />
+        At Haniko, we believe in offering pure and finest sourced honey that supports sustainable beekeeping. We work closely with local beekeepers to ensure every jar of honey meets the highest standards of quality. With a variety of natural honey flavors such as Litchi, Multiflora, Mustard, Jamun, we bring you the authentic taste of India.
+          {/* <br /><br />
           Due to its energy density, honey is an important food for virtually all
           hunter-gatherer cultures in warm climates, with the Hadza people ranking
-          honey as their favorite food.
+          honey as their favorite food. */}
         </p>
         <Link href={"/about-us"}>
           <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105 ">
