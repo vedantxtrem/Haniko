@@ -68,15 +68,17 @@ function ShowCase() {
 
 
               <p className="text-base text-[#4a4a4a] text-center">
-                A delightful blend of flavors and textures that perfectly
-                complements your favorite foods.
+               
               </p>
             </div>
           ))}
         </div>
-        <div className="w-full text-center mt-1">
-        <Link href={'/products'} className="px-10 underline underline-offset-2 font-medium text-[#003e52]">
-          Shop More...
+        <div className="w-full flex justify-center items-center">
+        <Link href={'/products'} >
+          <div className="w-fit bg-gradient-to-r h-12 px-6 flex justify-center items-center  from-amber-500 text-xl to-[#ffde4a] text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+          Shop More
+
+          </div>
         </Link>
         </div>
       </div>

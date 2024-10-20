@@ -10,14 +10,14 @@ export default function WhyChooseUs() {
   const features = [
     {
       icon: "/image/honeycomb.png",
-      title: "Organic Honey",
+      title: "Honey",
       description:
         "Our honey is 100% natural, harvested straight from the finest blossoms without any additives and each variety offers unique, naturally occurring flavors.",
       gradient: "bg-gradient-to-tr from-[#8b45ba] to-[#d669e7]",
     },
     {
       icon: "/image/bee.png",
-      title: "Sustainable",
+      title: "Sustainable and Ethical",
       description:
         "During the honey harvesting process, we ensure that our beekeepers follow ethical practices that protect bee populations and preserve the environment, promoting sustainability and ecological balance.",
       gradient: "bg-gradient-to-tr from-[#EFA820] to-[#FFCB74]",

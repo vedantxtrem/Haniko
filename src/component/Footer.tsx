@@ -80,7 +80,7 @@ function Footer() {
           <div className="flex items-start mb-3">
             <IoLocationOutline size={45} className="text-yellow-800 mr-3" />
             <span className="text-sm text-gray-900 font-semibold">
-              EMB Exim PRIVATE LIMITED, Village Kumarhera, Chajjpura, Pargana
+              M B Exim PRIVATE LIMITED, Village Kumarhera, Chajjpura, Pargana
               Harora, Saharanpur, Uttar Pradesh, 247001
             </span>
           </div>
