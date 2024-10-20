@@ -53,7 +53,7 @@ const ScrollSections = () => {
 
   return (
     <>
-      <header>
+      <header className="fnt-szi">
         <div>
           <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24 relative z-30">
             <div className="w-full flex justify-center items-center">
@@ -106,7 +106,7 @@ const ScrollSections = () => {
         </div>
       </header>
 
-      <main className="">
+      <main className="fnt-szi">
         <ul id="cards">
           {data.map((item, index) => (
             <li

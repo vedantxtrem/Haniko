@@ -64,10 +64,12 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="hidden bg-transparent w-11/12 md:flex flex-row justify-between items-center py-5 mt-2 mx-auto">
+      <div className="hidden  w-11/12 md:flex flex-row justify-between items-center py-3 mt-2 mx-auto">
+        
         <Link href="/">
           <img src="/new/logo.webp" alt="Logo" className="max-w-20" />
         </Link>
+
         <div className={`${poppins.className} flex flex-row gap-5`}>
           {options.map((option, index) => (
             <Link key={index} href={option.link}>
