@@ -51,7 +51,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, front, back }) => {
     <div className="group h-[300px] md:h-[400px] w-[250px] md:w-[300px] [perspective:1000px]">
       <div className="relative h-full w-full rounded-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front side */}
-        <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+        <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] flex justify-center items-center">
           <img
             src={front}
             alt={name}
@@ -168,7 +168,7 @@ const ProductPage: React.FC = () => {
       <Promotion />
 
       <div className="w-full h-full flex flex-col justify-center items-center p-6 md:p-12">
-        <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-1 justify-items-center">
+        <div className="w-full h-full flex flex-col md:flex-row md:flex-wrap justify-center  items-center lg:gap-x-56 lg:gap-y-20 ">
           {products.map((product) => (
             <ProductCard
               key={product.name}

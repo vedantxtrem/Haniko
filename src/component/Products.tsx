@@ -68,12 +68,12 @@ function ShowCase() {
                 onMouseEnter={() => setHover(index)}
                 onMouseLeave={() => setHover(-1)}
                 key={index}
-                className="h-[550px] embla__slide flex-shrink-0 w-full p-4 flex flex-col items-center justify-center"
+                className="h-[600px] embla__slide flex-shrink-0 w-full p-4 flex flex-col items-center justify-center"
               >
                 <img
                   src={product.imageUrl}
                   alt={product.name}
-                  className={`h-auto object-cover mx-auto  duration-1000 cursor-pointer transition-all  ${isActive ? 'w-[40%]' : 'w-[30%]'} ${hover === index ? 'scale-110' : ''}`}
+                  className={`h-auto object-cover mx-auto  duration-1000 cursor-pointer transition-all  ${isActive ? 'w-[35%]' : 'w-[30%]'} ${hover === index ? 'scale-105' : ''}`}
                 />
 
                 <div className="flex leading-3 flex-col mt-6 gap-1">
