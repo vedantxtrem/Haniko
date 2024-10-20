@@ -13,7 +13,7 @@ function page() {
   //test
   return (
     <>
-      <div>
+      <div className="overflow-x-hidden">
         <VideoSectionBanner />
         <WhyChooseUs />
         <ShowCase />
