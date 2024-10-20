@@ -2,11 +2,11 @@ import { log } from "console";
 import React from "react";
 
 const honeyTypes = [
-  "Pure Honey",
-  "Jamun Honey",
-  "Mustard Honey",
-  "Multiflora Honey",
-  "Litchi Honey",
+  "  Pure Honey  ",
+  "  Jamun Honey  ",
+  "  Mustard Honey  ",
+  "  Multiflora Honey  ",
+  "  Litchi Honey  ",
 ];
 
 
