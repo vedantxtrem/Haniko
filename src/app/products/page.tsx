@@ -40,59 +40,59 @@ const products = [
 
 interface ProductCardProps {
   name: string;
-  front: string; 
+  front: string;
   back: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ name, front, back }) => {
   return (
     <div className="w-full md:w-fit h-full flex flex-col justify-center items-center p-4">
-  <div className="w-full text-center text-black relative">
-    <div className="group h-[300px] md:h-[400px] w-[250px] md:w-[300px] [perspective:1000px]">
-      <div className="relative h-full w-full rounded-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        {/* Front side */}
-        <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] flex justify-center items-center">
-          <img
-            src={front}
-            alt={name}
-            className="w-full h-full object-contain rounded-xl"
-          />
-        </div>
+      <div className="w-full text-center text-black relative">
+        <div className="group h-[300px] md:h-[400px] w-[250px] md:w-[300px] [perspective:1000px]">
+          <div className="relative h-full w-full rounded-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            {/* Front side */}
+            <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] flex justify-center items-center">
+              <img
+                src={front}
+                alt={name}
+                className="w-full h-full object-contain rounded-xl"
+              />
+            </div>
 
-        {/* Back side */}
-        <div className="absolute inset-0 h-full w-full text-center text-black [transform:rotateY(180deg)] [backface-visibility:hidden]">
-          <div className="absolute inset-0 h-full w-full [backface-visibility:hidden]">
-            <img
-              src={back}
-              alt={name}
-              className="w-full h-full object-contain rounded-xl"
-            />
+            {/* Back side */}
+            <div className="absolute inset-0 h-full w-full text-center text-black [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div className="absolute inset-0 h-full w-full [backface-visibility:hidden]">
+                <img
+                  src={back}
+                  alt={name}
+                  className="w-full h-full object-contain rounded-xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <h2 className="font-bold text-base md:text-xl mt-4 text-black uppercase">
+        {name}
+      </h2>
+
+      <Link
+        href="/contact"
+        className="mt-5 bg-yellow-400 text-black font-bold text-sm md:text-xl px-6 py-2 md:px-10 md:py-3 rounded-3xl hover:bg-white border-2 border-yellow-400 transition-colors duration-300"
+      >
+        Shop Now
+      </Link>
     </div>
-  </div>
-
-  <h2 className="font-bold text-base md:text-xl mt-4 text-black uppercase">
-    {name}
-  </h2>
-
-  <Link
-    href="/contact"
-    className="mt-5 bg-yellow-400 text-black font-bold text-sm md:text-xl px-6 py-2 md:px-10 md:py-3 rounded-3xl hover:bg-white border-2 border-yellow-400 transition-colors duration-300"
-  >
-    Shop Now
-  </Link>
-</div>
 
   );
 };
 
 const ProductPage: React.FC = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(1); 
+  const [currentImageIndex, setCurrentImageIndex] = useState(1);
 
   const slideToNext = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % (images.length + 2)); 
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % (images.length + 2));
   };
 
   const slideToPrev = () => {
@@ -169,7 +169,18 @@ const ProductPage: React.FC = () => {
 
       <div className="w-full h-full flex flex-col justify-center items-center p-6 md:p-12">
         <div className="w-full h-full flex flex-col md:flex-row md:flex-wrap justify-center  items-center lg:gap-x-56 lg:gap-y-20 ">
-          {products.map((product) => (
+          {products.slice(0, products.length / 2).map((product) => (
+            <ProductCard
+              key={product.name}
+              name={product.name}
+              front={product.front}
+              back={product.back}
+            />
+          ))}
+        </div>
+
+        <div className="w-full h-full flex flex-col md:flex-row md:flex-wrap justify-center  items-center lg:gap-x-56 lg:gap-y-20 ">
+          {products.slice(products.length / 2, products.length).map((product) => (
             <ProductCard
               key={product.name}
               name={product.name}
