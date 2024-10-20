@@ -12,12 +12,7 @@ function Page() {
     <section className={`relative overflow-hidden ${poppins.className} py-10`}>
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:text-start text-center bg-white max-w-screen mx-auto">
         {/* Contact Information */}
-        <div className="lg:w-1/2 flex flex-col items-center lg:items-start bg-amber-500 text-white p-6 lg:p-12 rounded-br-[50%] lg:rounded-br-full shadow-xl">
-          <img
-            src="/new/logo.webp"
-            alt="Beekeepers"
-            className="rounded-full h-36 w-36 sm:h-48 sm:w-48 lg:h-56 lg:w-56 mb-4 sm:mb-6 shadow-md bg-white border-4 border-white"
-          />
+        <div className="lg:w-1/2 flex flex-col items-center lg:items-start py-20 bg-amber-500 text-white p-6 lg:p-12 rounded-br-[50%] lg:rounded-br-full shadow-xl">
 
           <h2 className="text-white text-lg font-semibold mb-2 tracking-wide">
             Contact Information
