@@ -98,7 +98,7 @@ const ProductPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen h-full justify-center items-center overflow-x-hidden">
+    <div className="min-h-screen w-screen text-white overflow-x-hidden">
       {/* Carousel Div */}
       <div className="relative h-[200px] sm:h-[300px] md:h-[360px] w-full flex justify-center items-center overflow-hidden">
         <div
@@ -123,13 +123,13 @@ const ProductPage: React.FC = () => {
         {/* Navigation Buttons */}
         <button
           onClick={slideToPrev}
-          className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:p-2 rounded-full"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
         >
           &#8592;
         </button>
         <button
           onClick={slideToNext}
-          className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:p-2 rounded-full"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
         >
           &#8594;
         </button>
