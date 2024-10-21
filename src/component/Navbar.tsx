@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="hidden  w-11/12 md:flex flex-row justify-between items-center py-3 mt-2 mx-auto">
+      <div className="hidden  w-11/12 lg:flex flex-row justify-between items-center py-3 mt-2 mx-auto">
 
         <Link href="/">
           <img src="/new/logo.webp" alt="Logo" className="max-w-20" />
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="md:hidden relative bg-transparent  w-11/12 flex flex-row justify-center items-center py-3 mx-auto">
+      <div className="lg:hidden relative bg-transparent  w-11/12 flex flex-row justify-center items-center py-3 mx-auto">
         <div
           onClick={toggleSidebar}
           className="z-[500] absolute top-1/2 left-1 transform -translate-y-1/2 cursor-pointer"

@@ -35,7 +35,7 @@ function Footer() {
   const currentPath = usePathname();
 
   useEffect(() => {
-    setIsOpen(currentPath === "about-us" ? false : true);
+    setIsOpen(currentPath === "/about-us" ? false : true);
   }, [currentPath]);
 
   return (
