@@ -30,7 +30,7 @@ function VideoSectionBanner() {
       <div className={`${poppins.className} w-full h-full absolute flex flex-col lg:justify-items-center  `}>
 
         <div className="p-10 my-auto lg:pl-32 ">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 ">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 ">
             <span className="text-white  ">The Finest Taste </span>
             <br />
             <span className="text-white ">of <span className="text-[#f2b104] "> Nature </span></span>
