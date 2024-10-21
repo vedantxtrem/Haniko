@@ -15,6 +15,7 @@ const products = [
     name: "Honey",
     front: "/product/pure-front.png",
     back: "/product/pure-back.png",
+
   },
   {
     name: "Jamun Honey",
@@ -51,6 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, front, back }) => {
         <div className="group h-[280px] md:h-[350px] lg:h-[400px] w-[200px] md:w-[250px] lg:w-[300px] [perspective:1000px] flex justify-center items-center">
           <div className="relative h-full w-full  rounded-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             {/* Front side */}
+            
             <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] flex justify-center items-center">
               <img
                 src={front}
