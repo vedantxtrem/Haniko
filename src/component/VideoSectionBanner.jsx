@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 function VideoSectionBanner() {
   return (
-    <main className="w-screen relative min-h-screen">
+    <main className="w-screen relative h-[50vh] md:h-[80vh] lg:min-h-screen">
       <div className="absolute top-0 left-0 w-full h-full">
         <video
           className="w-full h-full object-cover backdrop-blur-xl"
