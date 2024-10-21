@@ -46,10 +46,10 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ name, front, back }) => {
   return (
-    <div className="w-full sm:w-[45%] md:w-[47%] lg:w-[600px] flex flex-col justify-center items-center p-4 rounded-lg">
+    <div className="w-full sm:w-[45%] md:w-[47%] lg:w-[600px] flex flex-col justify-center items-center p-2 rounded-lg">
       <div className="w-full text-center text-black relative">
         <div className="w-full flex justify-center items-center">
-          <div className="group h-[250px] sm:h-[300px] md:h-[450px] w-[200px] sm:w-[250px] md:w-[400px] [perspective:1000px] flex justify-center items-center">
+          <div className="group h-[250px] sm:h-[300px] md:h-[450px] w-[200px] sm:w-[250px] md:w-[380px] [perspective:1000px] flex justify-center items-center">
             <div className="relative h-full w-full rounded-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               {/* Front side */}
               <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] flex justify-center items-center">
