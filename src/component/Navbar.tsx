@@ -11,6 +11,7 @@ import { BsCart } from "react-icons/bs";
 import "animate.css";
 import { usePathname } from "next/navigation";
 import { GoHome } from "react-icons/go";
+import { IoChevronDownOutline } from "react-icons/io5";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,27 +43,27 @@ const Navbar: React.FC = () => {
   const options = [
     {
       name: currentPath !== "/" ? "Home" : null,
-      icon: currentPath !== "/" ? <GoHome className="font-bold" /> : null,
+      icon: currentPath !== "/" ? <IoChevronDownOutline className="font-bold" /> : null,
       link: currentPath !== "/" ? "/" : "",
     },
     {
       name: currentPath !== "/about-us" ? "About Us" : null,
-      icon: currentPath !== "/about-us" ? <AiOutlineInfoCircle className="font-bold" /> : null,
+      icon: currentPath !== "/about-us" ? <IoChevronDownOutline className="font-bold" /> : null,
       link: currentPath !== "/about-us" ? "/about-us" : "",
     },
     {
       name: currentPath !== "/products" ? "Shop" : null,
-      icon: currentPath !== "/products" ? <BsCart className="font-bold" /> : null,
+      icon: currentPath !== "/products" ? <IoChevronDownOutline className="font-bold" /> : null,
       link: currentPath !== "/products" ? "/products" : "",
     },
     {
       name: currentPath !== "/b2b" ? "Business Segment" : null,
-      icon: currentPath !== "/b2b" ? <GiClothJar className="font-bold" /> : null,
+      icon: currentPath !== "/b2b" ? <IoChevronDownOutline className="font-bold" /> : null,
       link: currentPath !== "/b2b" ? '/b2b' : "",
     },
     {
       name: currentPath !== blog ? "Blogs" : null,
-      icon: currentPath !== blog ? <HiOutlineGlobeAlt className="font-bold" /> : null,
+      icon: currentPath !== blog ? <IoChevronDownOutline className="font-bold" /> : null,
       link: currentPath !== blog ? blog : "",
     },
   ].filter(option => option.name);
@@ -70,18 +71,22 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="hidden  w-11/12 lg:flex flex-row justify-between items-center py-3 mt-2 mx-auto">
+      <div className="hidden  w-[95%] lg:flex flex-row justify-between items-center py-2 mt-1 mx-auto">
 
-        <Link href="/">
-          <img src="/new/logo.webp" alt="Logo" className="max-w-20" />
-        </Link>
+        <div className="absolute left-[49vw]  z-50 top-3 p-4 rounded-full">
+          <Link href="/">
+            <img src="/new/logo.webp" alt="Logo" className="max-w-32" />
+          </Link>
+        </div>
+        <div className="absolute left-[49vw]  h-[200px] w-[200px] bg-[#fffbeb] z-40 mt-2 -mx-5 rounded-full">
+        </div>
 
         <div className={`${poppins.className} flex flex-row gap-5 p-4 `}>
           {options.map((option, index) => (
             <Link key={index} href={option.link}>
               <div className="flex cursor-pointer text-black text-xl items-center gap-2 transition-transform duration-300 hover:scale-105 hover:opacity-80">
-                <span className="flex items-center font-semibold">{option.icon}</span>
                 <span className="flex items-center mt-0.5 font-medium">{option.name}</span>
+                <span className="flex items-center font-semibold">{option.icon}</span>
               </div>
             </Link>
           ))}
