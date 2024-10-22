@@ -47,15 +47,11 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
         {/* Section Heading */}
         <div className="text-center mb-16">
+
           <h1 className="text-5xl lg:text-6xl text-[#013e52] mt-3 text-center font-bold">
             Why Choose Our Honey
           </h1>
 
-          {/* <p className="text-yellow-700 max-w-2xl mx-auto leading-relaxed font-semibold">
-            Our honey is harvested with precision and love, ensuring each drop
-            offers the best flavor and health benefits. Here why our customers
-            love us.
-          </p> */}
           
         </div>
 
