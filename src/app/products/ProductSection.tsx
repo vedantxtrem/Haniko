@@ -93,4 +93,4 @@ const ProductCard: React.FC<{ name: string; front: string; back: string }> = ({
   );
 };
 
-export default ProductSection;
+export default ProductSection;   
