@@ -35,16 +35,16 @@ function ShowCase() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    if (!emblaApi) return; 
-  
+    if (!emblaApi) return;
+
     const handleSelect = () => {
       setActiveIndex(emblaApi.selectedScrollSnap());
     };
-  
+
     emblaApi.on("select", handleSelect);
-    
+
     return () => {
-      emblaApi.off("select", handleSelect); 
+      emblaApi.off("select", handleSelect);
     };
   }, [emblaApi]);
 
@@ -54,6 +54,22 @@ function ShowCase() {
         <h1 className="  mt-3  text-5xl lg:text-6xl text-[#013e52]  text-center font-bold">
           Discover Our Honey
         </h1>
+      </div>
+
+      <div className="absolute left-0 top-0 w-48 h-48 bg-amber-100 rounded-full -translate-x-1/2 -translate-y-1/2 z-10 animate-pulse-slow"></div>
+      <div className="absolute right-0 bottom-0 w-48 h-48 bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 z-10 animate-bounce-slow"></div>
+      <div className="absolute left-1/2 bottom-0 w-96 h-96  bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 -z-10 animate-bounce-slow"></div>
+
+      {/* Honeycomb Pattern */}
+      <div className="absolute left-1/4 top-1/4 grid grid-cols-5 gap-2 opacity-20 -z-10 animate-honeycomb">
+        {[...Array(25)].map((_, i) => (
+          <div key={i} className="w-2 h-2 bg-amber-400 rounded-full"></div>
+        ))}
+      </div>
+      <div className="absolute left-[60%] top-[60%] grid grid-cols-5 gap-2 opacity-20 -z-10 animate-honeycomb rotate-45">
+        {[...Array(25)].map((_, i) => (
+          <div key={i} className="w-2 h-2 bg-amber-400 rounded-full"></div>
+        ))}
       </div>
 
       <div
@@ -77,11 +93,11 @@ function ShowCase() {
                 />
 
                 <div className="flex leading-3 flex-col mt-6 gap-1 font-bold">
-                  <h2 className={`text-3xl text-center ${hover === index ? 'text-[#003e52]' : 'text-[#e75542]'} transition-colors duration-500`}>
+                  <h2 className={`text-3xl text-center ${hover === index ? 'text-[#003e52]' : 'text-[#e75542]'} font-bold transition-colors duration-500`}>
                     {product.name}
                   </h2>
 
-                  <h2 className={`text-3xl text-center ${hover === index ? 'text-[#e75542]' : 'text-[#003e52]'} transition-colors duration-500`}>
+                  <h2 className={`text-3xl text-center ${hover === index ? 'text-[#e75542]' : 'text-[#003e52]'} font-bold transition-colors duration-500`}>
                     Honey
                   </h2>
                 </div>
@@ -90,9 +106,9 @@ function ShowCase() {
           })}
         </div>
       </div>
-      <div className="w-full flex justify-center items-center mt-4">
+      <div className="w-full flex justify-center items-center mt-4 ">
         <Link href={'/products'}>
-          <div className="w-fit bg-gradient-to-r h-12 px-6 flex justify-center items-center from-amber-500 text-xl to-[#ffde4a] text-black rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+          <div className="w-fit font-medium bg-gradient-to-r h-12 px-6 flex justify-center items-center from-amber-500 text-xl to-[#ffde4a] text-black rounded-full transition duration-300 ease-in-out transform hover:scale-105">
             Shop More
           </div>
         </Link>

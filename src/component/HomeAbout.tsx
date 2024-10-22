@@ -35,6 +35,15 @@ const AboutHoney = () => {
 
       {/* Text Section */}
       <div className="relative lg:w-[35%] z-10 mt-8 lg:mt-0 lg:ml-12 text-center lg:text-left">
+      <div className="absolute right-0 bottom-0 w-48 h-48 bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 z-10 animate-bounce-slow"></div>
+      <div className="absolute left-1/2 bottom-0 w-96 h-96  bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 -z-10 animate-bounce-slow"></div>
+
+      {/* Honeycomb Pattern */}
+      <div className="absolute left-1/4 top-1/4 grid grid-cols-5 gap-2 opacity-20 -z-10 animate-honeycomb">
+        {[...Array(25)].map((_, i) => (
+          <div key={i} className="w-2 h-2 bg-amber-400 rounded-full"></div>
+        ))}
+      </div>
         <p className="text-yellow-500 font-semibold mb-2">INFORMATION</p>
         <h2 className="text-5xl font-bold mb-4 text-black">About Us</h2>
         <p className="text-lg mb-6 text-black">
