@@ -19,7 +19,7 @@ function Promotion() {
 
   return (
     <div className="relative overflow-hidden bg-yellow-400 py-4">
-      <div className="flex animate-marquee items-center h-full">
+      <div className="flex animate-marquee items-center h-full gap-5">
         {duplicatedHoneyTypes.map((honey, index) => (
           <h1
             key={index}

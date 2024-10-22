@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="hidden  w-[95%] xl:flex flex-row justify-between items-center py-2 mt-1 mx-auto">
+      <div className="hidden bg-white w-[95%] xl:flex flex-row justify-between items-center py-2 mt-1 mx-auto">
 
         <div className="absolute left-[49vw]  z-50 top-3 p-4 rounded-full">
           <Link href="/">
@@ -99,12 +99,12 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="xl:hidden relative bg-transparent h-20 w-11/12 flex  flex-row justify-center items-center py-3 mx-auto">
+      <div className="xl:hidden bg-white relative bg-transparent h-20 flex  flex-row justify-center items-center py-3">
         <div
           onClick={toggleSidebar}
           className="z-[500] absolute top-1/2 left-1 transform -translate-y-1/2 cursor-pointer"
         >
-          <GiHamburgerMenu className="text-2xl" />
+          <GiHamburgerMenu className="text-2xl mx-5" />
         </div>
 
         <div className="absolute  z-50 top-3 p-4 rounded-full">
