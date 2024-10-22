@@ -8,6 +8,7 @@ import React from "react";
 import ShowCase from "@/component/Products";
 import TypeSection from "@/component/TypeSection";
 import VideoSectionBanner from "@/component/VideoSectionBanner";
+import QualityAssurance from "@/component/QualityAssurance";
 
 function page() {
   //test
@@ -20,6 +21,7 @@ function page() {
         <AboutUs />
         <TypeSection />
         <VideoSection />
+        <QualityAssurance />
         <BlogSection />
       </div>
     </>

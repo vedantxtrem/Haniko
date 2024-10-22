@@ -32,7 +32,6 @@ const certifications = [
 ];
 
 
-
 export default function Page() {
   const autoplay = Autoplay({ delay: 3000 });
 
