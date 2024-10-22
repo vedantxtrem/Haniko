@@ -65,11 +65,11 @@ html {
 }
 
 .stroke {
-    -webkit-text-stroke: 2px ;
+    -webkit-text-stroke: 2px;
     text-stroke: 2px black;
 }
-   
-   
+
+
 
 .scroll-bar-hidden {
     overflow-y: scroll;
@@ -169,16 +169,16 @@ html {
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: #f59e0b; /* Tailwind amber-500 */
-    clip-path: polygon(
-      25% 6.7%,
-      75% 6.7%,
-      100% 50%,
-      75% 93.3%,
-      25% 93.3%,
-      0% 50%
-    );
-  }
+    background-color: #f59e0b;
+    /* Tailwind amber-500 */
+    clip-path: polygon(25% 6.7%,
+            75% 6.7%,
+            100% 50%,
+            75% 93.3%,
+            25% 93.3%,
+            0% 50%);
+}
+
 .glass-card {
     background: rgba(240, 168, 45, 0.3);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -188,39 +188,54 @@ html {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Adjust based on the total width of your content */
-  }
-  
-  .animate-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Adjust based on the total width of your content */
+}
+
+.animate-marquee {
     animation: marquee 15s linear infinite;
     white-space: nowrap;
-  }
+}
 
 
 .user-select-none {
-    user-select: none; /* Prevent text selection */
+    user-select: none;
+    /* Prevent text selection */
 }
+
 video::-webkit-media-controls {
-    display:none !important;
+    display: none !important;
 }
+
+video {
+    pointer-events: none;
+}
+
 *::-webkit-media-controls-panel {
-    display: none!important;
+    display: none !important;
     -webkit-appearance: none;
-  }
-  
-  /* Old shadow dom for play button */
-  
-  *::-webkit-media-controls-play-button {
-    display: none!important;
+}
+
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+    display: none !important;
     -webkit-appearance: none;
-  }
-  
-  /* New shadow dom for play button */
-  
-  /* This one works! */
-  
-  *::-webkit-media-controls-start-playback-button {
-    display: none!important;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+    display: none !important;
     -webkit-appearance: none;
-  }
+}
