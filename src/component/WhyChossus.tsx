@@ -56,6 +56,7 @@ export default function WhyChooseUs() {
             offers the best flavor and health benefits. Here why our customers
             love us.
           </p> */}
+          
         </div>
 
         {/* Features Grid */}
