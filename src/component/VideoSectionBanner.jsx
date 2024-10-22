@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useRef } from "react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 
@@ -8,10 +9,19 @@ const poppins = Poppins({
 })
 
 function VideoSectionBanner() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.controls = false; // Ensure controls are hidden
+    }
+  }, []);
+
   return (
     <main className="w-screen relative h-[50vh] md:h-[80vh] lg:min-h-screen">
       <div className="absolute top-0 left-0 w-full h-full">
         <video
+          ref={videoRef}
           className="w-full h-full object-cover backdrop-blur-xl"
           autoPlay={true}
           loop={true}
@@ -19,7 +29,7 @@ function VideoSectionBanner() {
           controls={false}
           draggable={false}
         >
-          <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm"   />
+          <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm" />
         </video>
         <div className="absolute inset-0  opacity-20"></div>
       </div>
@@ -40,9 +50,9 @@ function VideoSectionBanner() {
             View Products
           </button> */}
           <Link href={"/products"}>
-          <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-           View Products
-          </button>
+            <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+              View Products
+            </button>
           </Link>
         </div>
 
