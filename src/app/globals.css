@@ -209,33 +209,3 @@ html {
     user-select: none;
     /* Prevent text selection */
 }
-
-video::-webkit-media-controls {
-    display: none !important;
-}
-
-video {
-    pointer-events: none;
-}
-
-*::-webkit-media-controls-panel {
-    display: none !important;
-    -webkit-appearance: none;
-}
-
-
-/* Old shadow dom for play button */
-
-*::-webkit-media-controls-play-button {
-    display: none !important;
-    -webkit-appearance: none;
-}
-
-/* New shadow dom for play button */
-
-/* This one works! */
-
-*::-webkit-media-controls-start-playback-button {
-    display: none !important;
-    -webkit-appearance: none;
-}

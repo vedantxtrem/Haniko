@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl text-[#013e52] mt-3 text-center font-bold">
+          <h1 className="text-5xl lg:text-6xl text-[#013e52] mt-3 text-center font-bold">
             Why Choose Our Honey
           </h1>
 

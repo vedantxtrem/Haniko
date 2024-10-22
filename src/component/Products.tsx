@@ -49,9 +49,9 @@ function ShowCase() {
   }, [emblaApi]);
 
   return (
-    <main className="w-full h-full flex flex-col items-center relative font-harman">
+    <main className="w-full h-full flex flex-col items-center relative ">
       <div className="flex flex-col items-center">
-        <h1 className="lg:text-6xl md:border-b-[6px] border-double border-[#013e52] text-4xl text-[#013e52] mt-3 text-center">
+        <h1 className="  mt-3  text-5xl lg:text-6xl text-[#013e52]  text-center font-bold">
           Discover Our Honey
         </h1>
       </div>
@@ -76,7 +76,7 @@ function ShowCase() {
                   className={`h-auto object-cover mx-auto  duration-1000 cursor-pointer transition-all w-1/2  ${isActive ? 'md:w-[35%]' : 'md:w-[30%]'} ${hover === index ? 'scale-105' : ''}`}
                 />
 
-                <div className="flex leading-3 flex-col mt-6 gap-1">
+                <div className="flex leading-3 flex-col mt-6 gap-1 font-bold">
                   <h2 className={`text-3xl text-center ${hover === index ? 'text-[#003e52]' : 'text-[#e75542]'} transition-colors duration-500`}>
                     {product.name}
                   </h2>
