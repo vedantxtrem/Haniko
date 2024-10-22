@@ -22,7 +22,7 @@ function VideoSectionBanner() {
           disableRemotePlayback={true}
           draggable={false}
         >
-          <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm"   />
+          <source src='/image/bannervideo.gif' type="video/webm"   />
         </video>
         <div className="absolute inset-0  opacity-20"></div>
       </div>
