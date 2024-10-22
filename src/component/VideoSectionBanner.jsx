@@ -17,9 +17,6 @@ function VideoSectionBanner() {
           loop={true}
           muted={true}
           controls={false}
-          onContextMenu={(e) => e.preventDefault()}
-          disablePictureInPicture={true}
-          disableRemotePlayback={true}
           draggable={false}
         >
           <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm"   />
