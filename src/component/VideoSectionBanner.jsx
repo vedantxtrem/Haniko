@@ -32,6 +32,7 @@ function VideoSectionBanner() {
           <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm" />
         </video> */}
         <img src="/image/hon.webp"
+        //test
         className="w-full h-full object-cover backdrop-blur-xl" alt="" />
         <div className="absolute inset-0  opacity-20"></div>
       </div>
