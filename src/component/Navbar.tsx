@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
             <img src="/new/logo.webp" alt="Logo" className="max-w-32" />
           </Link>
         </div>
-        <div className="absolute left-[49vw]  h-[200px] w-[200px] bg-[#fffbeb] z-40 mt-2 -mx-5 rounded-full">
+        <div className="absolute left-[49vw]  h-[200px] w-[200px] bg-white z-40 mt-2 -mx-5 rounded-full">
         </div>
 
         <div className={`${poppins.className} flex flex-row gap-5 p-4 `}>
@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
             <img src="/new/logo.webp" alt="Logo" className="max-w-24" />
           </Link>
         </div>
-        <div className="absolute h-[180px] w-[180px] bg-[#fffbeb] z-40 -mt-2 -mx-5 rounded-full">
+        <div className="absolute h-[180px] w-[180px] bg-white z-40 -mt-2 -mx-5 rounded-full">
         </div>
 
       </div>
