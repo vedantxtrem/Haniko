@@ -61,17 +61,17 @@ const Navbar: React.FC = () => {
       icon: currentPath !== "/b2b" ? <IoChevronDownOutline className="font-bold" /> : null,
       link: currentPath !== "/b2b" ? '/b2b' : "",
     },
-    {
-      name: currentPath !== blog ? "Blogs" : null,
-      icon: currentPath !== blog ? <IoChevronDownOutline className="font-bold" /> : null,
-      link: currentPath !== blog ? blog : "",
-    },
+    // {
+    //   name: currentPath !== blog ? "Blogs" : null,
+    //   icon: currentPath !== blog ? <IoChevronDownOutline className="font-bold" /> : null,
+    //   link: currentPath !== blog ? blog : "",
+    // },
   ].filter(option => option.name);
 
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="hidden  w-[95%] lg:flex flex-row justify-between items-center py-2 mt-1 mx-auto">
+      <div className="hidden  w-[95%] xl:flex flex-row justify-between items-center py-2 mt-1 mx-auto">
 
         <div className="absolute left-[49vw]  z-50 top-3 p-4 rounded-full">
           <Link href="/">
@@ -99,14 +99,22 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="lg:hidden relative bg-transparent  w-11/12 flex flex-row justify-center items-center py-3 mx-auto">
+      <div className="xl:hidden relative bg-transparent h-20 w-11/12 flex  flex-row justify-center items-center py-3 mx-auto">
         <div
           onClick={toggleSidebar}
           className="z-[500] absolute top-1/2 left-1 transform -translate-y-1/2 cursor-pointer"
         >
-          <GiHamburgerMenu />
+          <GiHamburgerMenu className="text-2xl" />
         </div>
-        <img src="/new/logo.webp" alt="Logo" className="max-w-20" />
+
+        <div className="absolute  z-50 top-3 p-4 rounded-full">
+          <Link href="/">
+            <img src="/new/logo.webp" alt="Logo" className="max-w-24" />
+          </Link>
+        </div>
+        <div className="absolute h-[180px] w-[180px] bg-[#fffbeb] z-40 -mt-2 -mx-5 rounded-full">
+        </div>
+
       </div>
 
       {/* Sidebar */}
@@ -117,7 +125,7 @@ const Navbar: React.FC = () => {
           >
             {options.map((option, index) => (
               <Link key={index} href={option.link} onClick={toggleSidebar}>
-                <div className="flex w-full bg-amber-500 py-1.5 rounded-2xl bg-opacity-10 mx-auto text-center items-center justify-center text-slate-950 text-xl gap-2 font-semibold">
+                <div className="flex w-full bg-amber-500 px-1 py-1.5 rounded-2xl bg-opacity-20 mx-auto text-center items-center justify-center text-slate-950 text-xl gap-2 font-semibold">
                   {option.icon}
                   {option.name}
                 </div>
