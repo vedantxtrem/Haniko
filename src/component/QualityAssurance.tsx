@@ -31,6 +31,10 @@ export default function QualityAssurance() {
                 regulatory and international standards.
             </p>
 
+
+            <div className="absolute left-0 top-0 w-48 h-48 bg-amber-100 rounded-full -translate-x-1/2 -translate-y-1/2 -z-10 animate-pulse-slow"></div>
+            <div className="absolute right-0 bottom-0 w-48 h-48 bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 -z-10 animate-bounce-slow"></div>
+
             <div className="flex flex-col w-11/12 lg:max-w-[50%] rounded-3xl bg-gray-100 overflow-hidden">
                 <div className="flex h-72 mx-auto p-10 justify-center">
                     <img
