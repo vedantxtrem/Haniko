@@ -71,14 +71,14 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="hidden bg-white w-[95%] xl:flex flex-row justify-between items-center py-2 mt-1 mx-auto">
+      <div className="hidden bg-white px-10 xl:flex flex-row justify-between items-center py-2 pt-3">
 
         <div className="absolute left-[49vw]  z-50 top-3 p-4 rounded-full">
           <Link href="/">
             <img src="/new/logo.webp" alt="Logo" className="max-w-32" />
           </Link>
         </div>
-        <div className="absolute left-[49vw]  h-[200px] w-[200px] bg-white z-40 mt-2 -mx-5 rounded-full">
+        <div className="absolute left-[49vw]  h-[200px] w-[200px] bg-white z-40 mt-3 -mx-5 rounded-full">
         </div>
 
         <div className={`${poppins.className} flex flex-row gap-5 p-4 `}>
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
               </div>
             </Link>
           ))}
-          
+
         </div>
         <Link href="/contact">
           <button className="bg-gradient-to-r h-12 px-6 from-amber-500 text-xl to-[#ffde4a]  font-semibold  text-black  rounded-full transition duration-300 ease-in-out transform hover:scale-x-110">
