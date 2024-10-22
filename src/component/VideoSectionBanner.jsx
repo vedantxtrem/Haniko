@@ -20,7 +20,7 @@ function VideoSectionBanner() {
   return (
     <main className="w-screen relative h-[50vh] md:h-[80vh] lg:min-h-screen">
       <div className="absolute top-0 left-0 w-full h-full">
-        <video
+        {/* <video
           ref={videoRef}
           className="w-full h-full object-cover backdrop-blur-xl"
           autoPlay={true}
@@ -30,7 +30,9 @@ function VideoSectionBanner() {
           draggable={false}
         >
           <source src='https://www.shutterstock.com/shutterstock/videos/3017200/preview/stock-footage-honey-drizzling-shooting-with-high-speed-camera-phantom-flex.webm' type="video/webm" />
-        </video>
+        </video> */}
+        <img src="/image/giphy.webp"
+        className="w-full h-full object-cover backdrop-blur-xl" alt="" />
         <div className="absolute inset-0  opacity-20"></div>
       </div>
 
