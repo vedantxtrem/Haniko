@@ -56,8 +56,8 @@ function ShowCase() {
         </h1>
       </div>
 
-      <div className="absolute left-0 top-0 w-48 h-48 bg-amber-100 rounded-full -translate-x-1/2 -translate-y-1/2 z-10 animate-pulse-slow"></div>
-      <div className="absolute right-0 bottom-0 w-48 h-48 bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 z-10 animate-bounce-slow"></div>
+      <div className="absolute left-0 top-0 w-48 h-48 bg-amber-100 rounded-full -translate-x-1/2 -translate-y-1/2 -z-10 animate-pulse-slow"></div>
+      <div className="absolute right-0 bottom-0 w-48 h-48 bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 -z-10 animate-bounce-slow"></div>
       <div className="absolute left-1/2 bottom-0 w-96 h-96  bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 -z-10 animate-bounce-slow"></div>
 
       {/* Honeycomb Pattern */}
