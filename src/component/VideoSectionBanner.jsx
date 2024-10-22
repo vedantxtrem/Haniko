@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ function VideoSectionBanner() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.controls = false; // Ensure controls are hidden
+      videoRef.current.controls = false; 
     }
   }, []);
 
