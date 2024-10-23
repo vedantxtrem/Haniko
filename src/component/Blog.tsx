@@ -40,7 +40,7 @@ const Blog = () => {
               <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
                   {service.imageUrl && (
-                    //test
+                    //test 01
                     <img
                       className="object-cover cursor-pointer object-left h-full w-full rounded-xl"
                       src={service.imageUrl}
