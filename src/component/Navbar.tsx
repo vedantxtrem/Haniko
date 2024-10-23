@@ -73,12 +73,13 @@ const Navbar: React.FC = () => {
       {/* Desktop Navbar */}
       <div className="hidden bg-white px-10 xl:flex flex-row justify-between items-center py-2 pt-3">
 
-        <div className="absolute left-[49vw]  z-50 top-3 p-4 rounded-full">
+        <div className="absolute z-50 top-3 left-1/2 transform -translate-x-1/2 p-4 rounded-full">
           <Link href="/">
             <img src="/new/logo.webp" alt="Logo" className="max-w-32" />
           </Link>
         </div>
-        <div className="absolute left-[49vw]  h-[200px] w-[200px] bg-white z-40 mt-3 -mx-5 rounded-full">
+
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-[200px] w-[200px] bg-white z-40 mt-3  rounded-full">
         </div>
 
         <div className={`${poppins.className} flex flex-row gap-5 p-4 `}>
