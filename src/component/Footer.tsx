@@ -4,6 +4,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { IoIosMail } from "react-icons/io";
 
 function Footer() {
   const [isOpen, setIsOpen] = useState(true);
@@ -28,9 +29,8 @@ function Footer() {
     {
       label: "Export Inquiry",
       link: "/b2b",
-    }
+    },
   ];
-
 
   const currentPath = usePathname();
 
@@ -85,12 +85,24 @@ function Footer() {
             </span>
           </div>
           <div className="flex items-center">
-            <MdPhoneInTalk size={24} className="text-yellow-800 mr-3" />
+            <MdPhoneInTalk size={20} className="text-yellow-800 mr-3" />
             <a
-              href="tel:+919557105677"
-              className="text-gray-900 font-semibold hover:text-yellow-600 transition duration-300"
+              href="tel:+919310441423"
+              className="text-gray-900 font-semibold hover:text-yellow-600 transition-colors duration-300"
+              aria-label="Call us"
             >
-              (+91) 9557105677
+              +91 9310441423
+            </a>
+          </div>
+
+          <div className="flex items-center">
+            <IoIosMail size={20} className="text-yellow-800 mr-3" />
+            <a
+              href="mailto:info@haniko.in"
+              className="text-gray-900 font-semibold hover:text-yellow-600 transition-colors duration-300"
+              aria-label="Send us an email"
+            >
+              info@haniko.in
             </a>
           </div>
         </div>
