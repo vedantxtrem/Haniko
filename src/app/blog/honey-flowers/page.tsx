@@ -39,18 +39,19 @@ function Page() {
         </h3>
         <ol className="list-decimal list-inside space-y-2 text-gray-500 mb-6">
           <li>
-            Nectar Composition: Flowers produce nectar with varying levels of
-            sugars, minerals, and trace elements, all of which affect the
-            honey's flavor.
+            <strong> Nectar Composition: </strong> Flowers produce nectar with
+            varying levels of sugars, minerals, and trace elements, all of which
+            affect the honey's flavor.
           </li>
           <li>
-            Pollen Influence: Small amounts of pollen from the flowers also end
-            up in honey, adding subtle undertones that enhance its complexity.
+            <strong>Pollen Influence: </strong>Small amounts of pollen from the
+            flowers also end up in honey, adding subtle undertones that enhance
+            its complexity.
           </li>
           <li>
-            Regional Climate: The climate, soil, and environment where the
-            flowers grow also contribute to the unique characteristics of the
-            honey.
+            <strong> Regional Climate:</strong> The climate, soil, and
+            environment where the flowers grow also contribute to the unique
+            characteristics of the honey.
           </li>
         </ol>
       </section>
