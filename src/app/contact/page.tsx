@@ -17,13 +17,14 @@ function Page() {
     message: "",
   });
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async () => {
-    // e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent page reload
+    console.log(formData); // Log form data
   };
 
   return (
@@ -105,6 +106,7 @@ function Page() {
                 rows={5}
               />
             </div>
+
             <button
               type="submit"
               className="bg-amber-500 font-medium text-white py-3 px-8 rounded-full hover:bg-amber-600 transition duration-300 ease-in-out transform hover:scale-105"
@@ -112,6 +114,7 @@ function Page() {
               Submit
             </button>
           </form>
+
         </div>
       </div>
     </section>
@@ -119,4 +122,3 @@ function Page() {
 }
 
 export default Page;
-
