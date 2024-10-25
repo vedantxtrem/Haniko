@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from "react";
 import { Poppins } from "next/font/google";
@@ -9,6 +9,14 @@ const poppins = Poppins({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+
+const BREVO_API_KEY = process?.env?.NEXT_PUBLIC_BREVO_API_KEY;
+
+const defaultSender = {
+  name: 'Rajyavardhan Bithale',
+  email: 'bithale01@gmail.com'
+};
+
 function Page() {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,6 +24,9 @@ function Page() {
     mobile: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -23,8 +34,32 @@ function Page() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent page reload
-    console.log(formData); // Log form data
+    e.preventDefault();
+    setLoading(true);
+    setErrorMessage("");
+    setSuccessMessage("");
+
+    try {
+      const response = await axios.post('https://api.brevo.com/v3/smtp/email', {
+        sender: defaultSender,
+        to: [{ email: 'aviralpandey7974@gmail.com' }],
+        subject: 'TEST Mail',
+        htmlContent: `<p><strong>Name:</strong> ${formData?.name}</p>
+                      <p><strong>Email:</strong> ${formData?.email}</p>
+                      <p><strong>Mobile:</strong> ${formData?.mobile}</p>
+                      <p><strong>Message:</strong> ${formData?.message}</p>`,
+      }, {
+        headers: {
+          'accept': 'application/json',
+          'api-key': BREVO_API_KEY,
+          'content-type': 'application/json',
+        },
+      })
+
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   };
 
   return (
@@ -34,24 +69,19 @@ function Page() {
         <div className="lg:w-1/2 flex flex-col items-center lg:items-start py-20 bg-amber-500 text-white p-6 lg:p-12 rounded-br-[50%] lg:rounded-br-full shadow-xl">
           <h2 className="text-white text-lg font-semibold mb-2 tracking-wide">Contact Information</h2>
           <h3 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">Reach Us At</h3>
-          <p className="text-white mb-2 sm:mb-4">
-            <strong>Address:</strong> 1234 Honeybee Lane, Beekeeper City, HB 56789
-          </p>
-          <p className="text-white mb-2 sm:mb-4">
-            <strong>Email:</strong> contact@haniko.com
-          </p>
-          <p className="text-white mb-2 sm:mb-4">
-            <strong>Phone:</strong> +123-456-7890
-          </p>
+          <p className="text-white mb-2 sm:mb-4"><strong>Address:</strong> 1234 Honeybee Lane, Beekeeper City, HB 56789</p>
+          <p className="text-white mb-2 sm:mb-4"><strong>Email:</strong> contact@haniko.com</p>
+          <p className="text-white mb-2 sm:mb-4"><strong>Phone:</strong> +123-456-7890</p>
         </div>
 
         {/* Contact Form */}
         <div className="lg:w-1/2 bg-white p-6 lg:px-10">
           <h1 className="text-amber-500 text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-10">Contact Us</h1>
           <h2 className="text-gray-800 text-lg font-semibold">Get in Touch with Us</h2>
-          <h1 className="mb-4 text-sm md:text-lg">
-            Whether you have questions about our products or are looking for a trusted B2B honey supplier, we’re here to help.
-          </h1>
+          <h1 className="mb-4 text-sm md:text-lg">Whether you have questions about our products or are looking for a trusted B2B honey supplier, we’re here to help.</h1>
+
+          {successMessage && <p className="text-green-500 mb-4">{successMessage}</p>}
+          {errorMessage && <p className="text-red-500 mb-4">{errorMessage}</p>}
 
           <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
             <div className="flex flex-col">
@@ -109,12 +139,12 @@ function Page() {
 
             <button
               type="submit"
-              className="bg-amber-500 font-medium text-white py-3 px-8 rounded-full hover:bg-amber-600 transition duration-300 ease-in-out transform hover:scale-105"
+              disabled={loading} // Disable the button while loading
+              className={`bg-amber-500 font-medium text-white py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-amber-600'}`}
             >
-              Submit
+              {loading ? 'Sending...' : 'Submit'}
             </button>
           </form>
-
         </div>
       </div>
     </section>

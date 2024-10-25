@@ -6,14 +6,7 @@
   --outline-width: 0px;
 }
 
-.footer {
-  background-color: #3F4122; /* Match the theme */
-  color: #FC9C0C; /* Text color */
-  text-align: center;
-  padding: 1em;
-  position: relative; /* Change to relative */
-  z-index: 10;
-}
+
 
 .main {
   padding-bottom: 4em; /* Add padding to the bottom of main */

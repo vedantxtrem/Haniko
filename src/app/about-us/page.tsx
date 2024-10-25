@@ -8,6 +8,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation"
+import { IoIosMail } from "react-icons/io";
 
 const hammer = Hammersmith_One({
   subsets: ['latin'],
@@ -46,7 +47,7 @@ const ScrollSections = () => {
     {
       label: "Export Inquiry",
       link: "/b2b",
-    }
+    },
   ];
 
 
@@ -78,8 +79,8 @@ const ScrollSections = () => {
 
   return (
     <>
-      <header className="fnt-szi overflow-hidden">
-        <div>
+      <header className="overflow-hidden">
+        <div className="fnt-szi">
           <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24 relative z-30">
             <div className="w-full flex justify-center items-center">
               {/* Text Section */}
@@ -131,8 +132,8 @@ const ScrollSections = () => {
         </div>
       </header>
 
-      <main className="fnt-szi">
-        <ul id="cards">
+      <main className="">
+        <ul id="cards" className="fnt-szi">
           {data.map((item, index) => (
             <li
               key={index}
@@ -161,7 +162,7 @@ const ScrollSections = () => {
 
         {/* footer here */}
         <footer
-          className={`bg-yellow-100 text-black p-10`}
+          className={`"bg-yellow-100 text-black p-10 mt-10"}`}
         >
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
@@ -206,12 +207,24 @@ const ScrollSections = () => {
                 </span>
               </div>
               <div className="flex items-center">
-                <MdPhoneInTalk size={24} className="text-yellow-800 mr-3" />
+                <MdPhoneInTalk size={20} className="text-yellow-800 mr-3" />
                 <a
-                  href="tel:+919557105677"
-                  className="text-gray-900 font-semibold hover:text-yellow-600 transition duration-300"
+                  href="tel:+919310441423"
+                  className="text-gray-900 font-semibold hover:text-yellow-600 transition-colors duration-300"
+                  aria-label="Call us"
                 >
-                  (+91) 9557105677
+                  +91 9310441423
+                </a>
+              </div>
+
+              <div className="flex items-center">
+                <IoIosMail size={20} className="text-yellow-800 mr-3" />
+                <a
+                  href="mailto:info@haniko.in"
+                  className="text-gray-900 font-semibold hover:text-yellow-600 transition-colors duration-300"
+                  aria-label="Send us an email"
+                >
+                  info@haniko.in
                 </a>
               </div>
             </div>
