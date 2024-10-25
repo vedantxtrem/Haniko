@@ -59,6 +59,17 @@ function Page() {
         }
       );
 
+      if (response.status === 200) {
+        alert("Your message has been sent successfully. We will get back to you soon.");
+        setSuccessMessage("Your message has been sent successfully. We will get back to you soon.");
+        setFormData({
+          name: "",
+          email: "",
+          mobile: "",
+          message: "",
+        });
+      }
+
       return response.data;
     } catch (error) {
       throw error;
