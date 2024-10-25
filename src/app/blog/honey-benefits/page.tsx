@@ -49,7 +49,7 @@ function Page() {
         className="w-full h-[600px] md:p-10 bg-cover bg-center object-cover"
       />
 
-      <div className="max-w-4xl mx-auto p-10 bg-white relative -top-52">
+      <div className="max-w-4xl mx-auto p-5 md:p-10 bg-white relative -top-52">
         <h1 className="text-3xl font-bold mb-10 text-gray-700 text-start">
           Honey and Its Benefits
         </h1>
