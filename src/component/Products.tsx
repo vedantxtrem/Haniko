@@ -94,7 +94,7 @@ function ShowCase() {
       </div>
       <div className="w-full flex justify-center items-center mt-4 ">
         <Link href={'/products'}>
-          <div className="w-fit font-medium bg-gradient-to-r h-12 px-6 flex justify-center items-center from-amber-500 text-xl to-[#ffde4a] text-black rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+          <div className="w-fit font-semibold bg-gradient-to-r h-12 px-6 flex justify-center items-center from-amber-500 text-xl to-[#ffde4a] text-black rounded-full transition duration-300 ease-in-out transform hover:scale-105">
             Shop More
           </div>
         </Link>
