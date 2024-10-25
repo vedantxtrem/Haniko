@@ -102,7 +102,7 @@ const ProductPage: React.FC = () => {
       {/* Carousel Div */}
       <div className="w-full bg-[#ffbd59] mx-auto">
         <div className="embla" ref={emblaRef}>
-          <div className="embla__container__shop my-16 md:mt-20 md:mb-2">
+          <div className="embla__container__shop my-16 lg:my-0 lg:mt-20 md:mb-2">
             {images.map((image, index) => (
               <div className="embla__slide__shop user-select-none flex items-center justify-center" key={index}>
                 <Image
@@ -111,7 +111,7 @@ const ProductPage: React.FC = () => {
                   width={0}
                   sizes="100vw"
                   alt={`Slide ${index + 1}`}
-                  className="w-full md:h-[500px] md:object-contain rounded-lg"
+                  className="w-full lg:h-[500px] md:object-contain rounded-lg"
                   loading="eager"
                 />
               </div>
