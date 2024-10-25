@@ -3,11 +3,11 @@
 import Promotion from "@/component/Promotion";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const images = [
-  "/product/test.png",
-  "/product/test.png",
-  "/product/test.png",
+  "/product/image10.png",
 ];
 
 const products = [
@@ -82,58 +82,57 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, front, back }) => {
 };
 
 const ProductPage: React.FC = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(1);
+  const autoplay = Autoplay({ delay: 3000 });
 
-  const slideToNext = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true }, [autoplay]);
 
-  const slideToPrev = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  const onSelect = () => {
+    if (!emblaApi) return;
   };
 
   useEffect(() => {
-    const interval = setInterval(slideToNext, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    onSelect();
+  }, [emblaApi]);
 
   return (
     <div className="min-h-screen w-screen text-white overflow-x-hidden">
       {/* Carousel Div */}
-      <div className="relative h-[200px] sm:h-[300px] md:h-[360px] w-full flex justify-center items-center overflow-hidden">
-        <div
-          className="absolute h-full w-full flex transition-transform duration-1000"
-          style={{
-            transform: `translateX(-${currentImageIndex * 100}%)`,
-          }}
-        >
-          {images.map((image, index) => (
-            <div key={index} className="h-full w-full flex-shrink-0 bg-origin-content">
-              <div
-                className="h-full w-full backdrop-blur-xl"
-                style={{
-                  backgroundImage: `url('${image}')`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "top",
-                }}
-              />
-            </div>
-          ))}
+      <div className="w-full bg-[#ffbd59] mx-auto">
+        <div className="embla" ref={emblaRef}>
+          <div className="embla__container__shop ">
+            {images.map((image, index) => (
+              <div className="embla__slide__shop user-select-none flex items-center justify-center" key={index}>
+                <img
+                  src={image}
+                  alt={`Certification ${index + 1}`}
+                  className="w-full h-[500px] object-contain rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        {/* Navigation Buttons */}
-        <button
-          onClick={slideToPrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
-        >
-          &#8592;
-        </button>
-        <button
-          onClick={slideToNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
-        >
-          &#8594;
-        </button>
       </div>
+
+      <style jsx>{`
+          .embla {
+            overflow: hidden;
+            width: 100%;
+          }
+          .embla__container__shop {
+            display: flex;
+          }
+          .embla__slide__shop {
+            min-width: 100%;
+            position: relative;
+            box-sizing: border-box; /* Ensure padding/margins don't affect width */
+          }
+          .embla__slide img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+          }
+        `}</style>
 
       <Promotion />
 
