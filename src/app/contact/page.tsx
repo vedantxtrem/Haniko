@@ -43,7 +43,7 @@ function Page() {
         "https://api.brevo.com/v3/smtp/email",
         {
           sender: defaultSender,
-          to: [{ email: "vedants9090@gmail.com" }],
+          to: [{ email: "info@haniko.in" }],
           subject: "TEST Mail",
           htmlContent: `<p><strong>Name:</strong> ${formData?.name}</p>
                       <p><strong>Email:</strong> ${formData?.email}</p>
