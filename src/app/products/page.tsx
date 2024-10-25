@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 const images = [
   "/product/screens.webp",
@@ -101,13 +102,17 @@ const ProductPage: React.FC = () => {
       {/* Carousel Div */}
       <div className="w-full bg-[#ffbd59] mx-auto">
         <div className="embla" ref={emblaRef}>
-          <div className="embla__container__shop ">
+          <div className="embla__container__shop my-16">
             {images.map((image, index) => (
               <div className="embla__slide__shop user-select-none flex items-center justify-center" key={index}>
-                <img
+                <Image
                   src={image}
-                  alt={`Certification ${index + 1}`}
-                  className="w-full h-[500px] object-contain rounded-lg"
+                  height={0}
+                  width={0}
+                  sizes="100vw"
+                  alt={`Slide ${index + 1}`}
+                  className="w-full md:h-[500px] md:object-contain rounded-lg"
+                  loading="eager"
                 />
               </div>
             ))}
