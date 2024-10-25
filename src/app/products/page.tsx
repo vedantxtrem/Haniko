@@ -102,7 +102,7 @@ const ProductPage: React.FC = () => {
       {/* Carousel Div */}
       <div className="w-full bg-[#ffbd59] mx-auto">
         <div className="embla" ref={emblaRef}>
-          <div className="embla__container__shop my-16">
+          <div className="embla__container__shop my-16 md:mt-20 md:mb-2">
             {images.map((image, index) => (
               <div className="embla__slide__shop user-select-none flex items-center justify-center" key={index}>
                 <Image
