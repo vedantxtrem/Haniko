@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function Page() {
   const honeyBenefits = [
@@ -25,7 +26,7 @@ function Page() {
     {
       title: "Energy Booster",
       description:
-        "If you're looking for a natural energy booster, honey is an excellent choice. Its natural sugars—glucose and fructose—are easily absorbed by the body, providing a quick source of energy. Athletes often use honey as a source of fuel before and after workouts to improve endurance and speed up recovery.",
+        "If you&apos;re looking for a natural energy booster, honey is an excellent choice. Its natural sugars—glucose and fructose—are easily absorbed by the body, providing a quick source of energy. Athletes often use honey as a source of fuel before and after workouts to improve endurance and speed up recovery.",
     },
     {
       title: "Supports Heart Health",
@@ -35,7 +36,7 @@ function Page() {
     {
       title: "Promotes Better Skin",
       description:
-        "Honey's hydrating and antibacterial properties make it an excellent remedy for skin issues. Applying honey topically can help treat acne, hydrate dry skin, and even heal wounds. The antioxidants in honey also slow down the aging process, keeping your skin looking youthful.",
+        "Honey&apos;s hydrating and antibacterial properties make it an excellent remedy for skin issues. Applying honey topically can help treat acne, hydrate dry skin, and even heal wounds. The antioxidants in honey also slow down the aging process, keeping your skin looking youthful.",
     },
   ];
 
@@ -47,17 +48,19 @@ function Page() {
         </h1>
         <p className="text-lg text-gray-600 text-center mb-8 font-normal">
           Honey is packed with nutrients, antioxidants, and healing properties.
-          If you're looking to add a healthy twist to your diet, honey can be an
+          If you&apos;re looking to add a healthy twist to your diet, honey can be an
           excellent substitute for sugar, providing both flavor and numerous
-          health benefits. Let’s explore some of the key reasons why consuming
+          health benefits. Let&rsquo;s explore some of the key reasons why consuming
           honey can be great for your health.
         </p>
       </header>
 
       <div className="my-8">
-        <img
+        <Image
           src="/image/screens.webp"
           alt="A variety of honey products"
+          width={800} // Adjust width as needed
+          height={450} // Adjust height as needed
           className="w-full h-auto rounded-lg shadow-lg"
         />
       </div>
@@ -77,7 +80,7 @@ function Page() {
         Conclusion
       </h3>
       <p className="text-gray-500 mb-4">
-        Honey is not just a sweet treat; it's a superfood with a multitude of
+        Honey is not just a sweet treat; it&apos;s a superfood with a multitude of
         health benefits. From boosting your immune system to enhancing skin
         health, honey has earned its place as one of the most versatile natural
         remedies. Whether you add it to your tea, drizzle it over yogurt, or use
@@ -86,7 +89,7 @@ function Page() {
       </p>
       <p className="text-gray-500">
         For the best results, opt for <strong>Haniko Honey</strong> to ensure
-        you're getting all the nutrients and healing properties that honey has
+        you&apos;re getting all the nutrients and healing properties that honey has
         to offer.
       </p>
     </main>
