@@ -51,14 +51,14 @@ export default function Page() {
     <>
       <Parallax
         blur={0}
-        bgImage="/image/screens.webp"
+        bgImage="/stock/b2b.jpg"
         bgImageAlt="banner"
         strength={500}
         className="min-h-[500px] hidden md:flex items-center  justify-center relative"
       >
         <div className="absolute inset-0 w-screen bg-black opacity-60"></div>
         <div className="relative z-10 flex flex-col text-center text-white min-h-[500px] justify-center">
-          <h1 className="text-8xl font-bold mb-4 shadow-md">B2B Solutions</h1>
+          <h1 className="text-8xl font-bold mb-4">B2B Solutions</h1>
           <p className="text-xl w-3/4 mx-auto mb-6">
             Haniko has built a reputation as a reliable B2B partner for
             businesses across the globe. From bulk honey exports to fully
@@ -70,14 +70,15 @@ export default function Page() {
 
       <Parallax
         blur={0}
-        bgImage="https://images.pexels.com/photos/2260932/pexels-photo-2260932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        bgImage="/stock/b2b.jpg"
         bgImageAlt="banner"
-        strength={500}
-        className="min-h-[400px] flex md:hidden items-center justify-center relative"
+        strength={100}
+        className="min-h-[350px] h-full flex items-center justify-center relative md:hidden overflow-visible" // Allow overflow
+        style={{ backgroundSize: 'cover', backgroundPosition: 'center' }} 
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 flex flex-col text-center text-white min-h-[400px] justify-center">
-          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-4 shadow-md">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-4">
             B2B Solutions
           </h1>
           <p className="text-base md:text-lg lg:text-xl w-3/4 mx-auto mb-6">
@@ -91,7 +92,7 @@ export default function Page() {
 
       {/* Services Section */}
       <div className="md:py-20 py-10 bg-white">
-        <h2 className="text-4xl md:text-6xl text-center font-bold mb-20">
+        <h2 className="text-4xl md:text-6xl text-center font-bold md:mb-20">
           Our Services Include
         </h2>
         <div className="w-screen h-auto">
@@ -129,7 +130,7 @@ export default function Page() {
       </div >
 
       {/* Quality Assurance Section */}
-      < div className="md:py-10 py-10 bg-white" >
+      < div className="md:py-10 py-10 bg-white w-11/12 mx-auto" >
         <h2 className="text-4xl text-center font-extrabold mb-10">
           Quality Assurance
         </h2>

@@ -59,25 +59,25 @@ function TypeSection() {
         <div className="relative z-30">
           <div className="w-full max-w-7xl mx-auto gap-10 xl:gap-x-[100px] grid grid-cols-1 xl:grid-cols-2">
             <TypesCard
-              imageSrc="https://www.shutterstock.com/shutterstock/photos/2335216723/display_1500/stock-photo-jambul-or-jamun-syzygium-cumini-isolated-on-wooden-background-2335216723.jpg"
+              imageSrc="/stock/jamun.jpeg"
               title="Jamun Honey"
               description=" Jamun Honey, derived from the nectars of jamun flowers, offers a distinctive taste of the Jamun flower and is packed with antioxidant properties."
               bgColor="bg-[#8b45ba]"
             />
             <TypesCard
-              imageSrc="https://www.shutterstock.com/shutterstock/photos/788276815/display_1500/stock-photo-mustard-plants-are-any-of-several-plant-species-in-the-genera-brassica-and-sinapis-in-the-family-788276815.jpg"
+              imageSrc="/stock/mustard.png"
               title="Mustard Honey"
               description="Mustard honey boasts a mild, earthy flavor with a hint of spice, naturally sourced from the nectar of mustard flowers."
               bgColor="bg-[#EFA820]"
             />
             <TypesCard
-              imageSrc="https://www.shutterstock.com/shutterstock/photos/2513008237/display_1500/stock-photo-phaseolus-coccineus-known-as-runner-bean-scarlet-runner-bean-or-multiflora-bean-is-a-plant-in-2513008237.jpg"
+              imageSrc="/stock/multiflora.jpg"
               title="Multiflora Honey"
               description="Multiflora honey is a harmonious blend of nectars from various wildflowers, offering a rich and diverse flavor profile with natural goodness."
               bgColor="bg-[#225D67]"
             />
             <TypesCard
-              imageSrc="https://www.shutterstock.com/shutterstock/photos/2002779566/display_1500/stock-photo-fresh-litchi-lichee-lychee-or-litchi-chinensis-background-2002779566.jpg"
+              imageSrc="/stock/litchi.jpg"
               title="Litchi Honey"
               description="Naturally infused from the nectar of litchi flowers, this variety of honey is light and has a delicate floral sweetness with a fruity tinge to it."
               bgColor="bg-[#E75D6B]"

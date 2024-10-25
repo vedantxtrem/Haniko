@@ -54,7 +54,7 @@ const ScrollSections = () => {
     {
       title: "Our Story",
       description: "Haniko is more than just a honey brand; it's the culmination of decades of passion, dedication, and expertise in the world of honey. As a subsidiary of M B Exim Pvt. Ltd., a premium exporter of bulk honey with nearly three decades of experience, Haniko carries forward a rich legacy of quality and trust. Our parent company, M B Exim, has built its reputation by supporting small businesses and sharing the exceptional quality of Indian honey with the world.",
-      image: "https://images.unsplash.com/photo-1471943311424-646960669fbc?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvbmV5fGVufDB8fDB8fHww",
+      image: "/stock/our-story.jpg",
       background: "#FC9C0C",
       text: "#1b0a02"
     },
@@ -69,7 +69,7 @@ const ScrollSections = () => {
     {
       title: "Quality Assurance",
       description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table. We are transparent about our processes, with certifications and rigorous testing at every stage to maintain the integrity of our honey.",
-      image: "https://www.shutterstock.com/shutterstock/photos/635029784/display_1500/stock-photo-appetizer-bruschetta-with-pear-honey-walnut-and-cottage-cheese-on-white-board-635029784.jpg",
+      image: "/stock/quality.jpg",
       background: "#3F4122",
       text: "#FC9C0C"
 

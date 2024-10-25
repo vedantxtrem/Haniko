@@ -49,7 +49,7 @@ export default function QualityAssurance() {
                     {certifications.map((image, index) => (
                         <div
                             onClick={() => setSelectedImage(index)}
-                            className={`flex items-center justify-center ${selectedImage === index ? "opacity-100 bg-white rounded-3xl" : "opacity-50 bg-gray-200"} user-select-none p-2`}
+                            className={`flex items-center justify-center ${selectedImage === index ? "opacity-100 bg-white rounded-3xl" : "opacity-50 bg-gray-200"} user-select-none p-2 lg:p-0`}
                             key={index}>
                             <img
                                 src={image}
