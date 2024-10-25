@@ -44,7 +44,7 @@ function Page() {
         {
           sender: defaultSender,
           to: [{ email: "info@haniko.in" }],
-          subject: "TEST Mail",
+          subject: "Query from Haniko Website",
           htmlContent: `<p><strong>Name:</strong> ${formData?.name}</p>
                       <p><strong>Email:</strong> ${formData?.email}</p>
                       <p><strong>Mobile:</strong> ${formData?.mobile}</p>
