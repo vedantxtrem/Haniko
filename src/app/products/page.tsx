@@ -7,7 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const images = [
-  "/product/image10.png",
+  "/product/screens.webp",
 ];
 
 const products = [
