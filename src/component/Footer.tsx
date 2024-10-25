@@ -6,31 +6,31 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { IoIosMail } from "react-icons/io";
 
+export const options = [
+  {
+    label: "Home",
+    link: "/",
+  },
+  {
+    label: "Product",
+    link: "/products",
+  },
+  {
+    label: "About Us",
+    link: "/about-us",
+  },
+  {
+    label: "Contact Us",
+    link: "/contact",
+  },
+  {
+    label: "Export Inquiry",
+    link: "/b2b",
+  },
+];
+
 function Footer() {
   const [isOpen, setIsOpen] = useState(true);
-
-  const options = [
-    {
-      label: "Home",
-      link: "/",
-    },
-    {
-      label: "Product",
-      link: "/products",
-    },
-    {
-      label: "About Us",
-      link: "/about-us",
-    },
-    {
-      label: "Contact Us",
-      link: "/contact",
-    },
-    {
-      label: "Export Inquiry",
-      link: "/b2b",
-    },
-  ];
 
   const currentPath = usePathname();
 

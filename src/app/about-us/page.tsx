@@ -9,6 +9,7 @@ import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation"
 import { IoIosMail } from "react-icons/io";
+import { options } from "@/component/Footer";
 
 const hammer = Hammersmith_One({
   subsets: ['latin'],
@@ -26,29 +27,6 @@ const nunito = Nunito_Sans({
 })
 
 const ScrollSections = () => {
-
-  const options = [
-    {
-      label: "Home",
-      link: "/",
-    },
-    {
-      label: "Product",
-      link: "/products",
-    },
-    {
-      label: "About Us",
-      link: "/about-us",
-    },
-    {
-      label: "Contact Us",
-      link: "/contact",
-    },
-    {
-      label: "Export Inquiry",
-      link: "/b2b",
-    },
-  ];
 
 
   const data = [
