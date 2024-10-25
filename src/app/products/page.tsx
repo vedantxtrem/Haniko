@@ -5,9 +5,9 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "/image/Product_Page_Banner-5.jpg",
-  "/image/Product_Page_Banner-5.jpg",
-  "/image/Product_Page_Banner-5.jpg",
+  "/product/test.png",
+  "/product/test.png",
+  "/product/test.png",
 ];
 
 const products = [
@@ -108,12 +108,12 @@ const ProductPage: React.FC = () => {
           }}
         >
           {images.map((image, index) => (
-            <div key={index} className="h-full w-full flex-shrink-0">
+            <div key={index} className="h-full w-full flex-shrink-0 bg-origin-content">
               <div
                 className="h-full w-full backdrop-blur-xl"
                 style={{
                   backgroundImage: `url('${image}')`,
-                  backgroundSize: "cover",
+                  backgroundSize: "contain",
                   backgroundPosition: "top",
                 }}
               />
