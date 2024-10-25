@@ -6,7 +6,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { IoIosMail } from "react-icons/io";
 
-export const options = [
+export const ServicesOptions = [
   {
     label: "Home",
     link: "/",
@@ -29,6 +29,22 @@ export const options = [
   },
 ];
 
+export const BlogsOptions = [
+  {
+    label: "Honey & its benefits",
+    link: "/blog/honey-benefits",
+  },
+  {
+    label: "How Honey Gets Its Unique Taste from Different Flowers",
+    link: "/blog/honey-flowers",
+  },
+  {
+    label: "Why Does Honey Crystallize?",
+    link: "/blog/why-honey-crystallizes",
+  },
+  
+];
+
 function Footer() {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -42,7 +58,7 @@ function Footer() {
     <footer
       className={`${isOpen ? "bg-yellow-100 text-black p-10" : "hidden"}`}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
         <div>
           <img
             src="/image/logo.png"
@@ -57,7 +73,27 @@ function Footer() {
             <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
           </h6>
           <ul className="space-y-1">
-            {options.map((service, index) => (
+            {ServicesOptions.map((service, index) => (
+              <li key={index}>
+                <a
+                  href={service.link}
+                  className="block text-gray-900 font-medium relative hover:text-yellow-600 transition duration-300"
+                  aria-label={`Learn more about ${service}`}
+                >
+                  <span className="absolute inset-0 bg-yellow-600 scale-x-0 transition-transform duration-300 origin-left hover:scale-x-100" />
+                  <span className="relative">{service.label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h6 className="font-bold text-lg mb-4 relative">
+            Blogs
+            <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
+          </h6>
+          <ul className="space-y-3">
+            {BlogsOptions.map((service, index) => (
               <li key={index}>
                 <a
                   href={service.link}
