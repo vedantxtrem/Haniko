@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 function Page() {
   const honeyBenefits = [
@@ -41,57 +40,54 @@ function Page() {
   ];
 
   return (
-    <main className="max-w-6xl mx-auto p-10 my-20">
-      <header>
+    <main className="relative ">
+      <img
+        src='https://markfedpunjab.com/markfed/wp-content/uploads/2022/10/WEBSITE-BANNER2.1.png'
+        alt="A variety of honey products"
+        width={800}
+        height={450}
+        className="w-full h-[600px] md:p-10 bg-cover bg-center object-cover"
+      />
+
+      <div className="max-w-4xl mx-auto p-10 bg-white relative -top-52">
         <h1 className="text-3xl font-bold mb-10 text-gray-700 text-start">
           Honey and Its Benefits
         </h1>
-        <p className="text-lg text-gray-600 text-center mb-8 font-normal">
+        <p className="text-lg text-gray-600 mb-8 font-normal">
           Honey is packed with nutrients, antioxidants, and healing properties.
-          If you&apos;re looking to add a healthy twist to your diet, honey can be an
-          excellent substitute for sugar, providing both flavor and numerous
-          health benefits. Let&rsquo;s explore some of the key reasons why consuming
-          honey can be great for your health.
+          If you&apos;re looking to add a healthy twist to your diet, honey can
+          be an excellent substitute for sugar, providing both flavor and
+          numerous health benefits. Let&rsquo;s explore some of the key reasons
+          why consuming honey can be great for your health.
         </p>
-      </header>
 
-      <div className="my-8">
-        <Image
-          src="/image/screens.webp"
-          alt="A variety of honey products"
-          width={800} // Adjust width as needed
-          height={450} // Adjust height as needed
-          className="w-full h-auto rounded-lg shadow-lg"
-        />
+        <ol className="space-y-6 list-decimal">
+          {honeyBenefits.map((benefit, index) => (
+            <li key={index} className="font-bold text-gray-600">
+              <h3 className="font-bold text-gray-600">{benefit.title}</h3>
+              <p className="text-gray-500 font-normal">{benefit.description}</p>
+            </li>
+          ))}
+        </ol>
+
+        <h3 className="text-xl font-bold my-5 text-gray-600 text-start">
+          Conclusion
+        </h3>
+        <p className="text-gray-500 mb-4">
+          Honey is not just a sweet treat; it&apos;s a superfood with a
+          multitude of health benefits. From boosting your immune system to
+          enhancing skin health, honey has earned its place as one of the most
+          versatile natural remedies. Whether you add it to your tea, drizzle it
+          over yogurt, or use it as a skincare treatment, incorporating honey
+          into your daily routine is a simple yet powerful way to improve your
+          overall well-being.
+        </p>
+        <p className="text-gray-500">
+          For the best results, opt for <strong>Haniko Honey</strong> to ensure
+          you&apos;re getting all the nutrients and healing properties that
+          honey has to offer.
+        </p>
       </div>
-
-      <ol className="space-y-6 list-decimal">
-        {honeyBenefits.map((benefit, index) => (
-          <li key={index} className="font-bold text-gray-600">
-            <h3 className="font-bold text-gray-600">
-              {benefit.title}
-            </h3>
-            <p className="text-gray-500 font-normal">{benefit.description}</p>
-          </li>
-        ))}
-      </ol>
-
-      <h3 className="text-xl font-bold my-5 text-gray-600 text-start">
-        Conclusion
-      </h3>
-      <p className="text-gray-500 mb-4">
-        Honey is not just a sweet treat; it&apos;s a superfood with a multitude of
-        health benefits. From boosting your immune system to enhancing skin
-        health, honey has earned its place as one of the most versatile natural
-        remedies. Whether you add it to your tea, drizzle it over yogurt, or use
-        it as a skincare treatment, incorporating honey into your daily routine
-        is a simple yet powerful way to improve your overall well-being.
-      </p>
-      <p className="text-gray-500">
-        For the best results, opt for <strong>Haniko Honey</strong> to ensure
-        you&apos;re getting all the nutrients and healing properties that honey has
-        to offer.
-      </p>
     </main>
   );
 }
