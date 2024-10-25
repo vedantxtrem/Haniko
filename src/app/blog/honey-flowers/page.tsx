@@ -188,6 +188,7 @@ function Page() {
       <footer className="my-10">
         <h3 className="text-3xl font-bold mb-5 text-gray-600 text-start">
           Conclusion
+          
         </h3>
         <p className="text-gray-500 mb-4">
           So the next time you drizzle honey over your breakfast or stir it into
