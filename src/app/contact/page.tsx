@@ -43,7 +43,7 @@ function Page() {
         "https://api.brevo.com/v3/smtp/email",
         {
           sender: defaultSender,
-          to: [{ email: "aviralpandey7974@gmail.com" }],
+          to: [{ email: "vedants9090@gmail.com" }],
           subject: "TEST Mail",
           htmlContent: `<p><strong>Name:</strong> ${formData?.name}</p>
                       <p><strong>Email:</strong> ${formData?.email}</p>
@@ -172,11 +172,10 @@ function Page() {
             <button
               type="submit"
               disabled={loading} // Disable the button while loading
-              className={`bg-amber-500 font-medium text-white py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 ${
-                loading ? "opacity-50 cursor-not-allowed" : "hover:bg-amber-600"
-              }`}
+              className={`bg-amber-500 font-medium text-white py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:bg-amber-600"
+                }`}
             >
-              {loading ? "Sending..." : "Submit"}
+              Send
             </button>
           </form>
         </div>
