@@ -42,7 +42,7 @@ function Page() {
   return (
     <main className="relative ">
       <img
-        src='https://markfedpunjab.com/markfed/wp-content/uploads/2022/10/WEBSITE-BANNER2.1.png'
+        src='https://markfedpunjab.com/markfed/wp-content/uploads/2022/10/WEBSITE-BANNER2.1.webp'
         alt="A variety of honey products"
         width={800}
         height={450}

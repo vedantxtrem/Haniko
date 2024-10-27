@@ -11,16 +11,6 @@ import { usePathname } from "next/navigation"
 import { IoIosMail } from "react-icons/io";
 import { BlogsOptions, ServicesOptions } from "@/component/Footer";
 
-const hammer = Hammersmith_One({
-  subsets: ['latin'],
-  weight: ["400"],
-})
-
-const fauna = Fauna_One({
-  subsets: ['latin'],
-  weight: ["400"],
-})
-
 const nunito = Nunito_Sans({
   subsets: ['latin'],
   weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
@@ -33,14 +23,14 @@ const ScrollSections = () => {
     {
       title: "Our Story",
       description: "Haniko is more than just a honey brand; it's the culmination of decades of passion, dedication, and expertise in the world of honey. As a subsidiary of M B Exim Pvt. Ltd., a premium exporter of bulk honey with nearly three decades of experience, Haniko carries forward a rich legacy of quality and trust. Our parent company, M B Exim, has built its reputation by supporting small businesses and sharing the exceptional quality of Indian honey with the world.",
-      image: "/stock/our-story.jpg",
+      image: "/stock/our-story.webp",
       background: "#FC9C0C",
       text: "#1b0a02"
     },
     {
       title: "Supporting Sustainable Beekeping",
       description: "Haniko isn’t just about honey; it’s about the ecosystem that creates it. We work closely with beekeepers to promote sustainable practices, ensuring that the bees thrive while we harvest honey responsibly. Our focus on ethical beekeeping helps maintain the health of bee populations and supports the livelihoods of local communities.",
-      image: 'https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmVla2VlcGVyfGVufDB8fDB8fHww',
+      image: '/stock/beeman.webp',
       background: "#125734",
       text: "#ebebeb"
 
@@ -48,7 +38,7 @@ const ScrollSections = () => {
     {
       title: "Quality Assurance",
       description: "From hive to jar, every step of our process is meticulously monitored to ensure the highest quality honey reaches your table. We are transparent about our processes, with certifications and rigorous testing at every stage to maintain the integrity of our honey.",
-      image: "/stock/quality.jpg",
+      image: "/stock/quality.webp",
       background: "#3F4122",
       text: "#FC9C0C"
 
@@ -82,7 +72,7 @@ const ScrollSections = () => {
               {/* Image Section */}
               {/* <div className="relative z-20">
                 <Image
-                  src="https://hanio.peerduck.com/wp-content/uploads/2021/02/Group-172-1476x1536.png"
+                  src="https://hanio.peerduck.com/wp-content/uploads/2021/02/Group-172-1476x1536.webp"
                   alt="Assorted Honey Products"
                   width={isMobile ? 700 : 1476}
                   height={isMobile ? 800 : 1536}
@@ -145,7 +135,7 @@ const ScrollSections = () => {
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
               <img
-                src="/image/logo.png"
+                src="/image/logo.webp"
                 alt="M B Exim Logo"
                 className="w-32 lg:w-48 mx-auto"
                 loading="lazy"

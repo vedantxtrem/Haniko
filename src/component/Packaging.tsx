@@ -3,27 +3,27 @@ import React from "react";
 function Packaging() {
   const data = [
     {
-      image: "/b2b/teddy.png",
+      image: "/b2b/teddy.webp",
       title: "Bottles",
     },
     {
-      image: "/b2b/bottle.png",
+      image: "/b2b/bottle.webp",
       title: "Jugs",
     },
     {
-      image: "/b2b/bucket.png",
+      image: "/b2b/bucket.webp",
       title: "Pails",
     },
     {
-      image: "/b2b/steel-container.png",
+      image: "/b2b/steel-container.webp",
       title: "Drums",
     },
     {
-      image: "/b2b/container.png",
+      image: "/b2b/container.webp",
       title: "Totes",
     },
     {
-      image: "/b2b/truck.png",
+      image: "/b2b/truck.webp",
       title: "Tankers",
     },
   ];

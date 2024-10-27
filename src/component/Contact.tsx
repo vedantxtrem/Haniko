@@ -21,7 +21,7 @@ function Contact() {
       <div className="flex flex-col lg:flex-row gap-8 px-8 py-12 lg:px-20 lg:text-start text-center">
         <div className="lg:w-1/2 flex flex-col items-center">
           <Image
-            src="/image/logo.png"
+            src="/image/logo.webp"
             alt="Beekeepers"
             width={0}
             height={0}

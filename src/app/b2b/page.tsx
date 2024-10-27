@@ -23,12 +23,12 @@ const services = [
     description:
       "Our bottling unit ensures precision and hygiene, packaging large quantities of honey daily while maintaining the highest standards of quality and customization.",
     image:
-      "https://t3.ftcdn.net/jpg/09/53/59/02/360_F_953590276_4IYwLZsrA0tOTMBbDzavpYnwqIr2xEh4.jpg",
+      "https://t3.ftcdn.net/jpg/09/53/59/02/360_F_953590276_4IYwLZsrA0tOTMBbDzavpYnwqIr2xEh4.webp",
   },
 ];
 
 const certifications = [
-  '/certificate/apeda.png', '/certificate/eic.png', '/certificate/fda.png', '/certificate/fssai.png', '/certificate/fssc.png', '/certificate/halal.png', '/certificate/nbb.png',
+  '/certificate/apeda.webp', '/certificate/eic.webp', '/certificate/fda.webp', '/certificate/fssai.webp', '/certificate/fssc.webp', '/certificate/halal.webp', '/certificate/nbb.webp',
 ];
 
 
@@ -51,7 +51,7 @@ export default function Page() {
     <>
       <Parallax
         blur={0}
-        bgImage="/stock/b2b.jpg"
+        bgImage="/stock/b2b.webp"
         bgImageAlt="banner"
         strength={500}
         className="min-h-[500px] hidden md:flex items-center  justify-center relative"
@@ -70,7 +70,7 @@ export default function Page() {
 
       <Parallax
         blur={0}
-        bgImage="/stock/b2b.jpg"
+        bgImage="/stock/b2b.webp"
         bgImageAlt="banner"
         strength={100}
         className="min-h-[350px] h-full flex items-center justify-center relative md:hidden overflow-visible" // Allow overflow

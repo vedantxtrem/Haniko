@@ -4,7 +4,7 @@ function Page() {
   return (
     <main className="relative">
       <img
-        src="https://centralfloridaagnews.com/wp-content/uploads/2023/08/iStock-1403550771-1024x684.jpg"
+        src="https://centralfloridaagnews.com/wp-content/uploads/2023/08/iStock-1403550771-1024x684.webp"
         alt="A variety of honey products"
         width={800}
         height={450}

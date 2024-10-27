@@ -14,28 +14,28 @@ const images = [
 const products = [
   {
     name: "Honey",
-    front: "/product/pure-front.png",
-    back: "/product/pure-back.png",
+    front: "/product/pure-front.webp",
+    back: "/product/pure-back.webp",
   },
   {
     name: "Jamun Honey",
-    front: "/product/jamun-front.png",
-    back: "/product/jamun-back.png",
+    front: "/product/jamun-front.webp",
+    back: "/product/jamun-back.webp",
   },
   {
     name: "Mustard Honey",
-    front: "/product/mustard-front.png",
-    back: "/product/mustard-back.png",
+    front: "/product/mustard-front.webp",
+    back: "/product/mustard-back.webp",
   },
   {
     name: "Multiflora Honey",
-    front: "/product/multiflora-front.png",
-    back: "/product/multiflora-back.png",
+    front: "/product/multiflora-front.webp",
+    back: "/product/multiflora-back.webp",
   },
   {
     name: "Litchi Honey",
-    front: "/product/litchi-front.png",
-    back: "/product/litchi-back.png",
+    front: "/product/litchi-front.webp",
+    back: "/product/litchi-back.webp",
   },
 ];
 

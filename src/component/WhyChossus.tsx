@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
       // gradient: "bg-gradient-to-tr from-[#225D67] to-[#49C5D5]",
     },
     {
-      icon: "/image/flower1.png",
+      icon: "/image/flower1.webp",
       title: "Floral Specific",
       description:
         "We source honey of specific nectar blossoms, resulting into distinct and natural flavors unique to each variety. These floral-specific varieties ensure that every spoonful delivers an authentic and unadulterated taste of nature.",

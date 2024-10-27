@@ -22,7 +22,7 @@ const AboutHoney = () => {
 
           <div className="p-8 rounded-full">
             <Image
-              src="https://hanio.peerduck.com/wp-content/uploads/2021/02/Group-174.png" // Replace  image
+              src="/image/Group-174.webp" // Replace  image
               alt="Honey"
               width={400}
               height={400}

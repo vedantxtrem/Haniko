@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 
 const certifications = [
-    '/certificate/apeda.png', '/certificate/eic.png',
-    '/certificate/fda.png', '/certificate/fssai.png',
-    '/certificate/fssc.png', '/certificate/halal.png',
-    '/certificate/nbb.png',
+    '/certificate/apeda.webp', '/certificate/eic.webp',
+    '/certificate/fda.webp', '/certificate/fssai.webp',
+    '/certificate/fssc.webp', '/certificate/halal.webp',
+    '/certificate/nbb.webp',
 ];
 
 export default function QualityAssurance() {

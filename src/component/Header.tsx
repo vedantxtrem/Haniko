@@ -100,7 +100,7 @@ export default function HeroSection() {
           {/* Image Section */}
           <div className="relative z-20">
             <Image
-              src="https://hanio.peerduck.com/wp-content/uploads/2021/02/Group-172-1476x1536.png"
+              src="https://hanio.peerduck.com/wp-content/uploads/2021/02/Group-172-1476x1536.webp"
               alt="Assorted Honey Products"
               width={isMobile ? 700 : 1476}
               height={isMobile ? 800 : 1536}

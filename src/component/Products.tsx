@@ -8,23 +8,23 @@ import Link from "next/link";
 const products = [
   {
     name: "Pure",
-    imageUrl: "/product/pure-front.png",
+    imageUrl: "/product/pure-front.webp",
   },
   {
     name: "Jamun",
-    imageUrl: "/product/jamun-front.png",
+    imageUrl: "/product/jamun-front.webp",
   },
   {
     name: "Mustard",
-    imageUrl: "/product/mustard-front.png",
+    imageUrl: "/product/mustard-front.webp",
   },
   {
     name: "Multiflora",
-    imageUrl: "/product/multiflora-front.png",
+    imageUrl: "/product/multiflora-front.webp",
   },
   {
     name: "Litchi",
-    imageUrl: "/product/litchi-front.png",
+    imageUrl: "/product/litchi-front.webp",
   },
 ];
 

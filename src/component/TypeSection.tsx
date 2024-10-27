@@ -5,12 +5,12 @@ function TypeSection() {
   return (
     <div className="flex flex-col gap-10 px-4 md:px-0 mb-20">
       <img
-        src="/image/hexgon.png"
+        src="/image/hexgon.webp"
         alt="spot"
         className="absolute w-28 mx-auto md:block hidden"
       />
       <img
-        src="/image/vector.png"
+        src="/image/vector.webp"
         alt="spot"
         className="absolute left-[20%] w-28 mx-auto md:block hidden"
       />
@@ -29,7 +29,7 @@ function TypeSection() {
         </div>
 
         <img
-          src="/image/hexgon.png"
+          src="/image/hexgon.webp"
           alt="spot"
           className="absolute left-[70%] top-0 w-28 mx-auto md:block hidden"
         />
@@ -59,25 +59,25 @@ function TypeSection() {
         <div className="relative z-30">
           <div className="w-full max-w-7xl mx-auto gap-10 xl:gap-x-[100px] grid grid-cols-1 xl:grid-cols-2">
             <TypesCard
-              imageSrc="/stock/jamun.jpeg"
+              imageSrc="/stock/jamun.webp"
               title="Jamun Honey"
               description=" Jamun Honey, derived from the nectars of jamun flowers, offers a distinctive taste of the Jamun flower and is packed with antioxidant properties."
               bgColor="bg-[#8b45ba]"
             />
             <TypesCard
-              imageSrc="/stock/mustard.png"
+              imageSrc="/stock/mustard.webp"
               title="Mustard Honey"
               description="Mustard honey boasts a mild, earthy flavor with a hint of spice, naturally sourced from the nectar of mustard flowers."
               bgColor="bg-[#EFA820]"
             />
             <TypesCard
-              imageSrc="/stock/multiflora.jpg"
+              imageSrc="/stock/multiflora.webp"
               title="Multiflora Honey"
               description="Multiflora honey is a harmonious blend of nectars from various wildflowers, offering a rich and diverse flavor profile with natural goodness."
               bgColor="bg-[#225D67]"
             />
             <TypesCard
-              imageSrc="/stock/litchi.jpg"
+              imageSrc="/stock/litchi.webp"
               title="Litchi Honey"
               description="Naturally infused from the nectar of litchi flowers, this variety of honey is light and has a delicate floral sweetness with a fruity tinge to it."
               bgColor="bg-[#E75D6B]"

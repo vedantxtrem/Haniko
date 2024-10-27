@@ -6,19 +6,19 @@ export default function Product() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const categories = [
-    { name: "Beehive", icon: "/image/honey.jpg" },
-    { name: "Beekeepar", icon: "/image/honey.jpg" },
-    { name: "Honey", icon: "/image/honey.jpg" },
-    { name: "Beekeepar", icon: "/image/honey.jpg" },
-    { name: "Beekeeping", icon: "/image/honey.jpg" },
-    { name: "Honeybee", icon: "/image/honey.jpg" },
+    { name: "Beehive", icon: "/image/honey.webp" },
+    { name: "Beekeepar", icon: "/image/honey.webp" },
+    { name: "Honey", icon: "/image/honey.webp" },
+    { name: "Beekeepar", icon: "/image/honey.webp" },
+    { name: "Beekeeping", icon: "/image/honey.webp" },
+    { name: "Honeybee", icon: "/image/honey.webp" },
   ];
 
   const products = [
-    { name: "Organic Honey", price: 120, oldPrice: 150, image: "/image/honey.jpg", sale: true, discount: 20 },
-    { name: "Raw Honey", price: 180, oldPrice: 200, image: "/image/honey.jpg", sale: false },
-    { name: "Wild flower Honey", price: 100, oldPrice: 120, image: "/image/honey.jpg", discount: 20 },
-    { name: "Natural Honey", price: 120, oldPrice: 150, image: "/image/honey.jpg" },
+    { name: "Organic Honey", price: 120, oldPrice: 150, image: "/image/honey.webp", sale: true, discount: 20 },
+    { name: "Raw Honey", price: 180, oldPrice: 200, image: "/image/honey.webp", sale: false },
+    { name: "Wild flower Honey", price: 100, oldPrice: 120, image: "/image/honey.webp", discount: 20 },
+    { name: "Natural Honey", price: 120, oldPrice: 150, image: "/image/honey.webp" },
   ];
 
   const handleCategoryClick = (categoryName:any ) => {

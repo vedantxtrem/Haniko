@@ -6,18 +6,17 @@ const services = [
     step: "01",
     name: "Honey and its benefits",
     imageUrl:
-      "https://www.verywellfit.com/thmb/wYu_hvb6hLUhVqXpAupfXqc9uhg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1255787221-3589d5984cb84925983714fb522608c0.jpg",
+      "/blog/1.webp",
     description:
       "Honey is packed with nutrients, antioxidants, and healing properties.",
-    bgColor: "bg-yellow-300", // Card background color
-    buttonColor: "bg-red-500", // Button background color
+    bgColor: "bg-yellow-300",
+    buttonColor: "bg-red-500",
     href: "/blog/honey-benefits",
   },
   {
     step: "02",
     name: "How Honey Gets Its Unique Taste from Different Flowers",
-    imageUrl:
-      "https://carolinahoneybees.com/wp-content/uploads/2021/10/recipes-using-honey-.jpg",
+    imageUrl: "/blog/2.webp",
     description:
       "Honey, often considered nature’s sweet gift, is more than just a delicious sweetener.",
     bgColor: "bg-[#225D67]",
@@ -27,8 +26,7 @@ const services = [
   {
     step: "03",
     name: "Why Does Honey Crystallize?",
-    imageUrl:
-      "https://honestandsimple.com/wp-content/uploads/2021/05/Chai-Spiced-Honey_Unsplash-scaled-e1620310581566.jpg",
+    imageUrl: "/blog/3.webp",
     description:
       "If you’ve ever noticed your honey turning thick and grainy over time, don’t worry—it’s a natural process called crystallization.",
     bgColor: "bg-[#E75D6B]",
@@ -72,13 +70,11 @@ const Blog = () => {
 
                 {/* Conditionally apply text color based on background */}
                 <div
-                  className={`absolute inset-0 h-full w-full rounded-xl ${
-                    service.bgColor
-                  } px-12 text-center ${
-                    service.bgColor === "bg-yellow-300"
+                  className={`absolute inset-0 h-full w-full rounded-xl ${service.bgColor
+                    } px-12 text-center ${service.bgColor === "bg-yellow-300"
                       ? "text-gray-950"
                       : "text-white"
-                  } [transform:rotateY(180deg)] [backface-visibility:hidden]`}
+                    } [transform:rotateY(180deg)] [backface-visibility:hidden]`}
                 >
                   <div className="flex min-h-full flex-col items-center justify-center">
                     <h2 className="text-lg font-bold mb-4">{service.name}</h2>

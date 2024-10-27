@@ -65,7 +65,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <img
-            src="/image/logo.png"
+            src="/image/logo.webp"
             alt="M B Exim Logo"
             className="w-32 lg:w-48 mx-auto"
             loading="lazy"
