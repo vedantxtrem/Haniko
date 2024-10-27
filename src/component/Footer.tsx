@@ -27,6 +27,10 @@ export const ServicesOptions = [
     label: "Export Inquiry",
     link: "/b2b",
   },
+  {
+    label: "Blog",
+    link: "/blog",
+  },
 ];
 
 export const BlogsOptions = [
@@ -58,7 +62,7 @@ function Footer() {
     <footer
       className={`${isOpen ? "bg-yellow-100 text-black p-10" : "hidden"}`}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <img
             src="/image/logo.png"
@@ -87,7 +91,7 @@ function Footer() {
             ))}
           </ul>
         </div>
-        <div>
+        {/* <div>
           <h6 className="font-bold text-lg mb-4 relative">
             Blogs
             <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
@@ -106,10 +110,10 @@ function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         <div>
-          <h6 className="font-bold text-lg mb-4 relative">
+          <h6 className="font-bold text-lg mb-4 relative ">
             Contact Us
             <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
           </h6>
@@ -143,7 +147,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center ">
           <h6 className="font-bold text-lg mb-4 relative">
             Social Links
             <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
