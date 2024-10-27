@@ -64,6 +64,7 @@ const ScrollSections = () => {
                 <img
                   src="https://xplore2k22.netlify.app/assets/scroll.c5d146f6.gif"
                   alt=""
+                  loading="lazy"
                   className="w-20  animate-bounce-slow cursor-pointer"
                 />
 
