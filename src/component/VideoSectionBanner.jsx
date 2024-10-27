@@ -1,7 +1,9 @@
 'use client'
+
 import React, { useEffect, useRef } from "react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ['latin'],
