@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const certifications = [
@@ -37,7 +38,11 @@ export default function QualityAssurance() {
 
             <div className="flex flex-col w-11/12 lg:max-w-[50%] rounded-3xl bg-gray-100 overflow-hidden">
                 <div className="flex h-72 mx-auto p-10 justify-center">
-                    <img
+                    <Image
+                        loading="eager"
+                        height={0}
+                        width={0}
+                        sizes="100vw"
                         key={selectedImage}
                         src={certifications[selectedImage]}
                         alt={`Certification`}
@@ -51,7 +56,11 @@ export default function QualityAssurance() {
                             onClick={() => setSelectedImage(index)}
                             className={`flex items-center justify-center ${selectedImage === index ? "opacity-100 bg-white rounded-3xl" : "opacity-50 bg-gray-200"} user-select-none p-2 lg:p-0`}
                             key={index}>
-                            <img
+                            <Image
+                                loading="eager"
+                                height={0}
+                                width={0}
+                                sizes="100vw"
                                 src={image}
                                 alt={`Certification ${index + 1}`}
                                 className={`md:max-w-24 md:max-h-24 max-w-20 max-h-20 object-cover rounded-lg ${selectedImage === index ? "animate__animated" : ""}`}

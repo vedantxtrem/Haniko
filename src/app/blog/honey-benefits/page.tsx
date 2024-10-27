@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function Page() {
@@ -41,8 +42,9 @@ function Page() {
 
   return (
     <main className="relative ">
-      <img
-        src='https://markfedpunjab.com/markfed/wp-content/uploads/2022/10/WEBSITE-BANNER2.1.webp'
+      <Image
+        loading="eager"
+        src='/blog/b1.webp'
         alt="A variety of honey products"
         width={800}
         height={450}

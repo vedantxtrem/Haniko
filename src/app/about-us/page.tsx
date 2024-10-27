@@ -61,8 +61,12 @@ const ScrollSections = () => {
                 <p className={`${nunito.className} text-gray-600 mb-8 max-w-lg `}>
                   Experience the finest honey sourced directly from our hives. Crafted with love, delivered with care.
                 </p>
-                <img
-                  src="https://xplore2k22.netlify.app/assets/scroll.c5d146f6.gif"
+                <Image
+                  loading="eager"
+                  height={0}
+                  width={0}
+                  sizes="100vw"
+                  src="/about/scroll.gif"
                   alt=""
                   loading="lazy"
                   className="w-20  animate-bounce-slow cursor-pointer"
@@ -122,7 +126,15 @@ const ScrollSections = () => {
                   >{item.description}</p>
                 </div>
                 <figure className="">
-                  <img src={item.image} alt="Image" className=" md:max-h-[40vw] md:min-h-full max-h-[60vw] min-h-[60vw]" />
+                  <Image
+                    loading="eager"
+                    height={0}
+                    width={0}
+                    sizes="100vw"
+                    src={item.image}
+                    alt="Image"
+                    className=" md:max-h-[40vw] md:min-h-full max-h-[60vw] min-h-[60vw]"
+                  />
                 </figure>
               </div>
             </li>
@@ -135,11 +147,14 @@ const ScrollSections = () => {
         >
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
-              <img
+              <Image
+                loading="eager"
+                height={0}
+                width={0}
+                sizes="100vw"
                 src="/image/logo.webp"
                 alt="M B Exim Logo"
                 className="w-32 lg:w-48 mx-auto"
-                loading="lazy"
               />
             </div>
             <div>

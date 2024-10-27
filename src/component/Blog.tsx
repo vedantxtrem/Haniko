@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -55,7 +56,8 @@ const Blog = () => {
                 <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
                   {service.imageUrl && (
                     //test 01
-                    <img
+                    <Image
+                      loading="eager"
                       className="object-cover cursor-pointer object-left h-full w-full rounded-xl"
                       src={service.imageUrl}
                       alt={service.name}

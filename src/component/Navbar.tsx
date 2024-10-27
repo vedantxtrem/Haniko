@@ -12,6 +12,7 @@ import "animate.css";
 import { usePathname } from "next/navigation";
 import { GoHome } from "react-icons/go";
 import { IoChevronDownOutline } from "react-icons/io5";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -75,7 +76,11 @@ const Navbar: React.FC = () => {
 
         <div className="absolute z-50 top-3 left-1/2 transform -translate-x-1/2 p-4 rounded-full">
           <Link href="/">
-            <img src="/new/logo.webp" alt="Logo" className="max-w-32" />
+            <Image
+              loading="eager"
+              height={0}
+              width={0}
+              sizes="100vw" src="/new/logo.webp" alt="Logo" className="max-w-32" />
           </Link>
         </div>
 
@@ -111,7 +116,14 @@ const Navbar: React.FC = () => {
 
         <div className="absolute  z-50 top-3 p-4 rounded-full">
           <Link href="/">
-            <img src="/new/logo.webp" alt="Logo" className="max-w-24" />
+            <Image
+              loading="eager"
+              height={0}
+              width={0}
+              sizes="100vw"
+              src="/new/logo.webp"
+              alt="Logo"
+              className="max-w-24" />
           </Link>
         </div>
         <div className="absolute h-[180px] w-[180px] bg-white z-40 -mt-2 -mx-5 rounded-full">

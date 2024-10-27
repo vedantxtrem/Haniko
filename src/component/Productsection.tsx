@@ -21,7 +21,7 @@ export default function Product() {
     { name: "Natural Honey", price: 120, oldPrice: 150, image: "/image/honey.webp" },
   ];
 
-  const handleCategoryClick = (categoryName:any ) => {
+  const handleCategoryClick = (categoryName: any) => {
     setSelectedCategory(categoryName);
   };
 
@@ -34,11 +34,10 @@ export default function Product() {
           <div
             key={index}
             onClick={() => handleCategoryClick(category.name)}
-            className={`w-[100px] h-[130px] flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all ${
-              selectedCategory === category.name ? 'bg-yellow-400' : 'bg-blue-100'
-            }`}
+            className={`w-[100px] h-[130px] flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all ${selectedCategory === category.name ? 'bg-yellow-400' : 'bg-blue-100'
+              }`}
           >
-            <Image src={category.icon} alt={category.name} width={40} height={40} className="mb-2" />
+            <Image loading="eager" src={category.icon} alt={category.name} width={40} height={40} className="mb-2" />
             <span className="text-sm font-medium">{category.name}</span>
           </div>
         ))}
@@ -48,7 +47,12 @@ export default function Product() {
         {products.map((product, index) => (
           <div key={index} className="w-full bg-white p-4 rounded-lg shadow-md transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-gradient-to-r from-yellow-500 via-white-300 to-orange-300 ">
             <div className="relative mb-4 w-full flex justify-center">
-              <img src={product.image} alt={product.name} className="w-36 transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110 duration-300" />
+              <Image
+                loading="eager"
+                height={0}
+                width={0}
+                sizes="100vw"
+                src={product.image} alt={product.name} className="w-36 transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110 duration-300" />
               {product.sale && (
                 <span className="absolute -top-4 -left-4 bg-yellow-400 text-xl font-bold px-4 py-2 rounded">Sale</span>
               )}

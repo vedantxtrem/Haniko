@@ -5,6 +5,7 @@ import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { IoIosMail } from "react-icons/io";
+import Image from "next/image";
 
 export const ServicesOptions = [
   {
@@ -46,7 +47,7 @@ export const BlogsOptions = [
     label: "Why Does Honey Crystallize?",
     link: "/blog/why-honey-crystallizes",
   },
-  
+
 ];
 
 function Footer() {
@@ -64,11 +65,14 @@ function Footer() {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
-          <img
+          <Image
+            loading="eager"
+            height={0}
+            width={0}
+            sizes="100vw"
             src="/image/logo.webp"
             alt="M B Exim Logo"
             className="w-32 lg:w-48 mx-auto"
-            loading="lazy"
           />
         </div>
         <div>

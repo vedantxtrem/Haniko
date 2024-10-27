@@ -54,13 +54,27 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, front, back }) => {
             <div className="relative h-full w-full rounded-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               {/* Front side */}
               <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] flex justify-center items-center">
-                <img src={front} alt={name} className="w-full h-full object-contain rounded-xl" />
+                <Image
+                  loading="eager"
+                  sizes="100vw"
+                  height={0}
+                  width={0}
+                  src={front}
+                  alt={name}
+                  className="w-full h-full object-contain rounded-xl" />
               </div>
 
               {/* Back side */}
               <div className="absolute inset-0 h-full w-full text-center text-black [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <div className="absolute inset-0 h-full w-full [backface-visibility:hidden]">
-                  <img src={back} alt={name} className="w-full h-full object-contain rounded-xl" />
+                  <Image
+                    loading="eager"
+                    sizes="100vw"
+                    height={0}
+                    width={0}
+                    src={back}
+                    alt={name}
+                    className="w-full h-full object-contain rounded-xl" />
                 </div>
               </div>
             </div>

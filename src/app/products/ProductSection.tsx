@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const products = [
   {
@@ -58,20 +59,26 @@ const ProductCard: React.FC<{ name: string; front: string; back: string }> = ({
           <div className="relative h-full w-full rounded-xl transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             {/* Front side */}
             <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] flex justify-center items-center">
-              <img
+              <Image
+                loading="eager"
+                height={0}
+                width={0}
+                sizes="100vw"
                 src={front}
                 alt={name}
-                loading="lazy"
                 className="w-full h-full object-contain rounded-xl"
               />
             </div>
 
             {/* Back side */}
             <div className="absolute inset-0 h-full w-full [transform:rotateY(180deg)] [backface-visibility:hidden] flex justify-center items-center">
-              <img
+              <Image
+                loading="eager"
+                height={0}
+                width={0}
+                sizes="100vw"
                 src={back}
                 alt={name}
-                loading="lazy"
                 className="w-full h-full object-contain rounded-xl"
               />
             </div>

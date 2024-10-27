@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import Image from "next/image";
 
 
 const poppins = Poppins({
@@ -52,7 +53,7 @@ export default function WhyChooseUs() {
             Why Choose Our Honey
           </h1>
 
-          
+
         </div>
 
         {/* Features Grid */}
@@ -62,7 +63,11 @@ export default function WhyChooseUs() {
               key={index}
               className={`h-auto w-full flex flex-col items-center justify-between p-6 rounded-xl  ${feature.gradient}`}
             >
-              <img
+              <Image
+                loading="eager"
+                height={0}
+                width={0}
+                sizes="100vw"
                 src={feature.icon}
                 className="w-24 h-24 mb-4 bg-cover "
                 alt={feature.title}

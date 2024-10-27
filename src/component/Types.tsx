@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function TypesCard({
@@ -12,7 +13,11 @@ export default function TypesCard({
         className={`md:w-[40rem] md:scale-105 h-[18rem] rounded-[35px] flex justify-end mx-auto ${bgColor} relative overflow-hidden shadow-inner`}
       >
         <div className="absolute hidden md:block -left-20 h-full">
-          <img
+          <Image
+            loading="eager"
+            height={0}
+            width={0}
+            sizes="100vw"
             src={imageSrc}
             alt={title}
             className="md:w-[20rem] h-full object-cover hover:scale-105 transition-all duration-500"

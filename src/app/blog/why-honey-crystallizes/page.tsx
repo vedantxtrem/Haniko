@@ -1,10 +1,12 @@
+import Image from "next/image";
 import React from "react";
 
 function page() {
   return (
     <main className="relative">
-      <img
-        src="https://www.tastingtable.com/img/gallery/what-to-do-when-your-honey-crystalizes-and-how-to-prevent-it-from-happening-again/why-does-honey-crystalize-1721140204.webp"
+      <Image
+        loading="eager"
+        src="/blog/b3.webp"
         alt="A variety of honey products"
         width={800}
         height={450}

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
+import Image from "next/image";
 
 const products = [
   {
@@ -56,7 +57,7 @@ function ShowCase() {
         </h1>
       </div>
 
-    
+
 
       <div
         className="overflow-hidden relative mt-5 md:mt-10 w-full user-select-none"
@@ -72,7 +73,11 @@ function ShowCase() {
                 key={index}
                 className="md:h-[600px] embla__slide flex-shrink-0 w-full p-4 flex flex-col items-center justify-center"
               >
-                <img
+                <Image
+                  loading="eager"
+                  height={0}
+                  width={0}
+                  sizes="100vw"
                   src={product.imageUrl}
                   alt={product.name}
                   className={`h-auto object-cover mx-auto  duration-1000 cursor-pointer transition-all w-1/2  ${isActive ? 'md:w-[35%]' : 'md:w-[30%]'} ${hover === index ? 'scale-105' : ''}`}

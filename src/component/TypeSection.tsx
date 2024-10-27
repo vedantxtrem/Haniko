@@ -1,15 +1,24 @@
 import React from "react";
 import TypesCard from "@/component/Types";
+import Image from "next/image";
 
 function TypeSection() {
   return (
     <div className="flex flex-col gap-10 px-4 md:px-0 mb-20">
-      <img
+      <Image
+        loading="eager"
+        height={0}
+        width={0}
+        sizes="100vw"
         src="/image/hexgon.webp"
         alt="spot"
         className="absolute w-28 mx-auto md:block hidden"
       />
-      <img
+      <Image
+        loading="eager"
+        height={0}
+        width={0}
+        sizes="100vw"
         src="/image/vector.webp"
         alt="spot"
         className="absolute left-[20%] w-28 mx-auto md:block hidden"
@@ -28,7 +37,11 @@ function TypeSection() {
           </p>
         </div>
 
-        <img
+        <Image
+          loading="eager"
+          height={0}
+          width={0}
+          sizes="100vw"
           src="/image/hexgon.webp"
           alt="spot"
           className="absolute left-[70%] top-0 w-28 mx-auto md:block hidden"

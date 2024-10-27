@@ -7,6 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
 import Packaging from "@/component/Packaging";
+import Image from "next/image";
 
 const services = [
   {
@@ -15,7 +16,7 @@ const services = [
     description:
       "Our state-of-the-art facility near New Delhi, India, produces up to 50 metric tons of honey daily. We cater to large bulk and institutional orders for export requirements with efficiency and care.",
     image:
-      "https://img.freepik.com/premium-photo/photo-honey-glass-jars-bottles-counter-dark-background-selling-delicious-healthy-product-generative-ai_653669-1520.jpg",
+      "/b2b/photo-honey-glass-jars-bottles-counter-dark-background-selling-delicious-healthy-product-generative-ai_653669-1520.avif",
   },
   {
     id: 2,
@@ -23,7 +24,7 @@ const services = [
     description:
       "Our bottling unit ensures precision and hygiene, packaging large quantities of honey daily while maintaining the highest standards of quality and customization.",
     image:
-      "https://t3.ftcdn.net/jpg/09/53/59/02/360_F_953590276_4IYwLZsrA0tOTMBbDzavpYnwqIr2xEh4.webp",
+      "/b2b/blank.webp",
   },
 ];
 
@@ -74,7 +75,7 @@ export default function Page() {
         bgImageAlt="banner"
         strength={100}
         className="min-h-[350px] h-full flex items-center justify-center relative md:hidden overflow-visible" // Allow overflow
-        style={{ backgroundSize: 'cover', backgroundPosition: 'center' }} 
+        style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 flex flex-col text-center text-white min-h-[400px] justify-center">
@@ -110,7 +111,11 @@ export default function Page() {
                 {/* <div className={`h-full w-14 bg-red-500 opacity-90 absolute ${index % 2 === 0 ? "-right-10" : "-left-0"}`}></div> */}
                 <div className={`h-full w-14 bg-white opacity-80 absolute ${index % 2 === 0 ? "right-0" : "left-0"}`}></div>
                 <div className={`h-full w-14 bg-white opacity-40 absolute ${index % 2 === 0 ? "right-14" : "left-14"}`}></div>
-                <img
+                <Image
+                  loading="eager"
+                  height={0}
+                  width={0}
+                  sizes="100vw"
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover"
@@ -146,8 +151,12 @@ export default function Page() {
             <div className="embla__container ">
               {certifications.map((image, index) => (
                 <div className="embla__slide user-select-none flex items-center justify-center" key={index}>
-                  <img
+                  <Image
+                    loading="eager"
+                    height={0}
+                    width={0}
                     src={image}
+                    sizes="100vw"
                     alt={`Certification ${index + 1}`}
                     className="max-w-48 max-h-48 object-cover rounded-lg"
                   />

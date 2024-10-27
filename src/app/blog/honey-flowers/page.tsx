@@ -1,10 +1,12 @@
+import Image from "next/image";
 import React from "react";
 
 function Page() {
   return (
     <main className="relative">
-      <img
-        src="https://centralfloridaagnews.com/wp-content/uploads/2023/08/iStock-1403550771-1024x684.webp"
+      <Image
+        loading="eager"
+        src="/blog/b2.webp"
         alt="A variety of honey products"
         width={800}
         height={450}
