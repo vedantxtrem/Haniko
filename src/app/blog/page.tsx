@@ -8,7 +8,7 @@ function Blog() {
       described:
         "Honey is packed with nutrients, antioxidants, and healing properties. If you're looking to add a healthy twist to your diet, honey can be an excellent substitute for sugar, providing both flavor and numerous health benefits. Let’s explore some of the key reasons why consuming honey can be great for your health.",
       image:
-        "https://markfedpunjab.com/markfed/wp-content/uploads/2022/10/WEBSITE-BANNER2.1.png",
+        "/blog/b1.webp",
       href: "/blog/honey-benefits",
       flex: "flex-row",
     },
@@ -17,7 +17,7 @@ function Blog() {
       described:
         "Honey, often considered nature's sweet gift, is more than just a delicious sweetener. Its taste, aroma, and even color vary depending on the type of flowers the bees visit to collect nectar. Each variety of honey offers a unique profile that is a direct reflection of the flowers in its environment, giving honey lovers an opportunity to explore a wide range of flavors. Whether it's fruity, floral, spicy, or earthy, every honey tells a story of its floral origins.",
       image:
-        "https://centralfloridaagnews.com/wp-content/uploads/2023/08/iStock-1403550771-1024x684.jpg",
+        "/blog/b2.webp",
       href: "/blog/honey-flowers",
       flex: "flex-row-reverse",
     },
@@ -26,7 +26,7 @@ function Blog() {
       described:
         "If you’ve ever noticed your honey turning thick and grainy over time, don’t worry—it’s a natural process called crystallization. While some people may think crystallized honey has gone bad, it’s actually a sign of pure, natural honey.",
       image:
-        "https://www.tastingtable.com/img/gallery/what-to-do-when-your-honey-crystalizes-and-how-to-prevent-it-from-happening-again/why-does-honey-crystalize-1721140204.jpg",
+        "/blog/b2.webp",
       href: "/blog/why-honey-crystallizes",
       flex: "flex-row",
     },
