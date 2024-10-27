@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
 
         <div className="absolute z-50 top-3 left-1/2 transform -translate-x-1/2 p-4 rounded-full">
           <Link href="/">
-            <Image
+            <img
               loading="eager"
               height={0}
               width={0}
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
 
         <div className="absolute  z-50 top-3 p-4 rounded-full">
           <Link href="/">
-            <Image
+            <img
               loading="eager"
               height={0}
               width={0}

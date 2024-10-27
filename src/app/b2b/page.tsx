@@ -151,12 +151,9 @@ export default function Page() {
             <div className="embla__container ">
               {certifications.map((image, index) => (
                 <div className="embla__slide user-select-none flex items-center justify-center" key={index}>
-                  <Image
+                  <img
                     loading="eager"
-                    height={0}
-                    width={0}
                     src={image}
-                    sizes="100vw"
                     alt={`Certification ${index + 1}`}
                     className="max-w-48 max-h-48 object-cover rounded-lg"
                   />
