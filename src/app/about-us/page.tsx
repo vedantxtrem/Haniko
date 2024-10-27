@@ -1,15 +1,12 @@
 'use client'
-import { title } from "process";
 import './about.css'
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Fauna_One, Hammersmith_One, Nunito_Sans, Playfair } from "next/font/google";
+import {  Nunito_Sans } from "next/font/google";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import { usePathname } from "next/navigation"
 import { IoIosMail } from "react-icons/io";
-import { BlogsOptions, ServicesOptions } from "@/component/Footer";
+import {  ServicesOptions } from "@/component/Footer";
 
 const nunito = Nunito_Sans({
   subsets: ['latin'],
