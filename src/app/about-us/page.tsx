@@ -68,7 +68,6 @@ const ScrollSections = () => {
                   sizes="100vw"
                   src="/about/scroll.gif"
                   alt=""
-                  loading="lazy"
                   className="w-20  animate-bounce-slow cursor-pointer"
                 />
 
