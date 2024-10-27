@@ -140,9 +140,9 @@ const ScrollSections = () => {
 
         {/* footer here */}
         <footer
-          className={`"bg-yellow-100 text-black p-10 mt-10"}`}
+          className={`" bg-yellow-100 text-black p-10 mt-10"}`}
         >
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
               <img
                 src="/image/logo.png"
@@ -171,7 +171,7 @@ const ScrollSections = () => {
                 ))}
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h6 className="font-bold text-lg mb-4 relative">
                 Blogs
                 <span className="block w-12 h-1 bg-yellow-800 mt-1"></span>
@@ -190,7 +190,7 @@ const ScrollSections = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             <div>
               <h6 className="font-bold text-lg mb-4 relative">
