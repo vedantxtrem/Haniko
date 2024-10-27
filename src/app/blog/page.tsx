@@ -26,7 +26,7 @@ function Blog() {
       described:
         "If you’ve ever noticed your honey turning thick and grainy over time, don’t worry—it’s a natural process called crystallization. While some people may think crystallized honey has gone bad, it’s actually a sign of pure, natural honey.",
       image:
-        "/blog/b2.webp",
+        "/blog/b3.webp",
       href: "/blog/why-honey-crystallizes",
       flex: "flex-row",
     },
