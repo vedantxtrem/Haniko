@@ -129,7 +129,7 @@ const ScrollSections = () => {
           ))}
         </ul>
 
-        {/* footer here */}
+        {/* footer here  test*/}
         <footer
           className={`" bg-yellow-100 text-black p-10 mt-10"}`}
         >
