@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -15,15 +16,7 @@ function VideoSectionBanner() {
   return (
     <main className="w-screen relative h-[50vh] md:h-[80vh] lg:min-h-screen">
       <div className="absolute top-0 left-0 w-full h-full">
-        <video
-          src="/istock/bannervideo.mp4"
-          autoPlay
-          muted
-          loop
-          className="w-full h-full object-cover backdrop-blur-xl"
-          preload="auto"
-        ></video>
-
+        <ReactPlayer url='/istock/bannervideo.mp4' className="w-full h-full object-cover" />
         <div className="absolute inset-0 opacity-20"></div>
       </div>
 

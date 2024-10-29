@@ -1,7 +1,10 @@
+'use client'
+
 import React from "react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
-import Image from "next/image";
+import ReactPlayer from 'react-player/youtube'
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,14 +18,8 @@ function VideoSection() {
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          src="/istock/beeKeper.mp4"
-          autoPlay
-          muted
-          loop
-          className="w-full h-full object-cover backdrop-blur-xl"
-          preload="auto"
-        ></video>
+        <ReactPlayer url='/istock/beeKeper.mp4' className="w-full h-full object-cover" />
+
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
