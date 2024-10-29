@@ -56,6 +56,7 @@ function VideoSection() {
         </p>
         <Link
           href={"/about-us"}
+          //test
           className="bg-gradient-to-r py-3 px-8 from-amber-500 text-xl to-[#ffde4a] font-medium text-black rounded-full transition duration-300 ease-in-out transform hover:scale-105"
         >
           Learn More
