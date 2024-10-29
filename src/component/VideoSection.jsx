@@ -15,30 +15,14 @@ function VideoSection() {
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        {/* <video
-          className="w-full h-full object-cover"
+        <video
+          src="/istock/beeKeper.mp4"
           autoPlay
-          loop
           muted
-          playsInline
-          aria-label="Video showcasing organic honey production"
-          loading="lazy"
-        >
-          <source src="/image/video.webm" type="video/webm" />
-          <source src="/image/video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
-        <Image
-          loading="eager"
-          height={0}
-          width={0}
-          sizes="100vw" 
-          src="/istock/journey.webp"
-          priority={true}
-          preload="true"
-          //test
-          className="w-full h-full object-cover backdrop-blur-xl" alt="" />
-
+          loop
+          className="w-full h-full object-cover backdrop-blur-xl"
+          preload="auto"
+        ></video>
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
