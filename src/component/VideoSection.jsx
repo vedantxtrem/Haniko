@@ -25,7 +25,7 @@ function VideoSection() {
         >
           <source src="/istock/beeKeper.mp4" type="video/mp4" />
         </video>
-
+        {/* testz */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
