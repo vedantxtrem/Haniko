@@ -1,6 +1,7 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,7 +15,7 @@ function VideoSection() {
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
+        {/* <video
           className="w-full h-full object-cover"
           autoPlay
           loop
@@ -26,7 +27,16 @@ function VideoSection() {
           <source src="/image/video.webm" type="video/webm" />
           <source src="/image/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+        <Image
+          loading="eager"
+          height={0}
+          width={0}
+          sizes="100vw" 
+          src="/istock/journey.webp"
+          //test
+          className="w-full h-full object-cover backdrop-blur-xl" alt="" />
+
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 

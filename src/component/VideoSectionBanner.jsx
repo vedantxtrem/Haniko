@@ -38,7 +38,7 @@ function VideoSectionBanner() {
           height={0}
           width={0}
           sizes="100vw" 
-          src="/image/hon.webp"
+          src="/istock/Banner.webp"
           //test
           className="w-full h-full object-cover backdrop-blur-xl" alt="" />
         <div className="absolute inset-0  opacity-20"></div>
