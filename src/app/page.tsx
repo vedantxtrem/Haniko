@@ -1,7 +1,7 @@
 // import BlogSection from "@/component/Blog";
 // import AboutUs from "@/component/HomeAbout";
 // import WhyChooseUs from "@/component/WhyChossus";
-// import VideoSection from "@/component/VideoSection";
+import VideoSection from "@/component/VideoSection";
 import React from "react";
 import ShowCase from "@/component/Products";
 // import TypeSection from "@/component/TypeSection";
@@ -9,12 +9,6 @@ import VideoSectionBanner from "@/component/VideoSectionBanner";
 import QualityAssurance from "@/component/QualityAssurance";
 
 import dynamic from "next/dynamic";
-
-
-const VideoSection = dynamic(() => import("@/component/VideoSection"), {
-  loading: () => <p>Loading...</p>,
-  ssr: false,
-});
 
 const AboutUs = dynamic(() => import("@/component/HomeAbout"), {
   loading: () => <p>Loading...</p>,

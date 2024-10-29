@@ -21,7 +21,7 @@ function VideoSectionBanner() {
           muted
           className="slideshow-split_video image_img hide-mobile w-full h-full object-cover"
           preload="metadata"
-          poster="//manukora.com/cdn/shop/files/preview_images/816950eeed744ba1b0170cc87c86f692.thumbnail.0000000000_small.jpg?v=1724064544"
+          poster="/istock/v1.png"
         >
           <source src="/istock/bannervideo.mp4" type="video/mp4" />
         </video>
