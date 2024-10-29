@@ -6,42 +6,43 @@ import Link from "next/link";
 import Image from "next/image";
 
 const poppins = Poppins({
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 function VideoSectionBanner() {
-
   return (
     <main className="w-screen relative h-[50vh] md:h-[80vh] lg:min-h-screen">
       <div className="absolute top-0 left-0 w-full h-full">
-        {/* <video
-          src="/istock/bannervideo.mp4"
+        <video
+          playsInline
           autoPlay
-          muted
           loop
-          className="w-full h-full object-cover backdrop-blur-xl"
-          preload="auto"
-        ></video> */}
-        <img 
-        src="/istock/banner.gif" 
-        alt=""
-        className="w-full h-full object-cover backdrop-blur-xl"
-          preload="auto"
-         />
+          muted
+          className="slideshow-split_video image_img hide-mobile w-full h-full object-cover"
+          preload="metadata"
+          poster="//manukora.com/cdn/shop/files/preview_images/816950eeed744ba1b0170cc87c86f692.thumbnail.0000000000_small.jpg?v=1724064544"
+        >
+          <source src="/istock/bannervideo.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 opacity-20"></div>
       </div>
 
-      <div className={`${poppins.className} w-full h-full absolute flex flex-col lg:justify-items-center`}>
+      <div
+        className={`${poppins.className} w-full h-full absolute flex flex-col lg:justify-items-center`}
+      >
         <div className="p-10 my-auto lg:pl-32 ">
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4">
             <span className="text-white">The Finest Taste</span>
             <br />
-            <span className="text-white">of <span className="text-[#f2b104]">Nature</span></span>
+            <span className="text-white">
+              of <span className="text-[#f2b104]">Nature</span>
+            </span>
           </h1>
 
           <p className="text-white mb-8 max-w-lg text-xl lg:text-2xl">
-            At Haniko, we deliver the finest honey straight from the source to you
+            At Haniko, we deliver the finest honey straight from the source to
+            you
           </p>
 
           <Link href={"/products"}>

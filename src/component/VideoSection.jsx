@@ -1,7 +1,6 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
-import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,20 +14,18 @@ function VideoSection() {
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        {/* <video
-          src="/istock/beeKeper.mp4"
+        <video
+          playsInline
           autoPlay
-          muted
           loop
-          className="w-full h-full object-cover backdrop-blur-xl"
-          preload="auto"
-        ></video> */}
-        <img 
-        src="/istock/beekeper.gif" 
-        alt=""
-        className="w-full h-full object-cover backdrop-blur-xl"
-          preload="auto"
-         />
+          muted
+          className="slideshow-split_video image_img hide-mobile w-full h-full object-cover"
+          preload="metadata"
+          poster="//manukora.com/cdn/shop/files/preview_images/816950eeed744ba1b0170cc87c86f692.thumbnail.0000000000_small.jpg?v=1724064544"
+        >
+          <source src="/istock/beeKeper.mp4" type="video/mp4" />
+        </video>
+
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
