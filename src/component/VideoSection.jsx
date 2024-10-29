@@ -34,6 +34,8 @@ function VideoSection() {
           width={0}
           sizes="100vw" 
           src="/istock/journey.webp"
+          priority={true}
+          preload="true"
           //test
           className="w-full h-full object-cover backdrop-blur-xl" alt="" />
 

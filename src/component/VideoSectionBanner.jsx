@@ -39,6 +39,8 @@ function VideoSectionBanner() {
           width={0}
           sizes="100vw" 
           src="/istock/Banner.webp"
+          priority={true}
+          preload="true"
           //test
           className="w-full h-full object-cover backdrop-blur-xl" alt="" />
         <div className="absolute inset-0  opacity-20"></div>
