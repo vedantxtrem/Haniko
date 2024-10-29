@@ -18,7 +18,7 @@ function VideoSection() {
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <ReactPlayer url='/istock/beeKeper.mp4' className="w-full h-full object-cover" />
+        <ReactPlayer url='/istock/beeKeper.mp4' className="w-full h-full object-cover"  muted loop/>
 
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
