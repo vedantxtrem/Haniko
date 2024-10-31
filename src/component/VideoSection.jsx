@@ -12,6 +12,7 @@ function VideoSection() {
     <section
       className={`relative h-[80vh] w-full flex items-center justify-center text-center md:text-left ${poppins.className}`}
     >
+      {/* //dploy */}
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
