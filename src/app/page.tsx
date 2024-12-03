@@ -9,6 +9,7 @@ import VideoSectionBanner from "@/component/VideoSectionBanner";
 import QualityAssurance from "@/component/QualityAssurance";
 
 import dynamic from "next/dynamic";
+import OurServices from "@/component/OurServices";
 
 const AboutUs = dynamic(() => import("@/component/HomeAbout"), {
   loading: () => <p>Loading...</p>,
@@ -37,6 +38,7 @@ function page() {
         <AboutUs />
         <TypeSection />
         <VideoSection />
+        <OurServices />
         <QualityAssurance />
         <BlogSection />
       </div>

@@ -22,7 +22,7 @@ export default function QualityAssurance() {
     }, []);
 
     return (
-        <div className="md:py-20 w-11/12 mx-auto py-10 bg-white flex justify-center items-center flex-col">
+        <div className="md:pb-20 w-11/12 mx-auto py-10 bg-white flex justify-center items-center flex-col">
             <h2 className="text-3xl md:text-5xl text-center font-extrabold mb-10">
                 Quality Assurance
             </h2>
